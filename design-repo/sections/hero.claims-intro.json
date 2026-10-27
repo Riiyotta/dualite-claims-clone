@@ -1,0 +1,150 @@
+{
+  "id": "hero.claims-intro",
+  "title": "Hero",
+  "source": {
+    "id": "src.hero",
+    "file": "src/components/Hero.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Hero.jsx:4",
+    "marker": "<section className={\"hero\"}"
+  },
+  "semantic": {
+    "id": "hero.claims-intro",
+    "category": "HERO"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "statusTicker": {
+      "type": "list",
+      "items": {
+        "type": "text",
+        "maxWords": 6
+      },
+      "minItems": 2,
+      "maxItems": 6
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 10
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "sub": {
+      "type": "text",
+      "maxWords": 50
+    },
+    "primaryCta": {
+      "type": "object",
+      "fields": {
+        "label": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "href": {
+          "type": "href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    },
+    "secondaryCta": {
+      "type": "object",
+      "fields": {
+        "label": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "href": {
+          "type": "href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    },
+    "micro": {
+      "type": "text",
+      "maxWords": 16
+    },
+    "facts": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "key": {
+            "type": "text",
+            "maxWords": 3
+          },
+          "value": {
+            "type": "text",
+            "maxWords": 6
+          }
+        },
+        "required": [
+          "key",
+          "value"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 4
+    },
+    "scene": {
+      "type": "media",
+      "assetRoles": [
+        "illustration.hero-scene-source",
+        "illustration.generated"
+      ]
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-intro-stagger",
+      "status-ticker-scramble"
+    ],
+    "reducedMotionFallback": {
+      "hero-intro-stagger": "final-state",
+      "status-ticker-scramble": "static-first-item"
+    }
+  },
+  "generatedAssetRoles": [
+    "illustration.generated",
+    "url.placeholder"
+  ],
+  "responsive": {
+    "desktop": "2-col grid (copy | scene), facts 4-up, scroll cue",
+    "mobile": "1 col, scene below copy, facts 2x2, CTAs full width, eyebrow status hidden <640px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:641-648",
+      "expect": ".hero__grid{grid-template-columns:1fr"
+    }
+  },
+  "contentRequired": [
+    "eyebrow",
+    "facts",
+    "headline",
+    "headlineAccent",
+    "micro",
+    "primaryCta",
+    "scene",
+    "secondaryCta",
+    "statusTicker",
+    "sub"
+  ]
+}

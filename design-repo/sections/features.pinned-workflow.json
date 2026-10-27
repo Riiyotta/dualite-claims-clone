@@ -1,0 +1,137 @@
+{
+  "id": "features.pinned-workflow",
+  "title": "Pinned step-by-step workflow",
+  "source": {
+    "id": "src.move",
+    "file": "src/components/Move.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Move.jsx:4",
+    "marker": "<section className={\"move\"}"
+  },
+  "semantic": {
+    "id": "features.pinned-workflow",
+    "category": "FEATURES"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "lede": {
+      "type": "text",
+      "maxWords": 30
+    },
+    "steps": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "index": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "name": {
+            "type": "text",
+            "maxWords": 2
+          },
+          "clock": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 30
+          }
+        },
+        "required": [
+          "index",
+          "name",
+          "clock",
+          "description"
+        ]
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "meta": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "key": {
+            "type": "text",
+            "maxWords": 2
+          },
+          "value": {
+            "type": "text",
+            "maxWords": 3
+          }
+        },
+        "required": [
+          "key",
+          "value"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "stageArt": {
+      "type": "media",
+      "assetRoles": [
+        "illustration.workflow-stage-source",
+        "illustration.generated"
+      ]
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "pinned-scrub-timeline"
+    ],
+    "reducedMotionFallback": {
+      "pinned-scrub-timeline": "scrub-true-no-smoothing"
+    }
+  },
+  "generatedAssetRoles": [
+    "illustration.generated"
+  ],
+  "responsive": {
+    "desktop": "2 cols (steps | stage), pinned for 5.2 viewport heights",
+    "mobile": "stage above, steps as 6-col progress strip, descriptions below",
+    "evidence": {
+      "cite": "public/assets/css/site.css:656-668",
+      "expect": ".move__grid{grid-template-columns:1fr;gap:18px}"
+    }
+  },
+  "heightNote": "Measured 5580px at 1440 including the 4680px pin spacer (pin start 2888, end 7568). It is one semantic unit (one workflow walkthrough) and holds 31.7% of the page, below the 50% share warning.",
+  "contentRequired": [
+    "eyebrow",
+    "eyebrowIndex",
+    "headline",
+    "headlineAccent",
+    "lede",
+    "meta",
+    "stageArt",
+    "steps"
+  ]
+}

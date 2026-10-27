@@ -1,0 +1,4 @@
+{
+  "$description": "Reviewed exceptions for extraction/wrapper_gate.py. Empty: at 1440px no section trips the gate (hero 900px; largest in-flow section features.pinned-workflow 5580px incl. its pin spacer = 31.7% of the page). Entry shape: {route, section, kind: hero|share, reviewedBy, justification (>=30 chars), maxHeightPx}. An agent reviewer must write 'agent attestation, not a human sign-off'.",
+  "entries": []
+}

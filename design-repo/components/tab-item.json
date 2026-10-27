@@ -1,0 +1,19 @@
+{
+  "id": "component.tab-item",
+  "description": "Platform tab with number, title, description and 7s progress bar.",
+  "props": {
+    "number": "text",
+    "title": "text",
+    "description": "text"
+  },
+  "tokensUsed": [
+    "font.mono",
+    "font.display",
+    "surface.card"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:424",
+    "expect": ".pf"
+  },
+  "retrievalEligible": true
+}

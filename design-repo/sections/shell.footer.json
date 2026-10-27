@@ -1,0 +1,121 @@
+{
+  "id": "shell.footer",
+  "title": "Footer",
+  "source": {
+    "id": "src.footer",
+    "file": "src/components/Footer.jsx",
+    "tag": "footer",
+    "lines": "4",
+    "citation": "src/components/Footer.jsx:4",
+    "marker": "<footer className={\"footer\"}"
+  },
+  "semantic": {
+    "id": "shell.footer",
+    "category": "FOOTER"
+  },
+  "region": "post-main",
+  "themes": [
+    "night-2"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "brandMark": {
+      "type": "media",
+      "assetRoles": [
+        "brand.logo-source",
+        "brand.mark-placeholder"
+      ]
+    },
+    "tagline": {
+      "type": "text",
+      "maxWords": 12
+    },
+    "columns": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "heading": {
+            "type": "text",
+            "maxWords": 2
+          },
+          "links": {
+            "type": "list",
+            "items": {
+              "type": "object",
+              "fields": {
+                "label": {
+                  "type": "text",
+                  "maxWords": 6
+                },
+                "href": {
+                  "type": "href"
+                }
+              },
+              "required": [
+                "label",
+                "href"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 6
+          }
+        },
+        "required": [
+          "heading",
+          "links"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 4
+    },
+    "mark": {
+      "type": "text",
+      "maxWords": 4
+    },
+    "legal": {
+      "type": "text",
+      "maxWords": 4
+    },
+    "legalLinks": {
+      "type": "text",
+      "maxWords": 3
+    },
+    "backToTop": {
+      "type": "text",
+      "maxWords": 4
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "footer-chars"
+    ],
+    "reducedMotionFallback": {
+      "footer-chars": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "brand.mark-placeholder",
+    "url.placeholder"
+  ],
+  "responsive": {
+    "desktop": "top 2 cols, link columns in a row",
+    "mobile": "top 1 col, columns wrap",
+    "evidence": {
+      "cite": "public/assets/css/site.css:679",
+      "expect": ".footer__top{grid-template-columns:1fr}"
+    }
+  },
+  "contentRequired": [
+    "backToTop",
+    "brandMark",
+    "columns",
+    "legal",
+    "legalLinks",
+    "mark",
+    "tagline"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "theme": "light",
+  "appliesToNodeThemes": [
+    "paper",
+    "paper-2"
+  ],
+  "resolves": {
+    "surface": "surface.paper",
+    "surface-alt": "surface.paper-2",
+    "text": "text.primary",
+    "text-secondary": "text.secondary",
+    "accent": "accent.olive",
+    "border": "border.default"
+  }
+}

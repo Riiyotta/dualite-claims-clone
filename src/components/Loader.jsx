@@ -1,0 +1,7 @@
+export default function Loader() {
+  return (
+    <>
+<div className={"loader"} aria-hidden={"true"}>{" "}<div className={"loader__top"}><span>Dualite Claims</span><span className={"loader__file"}>Claim 1187 · RGHS · OPD</span></div>{" "}<div className={"loader__mid"}>{" "}<svg className={"loader__seal"} viewBox={"0 0 132 132"} fill={"none"} stroke={"currentColor"}>{" "}<defs><path id={"sealPath"} d={"M66,66 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"} /></defs>{" "}<circle className={"seal-ink"} cx={"66"} cy={"66"} r={"62"} fill={"currentColor"} stroke={"none"} opacity={".08"} />{" "}<circle className={"seal-draw"} cx={"66"} cy={"66"} r={"62"} strokeWidth={"1.5"} />{" "}<circle className={"seal-draw"} cx={"66"} cy={"66"} r={"38"} strokeWidth={"1"} />{" "}<text className={"seal-text"} fontFamily={"Geist Mono, monospace"} fontSize={"7.6"} fill={"currentColor"} stroke={"none"} opacity={"0"}><textPath href={"#sealPath"} textLength={"292"} lengthAdjust={"spacing"}>DUALITE CLAIMS · CHECKED · SEALED · FILED ·</textPath></text>{" "}<path className={"seal-draw"} d={"M52 67l10 10 20-22"} strokeWidth={"3"} strokeLinecap={"round"} strokeLinejoin={"round"} />{" "}</svg>{" "}<div className={"loader__status"}>Opening claim file</div>{" "}</div>{" "}<div className={"loader__bot"}><span className={"loader__count"}>00</span><span>ECHS · RGHS · OPD · IPD</span></div>{" "}<div className={"loader__bar"}><span></span></div>{" "}<div className={"loader__panels"}><i></i><i></i><i></i><i></i><i></i><i></i></div>{" "}</div>
+    </>
+  );
+}

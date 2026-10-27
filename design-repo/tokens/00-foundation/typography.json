@@ -1,0 +1,183 @@
+{
+  "$description": "Font families, fluid size scale and weights (site.css :root + computed values measured at 1440 and 375).",
+  "fontFamily": {
+    "font.display": {
+      "value": "'Perfectly Nineties','Newsreader',Georgia,'Times New Roman',serif",
+      "files": [
+        "pn-regular.woff2 (400 normal)",
+        "pn-italic.woff2 (400 italic)"
+      ],
+      "evidence": {
+        "cite": "public/assets/css/site.css:35",
+        "expect": "--f-display"
+      }
+    },
+    "font.sans": {
+      "value": "'Geist',system-ui,-apple-system,'Segoe UI',sans-serif",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "evidence": {
+        "cite": "public/assets/css/site.css:36",
+        "expect": "--f-sans"
+      }
+    },
+    "font.mono": {
+      "value": "'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,monospace",
+      "weights": [
+        400,
+        500
+      ],
+      "evidence": {
+        "cite": "public/assets/css/site.css:37",
+        "expect": "--f-mono"
+      }
+    }
+  },
+  "fontSize": {
+    "fs.hero": {
+      "value": "clamp(46px,6.3vw,98px)",
+      "measured": {
+        "1440": "90.72px",
+        "375": "46px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:44",
+        "expect": "--fs-hero"
+      }
+    },
+    "fs.h2": {
+      "value": "clamp(38px,4.45vw,68px)",
+      "measured": {
+        "1440": "64.08px",
+        "375": "38px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:45",
+        "expect": "--fs-h2"
+      }
+    },
+    "fs.h3": {
+      "value": "clamp(24px,2vw,30px)",
+      "measured": {
+        "1440": "28.8px",
+        "375": "24px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:46",
+        "expect": "--fs-h3"
+      }
+    },
+    "fs.lede": {
+      "value": "clamp(17px,1.32vw,20px)",
+      "measured": {
+        "1440": "19.008px",
+        "375": "17px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:47",
+        "expect": "--fs-lede"
+      }
+    },
+    "fs.body": {
+      "value": "clamp(15px,1.12vw,17px)",
+      "measured": {
+        "1440": "16.128px",
+        "375": "15px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:48",
+        "expect": "--fs-body"
+      }
+    },
+    "fs.micro": {
+      "value": "13px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:145",
+        "expect": ".micro{font-size:13px"
+      }
+    },
+    "fs.eyebrow": {
+      "value": "12px",
+      "letterSpacing": ".14em",
+      "evidence": {
+        "cite": "public/assets/css/site.css:98",
+        "expect": "font-size:12px;letter-spacing:.14em"
+      }
+    },
+    "fs.mono-label": {
+      "value": "11px",
+      "note": "most frequent font-size literal in site.css (19 uses); loader top row, metric keys, footer headings",
+      "evidence": {
+        "cite": "public/assets/css/site.css:158",
+        "expect": "font-size:11px"
+      }
+    },
+    "fs.loader-count": {
+      "value": "clamp(64px,9vw,128px)",
+      "measured": {
+        "1440": "128px",
+        "375": "64px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:163",
+        "expect": "clamp(64px,9vw,128px)"
+      }
+    }
+  },
+  "fontWeight": {
+    "weight.regular": {
+      "value": 400,
+      "evidence": {
+        "cite": "public/assets/css/site.css:64",
+        "expect": "font-weight:400"
+      }
+    },
+    "weight.medium": {
+      "value": 500,
+      "evidence": {
+        "cite": "public/assets/css/site.css:117",
+        "expect": "font-weight:500"
+      }
+    },
+    "weight.semibold": {
+      "value": 600,
+      "evidence": {
+        "cite": "public/fonts.css:1-243",
+        "expect": "font-weight: 600"
+      }
+    }
+  },
+  "lineHeight": {
+    "lh.h2": {
+      "value": 1.02,
+      "evidence": {
+        "cite": "public/assets/css/site.css:102",
+        "expect": "line-height:1.02"
+      }
+    },
+    "lh.lede": {
+      "value": 1.55,
+      "evidence": {
+        "cite": "public/assets/css/site.css:106",
+        "expect": "line-height:1.55"
+      }
+    },
+    "lh.body": {
+      "value": 1.62,
+      "evidence": {
+        "cite": "public/assets/css/site.css:107",
+        "expect": "line-height:1.62"
+      }
+    },
+    "lh.loader-count": {
+      "value": 0.8,
+      "evidence": {
+        "cite": "public/assets/css/site.css:163",
+        "expect": "line-height:.8"
+      }
+    }
+  }
+}

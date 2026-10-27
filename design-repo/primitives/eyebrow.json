@@ -1,0 +1,19 @@
+{
+  "id": "primitive.eyebrow",
+  "description": "Mono uppercase label with (0N) index; scrambles in.",
+  "props": {
+    "index": "text",
+    "label": "text"
+  },
+  "tokensUsed": [
+    "font.mono",
+    "fs.eyebrow",
+    "accent.olive",
+    "text.faint"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:98",
+    "expect": ".eyebrow{display:inline-flex"
+  },
+  "retrievalEligible": true
+}

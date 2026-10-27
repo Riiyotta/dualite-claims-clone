@@ -1,0 +1,17 @@
+{
+  "id": "component.sec-head",
+  "description": "Section head: eyebrow + h2 left, aside (mono note or button) right; stacks <=980px.",
+  "props": {
+    "eyebrow": "primitive.eyebrow",
+    "heading": "primitive.heading-display",
+    "aside": "slot"
+  },
+  "tokensUsed": [
+    "layout.sec-head-cols"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:110",
+    "expect": ".sec-head{display:grid"
+  },
+  "retrievalEligible": true
+}

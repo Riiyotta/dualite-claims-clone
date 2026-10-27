@@ -1,0 +1,30 @@
+{
+  "id": "primitive.button",
+  "description": "Square button: primary (olive), ghost (hairline), lime (dark sections), sm (44px). Hover: fill slides up from 101%, label rolls, arrow swaps.",
+  "props": {
+    "variant": [
+      "primary",
+      "ghost",
+      "lime"
+    ],
+    "size": [
+      "md",
+      "sm"
+    ],
+    "magnetic": "bool"
+  },
+  "tokensUsed": [
+    "accent.olive",
+    "surface.night",
+    "button.height",
+    "button.height-sm",
+    "radius.none",
+    "dur.hover",
+    "ease.io"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:117",
+    "expect": ".btn{--bh:56px"
+  },
+  "retrievalEligible": true
+}

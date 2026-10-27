@@ -1,0 +1,43 @@
+{
+  "id": "utility.scroll-progress",
+  "title": "Scroll progress bar",
+  "source": {
+    "id": "src.progress",
+    "file": "src/components/Progress.jsx",
+    "tag": "div",
+    "lines": "4",
+    "citation": "src/components/Progress.jsx:4",
+    "marker": "<div className={\"progress\"}"
+  },
+  "semantic": {
+    "id": "utility.scroll-progress",
+    "category": "UTILITY"
+  },
+  "region": "pre-main",
+  "themes": [
+    "inherit"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": false,
+  "content": {},
+  "motion": {
+    "allowedPatterns": [
+      "progress-scrub"
+    ],
+    "reducedMotionFallback": {
+      "progress-scrub": "hidden"
+    }
+  },
+  "retrievalIneligibleReason": "Fixed 2px reading-progress indicator; decorative runtime UI with no content of its own.",
+  "generatedAssetRoles": [],
+  "measured": {
+    "box": "[0,0,1440,2] fixed z 120; span olive-2 scaleX scrub 0.3",
+    "evidence": {
+      "cite": "public/assets/css/site.css:92",
+      "expect": ".progress{position:fixed"
+    }
+  },
+  "contentRequired": []
+}

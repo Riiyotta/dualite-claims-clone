@@ -1,0 +1,108 @@
+{
+  "id": "product.demo-walkthrough",
+  "title": "Interactive product walkthrough",
+  "source": {
+    "id": "src.demo",
+    "file": "src/components/Demo.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Demo.jsx:4",
+    "marker": "<section className={\"demo\"}"
+  },
+  "semantic": {
+    "id": "product.demo-walkthrough",
+    "category": "PRODUCT_DEMO"
+  },
+  "region": "main",
+  "themes": [
+    "paper-2"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "lede": {
+      "type": "text",
+      "maxWords": 30
+    },
+    "timeline": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "index": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "label": {
+            "type": "text",
+            "maxWords": 3
+          }
+        },
+        "required": [
+          "index",
+          "label"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 7
+    },
+    "artboard": {
+      "type": "media",
+      "assetRoles": [
+        "screenshot.product-ui-source",
+        "image.generated-product-visual"
+      ]
+    },
+    "hint": {
+      "type": "text",
+      "maxWords": 12
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tilt-scrub-autocycle"
+    ],
+    "reducedMotionFallback": {
+      "tilt-scrub-autocycle": "static-first-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "image.generated-product-visual"
+  ],
+  "responsive": {
+    "desktop": "1080 artboard scaled to stage width",
+    "mobile": "artboard scaled to ~298px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:414",
+      "expect": ".scaler"
+    }
+  },
+  "contentRequired": [
+    "artboard",
+    "eyebrow",
+    "eyebrowIndex",
+    "headline",
+    "headlineAccent",
+    "hint",
+    "lede",
+    "timeline"
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "$description": "Closed list of what an AI generator may set. Hand-maintained; verify_all.py checks parity against sections/, primitives/, components/, the schema node properties, assets/asset-roles.json and motion patterns.",
+  "version": "1.0.0",
+  "nodeProperties": [
+    "content",
+    "motion",
+    "region",
+    "retrievalEligible",
+    "section",
+    "style",
+    "theme",
+    "variant"
+  ],
+  "sections": {
+    "content.problem-costs": {
+      "category": "PROBLEM",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "scrub-words",
+        "cost-scramble"
+      ]
+    },
+    "conversion.demo-form": {
+      "category": "CTA_CONVERSION",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "endpoint.lead-source",
+        "endpoint.placeholder"
+      ],
+      "motionPatterns": [
+        "form-feedback",
+        "reveal-up",
+        "stagger-children"
+      ]
+    },
+    "editorial.case-study": {
+      "category": "EDITORIAL",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "stagger-children"
+      ]
+    },
+    "faq.accordion": {
+      "category": "FAQ",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "accordion-height",
+        "reveal-fade"
+      ]
+    },
+    "features.pinned-workflow": {
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "illustration.generated",
+        "illustration.workflow-stage-source"
+      ],
+      "motionPatterns": [
+        "pinned-scrub-timeline"
+      ]
+    },
+    "features.platform-tabs": {
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "image.generated-product-visual",
+        "screenshot.platform-source"
+      ],
+      "motionPatterns": [
+        "tabs-autoplay",
+        "reveal-up"
+      ]
+    },
+    "features.reconciliation": {
+      "category": "FEATURES",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "recon-board-timeline",
+        "stagger-children"
+      ]
+    },
+    "hero.claims-intro": {
+      "category": "HERO",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "illustration.generated",
+        "illustration.hero-scene-source"
+      ],
+      "motionPatterns": [
+        "hero-intro-stagger",
+        "status-ticker-scramble"
+      ]
+    },
+    "metrics.results-band": {
+      "category": "METRICS",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "clip-reveal-scrub",
+        "reveal-up"
+      ]
+    },
+    "product.demo-walkthrough": {
+      "category": "PRODUCT_DEMO",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "image.generated-product-visual",
+        "screenshot.product-ui-source"
+      ],
+      "motionPatterns": [
+        "tilt-scrub-autocycle"
+      ]
+    },
+    "proof.quote-logos": {
+      "category": "SOCIAL_PROOF",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "logo.customer-placeholder",
+        "logo.customer-source"
+      ],
+      "motionPatterns": [
+        "quote-words",
+        "reveal-fade"
+      ]
+    },
+    "proof.video-story": {
+      "category": "SOCIAL_PROOF",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "image.generated-poster",
+        "image.story-poster-source",
+        "video.generated-loop",
+        "video.testimonial-source",
+        "video.user-supplied"
+      ],
+      "motionPatterns": [
+        "video-play-follow",
+        "reveal-up"
+      ]
+    },
+    "runtime.intro-loader": {
+      "category": "RUNTIME",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "mark.seal-generic",
+        "mark.seal-source"
+      ],
+      "motionPatterns": [
+        "intro-loader-seal",
+        "none"
+      ]
+    },
+    "runtime.mobile-menu": {
+      "category": "RUNTIME",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "menu-clip-wipe"
+      ]
+    },
+    "shell.footer": {
+      "category": "FOOTER",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "brand.logo-source",
+        "brand.mark-placeholder"
+      ],
+      "motionPatterns": [
+        "footer-chars"
+      ]
+    },
+    "shell.navbar": {
+      "category": "SHELL",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "brand.logo-source",
+        "brand.mark-placeholder"
+      ],
+      "motionPatterns": [
+        "nav-state"
+      ]
+    },
+    "trust.guarantees": {
+      "category": "TRUST",
+      "retrievalEligible": true,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [
+        "illustration.generated",
+        "video.generated-loop",
+        "video.trust-animation-source"
+      ],
+      "motionPatterns": [
+        "frame-clip-video"
+      ]
+    },
+    "utility.grain-overlay": {
+      "category": "UTILITY",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "grain-keyframes",
+        "none"
+      ]
+    },
+    "utility.scroll-progress": {
+      "category": "UTILITY",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "progress-scrub"
+      ]
+    },
+    "utility.skip-link": {
+      "category": "UTILITY",
+      "retrievalEligible": false,
+      "settable": [
+        "variant",
+        "theme",
+        "content",
+        "motion",
+        "style"
+      ],
+      "assetRoles": [],
+      "motionPatterns": [
+        "none"
+      ]
+    }
+  },
+  "primitives": [
+    "primitive.button",
+    "primitive.chip",
+    "primitive.eyebrow",
+    "primitive.heading-display",
+    "primitive.input-field",
+    "primitive.mono-label",
+    "primitive.play-button",
+    "primitive.roll-text",
+    "primitive.text-body",
+    "primitive.text-link"
+  ],
+  "components": {
+    "component.cost-card": {
+      "retrievalEligible": true
+    },
+    "component.fact": {
+      "retrievalEligible": true
+    },
+    "component.faq-item": {
+      "retrievalEligible": true
+    },
+    "component.form-feedback": {
+      "retrievalEligible": false
+    },
+    "component.guarantee": {
+      "retrievalEligible": true
+    },
+    "component.logo-lockup": {
+      "retrievalEligible": true
+    },
+    "component.metric": {
+      "retrievalEligible": true
+    },
+    "component.recon-dashboard": {
+      "retrievalEligible": true
+    },
+    "component.recon-source": {
+      "retrievalEligible": true
+    },
+    "component.scaler": {
+      "retrievalEligible": true
+    },
+    "component.seal-mark": {
+      "retrievalEligible": true
+    },
+    "component.sec-head": {
+      "retrievalEligible": true
+    },
+    "component.stage-frame": {
+      "retrievalEligible": true
+    },
+    "component.step-item": {
+      "retrievalEligible": true
+    },
+    "component.tab-item": {
+      "retrievalEligible": true
+    }
+  },
+  "assetRoles": [
+    "brand.logo-source",
+    "brand.mark-placeholder",
+    "copy.original",
+    "endpoint.lead-source",
+    "endpoint.placeholder",
+    "illustration.generated",
+    "illustration.hero-scene-source",
+    "illustration.workflow-stage-source",
+    "image.generated-poster",
+    "image.generated-product-visual",
+    "image.story-poster-source",
+    "logo.customer-placeholder",
+    "logo.customer-source",
+    "mark.seal-generic",
+    "mark.seal-source",
+    "person.fictional",
+    "rating.placeholder",
+    "screenshot.platform-source",
+    "screenshot.product-ui-source",
+    "url.placeholder",
+    "video.generated-loop",
+    "video.testimonial-source",
+    "video.trust-animation-source",
+    "video.user-supplied"
+  ],
+  "motionPatterns": [
+    "accordion-height",
+    "clip-reveal-scrub",
+    "cost-scramble",
+    "eyebrow-scramble",
+    "footer-chars",
+    "form-feedback",
+    "frame-clip-video",
+    "grain-keyframes",
+    "heading-split-lines",
+    "hero-intro-stagger",
+    "intro-loader-seal",
+    "menu-clip-wipe",
+    "nav-state",
+    "none",
+    "pinned-scrub-timeline",
+    "progress-scrub",
+    "quote-words",
+    "recon-board-timeline",
+    "reveal-fade",
+    "reveal-up",
+    "scrub-words",
+    "stagger-children",
+    "status-ticker-scramble",
+    "tabs-autoplay",
+    "tilt-scrub-autocycle",
+    "video-play-follow"
+  ]
+}

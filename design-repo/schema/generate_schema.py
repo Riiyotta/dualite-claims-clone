@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+"""Derive schema/pagespec.schema.json (JSON Schema Draft-07) from the section contracts,
+templates, asset-role registry and motion patterns. Deterministic: verify_all.py regenerates it
+in memory and fails if the file on disk differs (schema/contract parity).
+
+    python3 schema/generate_schema.py           # print diff status
+    python3 schema/generate_schema.py --write   # rewrite schema/pagespec.schema.json
+"""
+import json, sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+PAGESPEC_VERSION = "1.0.0"
+NODE_THEMES = ["paper", "paper-2", "night", "night-2", "inherit"]
+REGIONS = ["pre-main", "main", "post-main"]
+STYLE_PROPS = ["surface", "accent", "text", "paddingBlock", "displayFont"]
+
+
+def load(rel):
+    return json.loads((ROOT / rel).read_text())
+
+
+def sections():
+    return {json.loads(p.read_text())["id"]: json.loads(p.read_text()) for p in sorted((ROOT / "sections").glob("*.json"))}
+
+
+def field_schema(f):
+    t = f["type"]
+    if t == "text":
+        return {"type": "string", "minLength": 1}
+    if t == "integer":
+        return {"type": "integer", "minimum": f["min"], "maximum": f["max"]}
+    if t == "href":
+        return {"type": "string", "minLength": 1, "pattern": "^(#|/|https?://|mailto:)"}
+    if t == "email":
+        return {"type": "string", "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"}
+    if t == "boolean":
+        return {"type": "boolean"}
+    if t == "enum":
+        return {"type": "string", "enum": f["values"]}
+    if t == "media":
+        return {"type": "object", "additionalProperties": False, "required": ["assetRole"],
+                "properties": {"assetRole": {"type": "string", "enum": f["assetRoles"]}, "alt": {"type": "string"}, "src": {"type": "string", "minLength": 1}}}
+    if t == "object":
+        return {"type": "object", "additionalProperties": False, "required": f["required"],
+                "properties": {k: field_schema(v) for k, v in f["fields"].items()}}
+    if t == "list":
+        return {"type": "array", "minItems": f["minItems"], "maxItems": f["maxItems"], "items": field_schema(f["items"])}
+    raise ValueError(f"unknown field type {t}")
+
+
+def build():
+    secs = sections()
+    tpls = load("templates/templates.json")["templates"]
+    patterns = load("tokens/00-foundation/motion-patterns.json")["patterns"]
+    fallbacks = sorted({p["reducedMotionFallback"] for p in patterns.values()})
+    defs, branches = {}, []
+    for sid, s in secs.items():
+        key = "content." + sid
+        defs[key] = {"type": "object", "additionalProperties": False, "required": s["contentRequired"],
+                     "properties": {k: field_schema(v) for k, v in s["content"].items()}}
+        branches.append({"if": {"properties": {"section": {"const": sid}}},
+                         "then": {"properties": {
+                             "variant": {"enum": s["variants"]},
+                             "region": {"const": s["region"]},
+                             "theme": {"enum": s["themes"]},
+                             "retrievalEligible": {"const": s["retrievalEligible"]},
+                             "content": {"$ref": "#/definitions/" + key},
+                             "motion": {"properties": {"pattern": {"enum": s["motion"]["allowedPatterns"]}}}}}})
+    defs["motion"] = {"type": "object", "additionalProperties": False, "required": ["pattern", "reducedMotionFallback"],
+                      "properties": {"pattern": {"type": "string", "enum": sorted(patterns)},
+                                     "reducedMotionFallback": {"type": "string", "enum": fallbacks}}}
+    defs["style"] = {"type": "object", "additionalProperties": False, "minProperties": 1,
+                     "description": "Token references only (ids from tokens/llm/token-catalog.json); membership, raw values and theme combos are enforced by semantic_validate.py.",
+                     "properties": {p: {"type": "string", "minLength": 1} for p in STYLE_PROPS}}
+    defs["node"] = {"type": "object", "additionalProperties": False,
+                    "required": ["section", "variant", "region", "theme", "retrievalEligible", "content", "motion"],
+                    "properties": {"section": {"type": "string", "enum": sorted(secs)}, "variant": {"type": "string"},
+                                   "region": {"type": "string", "enum": REGIONS}, "theme": {"type": "string", "enum": NODE_THEMES},
+                                   "retrievalEligible": {"type": "boolean"}, "content": {"type": "object"},
+                                   "motion": {"$ref": "#/definitions/motion"}, "style": {"$ref": "#/definitions/style"}},
+                    "allOf": branches}
+    return {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "https://design-repo.example/dualite-claims-clone/pagespec.schema.json",
+        "title": "PageSpec (dualite-claims-clone design-repo)",
+        "description": "GENERATED by schema/generate_schema.py from sections/, templates/, assets/ and motion patterns. Do not hand-edit.",
+        "type": "object", "additionalProperties": False,
+        "required": ["pageSpecVersion", "mode", "template", "route", "meta", "nodes"],
+        "properties": {
+            "pageSpecVersion": {"type": "string", "const": PAGESPEC_VERSION},
+            "mode": {"type": "string", "enum": ["reference", "generated"],
+                     "description": "reference = faithful reconstruction of the source; generated = new page that must carry no source identity or content."},
+            "template": {"type": "string", "enum": sorted(tpls)},
+            "route": {"type": "string", "pattern": "^/"},
+            "meta": {"type": "object", "additionalProperties": False, "required": ["title", "brandName", "isFictionalBrand"],
+                     "properties": {"title": {"type": "string", "minLength": 1}, "description": {"type": "string"},
+                                    "brandName": {"type": "string", "minLength": 1}, "isFictionalBrand": {"type": "boolean"}}},
+            "nodes": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/node"}},
+        },
+        "definitions": defs,
+    }
+
+
+def dump(obj):
+    return json.dumps(obj, indent=2, ensure_ascii=False) + "\n"
+
+
+if __name__ == "__main__":
+    text = dump(build())
+    target = ROOT / "schema/pagespec.schema.json"
+    if "--write" in sys.argv:
+        target.write_text(text)
+        print("wrote schema/pagespec.schema.json")
+    else:
+        same = target.exists() and target.read_text() == text
+        print("schema in sync with contracts" if same else "schema OUT OF SYNC with contracts")
+        sys.exit(0 if same else 1)

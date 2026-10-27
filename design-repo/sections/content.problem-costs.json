@@ -1,0 +1,113 @@
+{
+  "id": "content.problem-costs",
+  "title": "Problem statement and cost cards",
+  "source": {
+    "id": "src.problem",
+    "file": "src/components/Problem.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Problem.jsx:4",
+    "marker": "<section className={\"problem\"}"
+  },
+  "semantic": {
+    "id": "content.problem-costs",
+    "category": "PROBLEM"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "statement": {
+      "type": "text",
+      "maxWords": 40
+    },
+    "statementAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "costs": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "key": {
+            "type": "text",
+            "maxWords": 2
+          },
+          "index": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "value": {
+            "type": "text",
+            "maxWords": 3
+          },
+          "unit": {
+            "type": "text",
+            "maxWords": 2
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 20
+          }
+        },
+        "required": [
+          "key",
+          "index",
+          "value",
+          "description"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 4
+    },
+    "note": {
+      "type": "text",
+      "maxWords": 24
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scrub-words",
+      "cost-scramble"
+    ],
+    "reducedMotionFallback": {
+      "scrub-words": "final-state",
+      "cost-scramble": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "copy.original",
+    "rating.placeholder"
+  ],
+  "responsive": {
+    "desktop": "4 cost cards in a row",
+    "wide": "<=1180px 2x2",
+    "mobile": "<=640px 1 col",
+    "evidence": {
+      "cite": "public/assets/css/site.css:684-690",
+      "expect": ".costs{grid-template-columns:1fr}"
+    }
+  },
+  "contentRequired": [
+    "costs",
+    "eyebrow",
+    "eyebrowIndex",
+    "note",
+    "statement",
+    "statementAccent"
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "id": "features.reconciliation",
+  "title": "Reconciliation board",
+  "source": {
+    "id": "src.recon",
+    "file": "src/components/Recon.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Recon.jsx:4",
+    "marker": "<section className={\"recon\"}"
+  },
+  "semantic": {
+    "id": "features.reconciliation",
+    "category": "FEATURES"
+  },
+  "region": "main",
+  "themes": [
+    "paper-2"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "lede": {
+      "type": "text",
+      "maxWords": 55
+    },
+    "sources": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "key": {
+            "type": "text",
+            "maxWords": 5
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 5
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 24
+          }
+        },
+        "required": [
+          "key",
+          "title",
+          "description"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "dashboard": {
+      "type": "object",
+      "fields": {
+        "title": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "kpis": {
+          "type": "list",
+          "items": {
+            "type": "object",
+            "fields": {
+              "label": {
+                "type": "text",
+                "maxWords": 3
+              },
+              "value": {
+                "type": "text",
+                "maxWords": 2
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ]
+          },
+          "minItems": 2,
+          "maxItems": 4
+        },
+        "rows": {
+          "type": "list",
+          "items": {
+            "type": "object",
+            "fields": {
+              "claim": {
+                "type": "text",
+                "maxWords": 6
+              },
+              "billed": {
+                "type": "text",
+                "maxWords": 1
+              },
+              "approved": {
+                "type": "text",
+                "maxWords": 1
+              },
+              "credit": {
+                "type": "text",
+                "maxWords": 3
+              },
+              "status": {
+                "type": "text",
+                "maxWords": 8
+              }
+            },
+            "required": [
+              "claim",
+              "billed",
+              "approved",
+              "credit",
+              "status"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 6
+        },
+        "note": {
+          "type": "text",
+          "maxWords": 3
+        }
+      },
+      "required": [
+        "title",
+        "kpis",
+        "rows",
+        "note"
+      ]
+    },
+    "gains": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "index": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 6
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 24
+          }
+        },
+        "required": [
+          "index",
+          "title",
+          "description"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 3
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "recon-board-timeline",
+      "stagger-children"
+    ],
+    "reducedMotionFallback": {
+      "recon-board-timeline": "final-state",
+      "stagger-children": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "image.generated-product-visual",
+    "rating.placeholder"
+  ],
+  "responsive": {
+    "desktop": "sources | wires | dashboard",
+    "wide": "<=1180px stacked, sources 3-up, wires hidden",
+    "tablet": "<=820px sources 1 col, KPIs 2x2, rows card-style",
+    "evidence": {
+      "cite": "public/assets/css/site.css:705-726",
+      "expect": ".recon__board{grid-template-columns:1fr;gap:20px}"
+    }
+  },
+  "contentRequired": [
+    "dashboard",
+    "eyebrow",
+    "eyebrowIndex",
+    "gains",
+    "headline",
+    "headlineAccent",
+    "lede",
+    "sources"
+  ]
+}

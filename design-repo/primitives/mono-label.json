@@ -1,0 +1,17 @@
+{
+  "id": "primitive.mono-label",
+  "description": "Mono 10-12px uppercase label (keys, captions, HUD).",
+  "props": {
+    "text": "text"
+  },
+  "tokensUsed": [
+    "font.mono",
+    "fs.mono-label",
+    "text.muted"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:158",
+    "expect": "font-size:11px"
+  },
+  "retrievalEligible": true
+}

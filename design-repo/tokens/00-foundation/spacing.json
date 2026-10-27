@@ -1,0 +1,67 @@
+{
+  "$description": "Spacing scale = the gap literals that occur 3+ times in site.css (histogram: 6px x13, 8px x11, 14px x8, 16px x6, 12px x6, 26px x5, 22px x5, 10px x5, 18px x4, 28px x3, 24px x3) plus the fluid layout steps.",
+  "tokens": {
+    "space.6": {
+      "value": "6px"
+    },
+    "space.8": {
+      "value": "8px"
+    },
+    "space.10": {
+      "value": "10px"
+    },
+    "space.12": {
+      "value": "12px"
+    },
+    "space.14": {
+      "value": "14px"
+    },
+    "space.16": {
+      "value": "16px"
+    },
+    "space.18": {
+      "value": "18px"
+    },
+    "space.22": {
+      "value": "22px"
+    },
+    "space.24": {
+      "value": "24px"
+    },
+    "space.26": {
+      "value": "26px"
+    },
+    "space.28": {
+      "value": "28px"
+    },
+    "space.gutter": {
+      "value": "clamp(20px,6.67vw,96px)",
+      "measured": {
+        "1440": "96px",
+        "375": "25.0125px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:39",
+        "expect": "--gutter"
+      }
+    },
+    "space.section-y": {
+      "value": "clamp(96px,10vw,152px)",
+      "measured": {
+        "1440": "144px",
+        "375": "96px"
+      },
+      "evidence": {
+        "cite": "public/assets/css/site.css:42",
+        "expect": "--section-y"
+      }
+    },
+    "space.0": {
+      "value": "0"
+    }
+  },
+  "evidence": {
+    "cite": "public/assets/css/site.css:1-739",
+    "expect": "gap:"
+  }
+}

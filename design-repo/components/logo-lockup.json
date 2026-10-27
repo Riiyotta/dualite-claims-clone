@@ -1,0 +1,16 @@
+{
+  "id": "component.logo-lockup",
+  "description": "Customer logo lockup (mark + name).",
+  "props": {
+    "name": "text",
+    "mark": "assetRole"
+  },
+  "tokensUsed": [
+    "text.muted"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:254",
+    "expect": ".logo-lockup"
+  },
+  "retrievalEligible": true
+}

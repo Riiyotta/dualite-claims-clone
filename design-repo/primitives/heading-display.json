@@ -1,0 +1,24 @@
+{
+  "id": "primitive.heading-display",
+  "description": "Display serif heading (h1 hero / h2 section), split-line reveal.",
+  "props": {
+    "level": [
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "text": "text",
+    "dim": "text"
+  },
+  "tokensUsed": [
+    "font.display",
+    "fs.hero",
+    "fs.h2",
+    "lh.h2"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:102",
+    "expect": ".h2{font-size:var(--fs-h2)"
+  },
+  "retrievalEligible": true
+}

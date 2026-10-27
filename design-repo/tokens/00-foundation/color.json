@@ -1,0 +1,189 @@
+{
+  "$description": "Foundation colours: every :root custom property in the original stylesheet (reused verbatim by the clone). No other colour is a token.",
+  "tokens": {
+    "color.paper": {
+      "value": "#F5F0E6",
+      "cssVar": "--paper",
+      "evidence": {
+        "cite": "public/assets/css/site.css:11",
+        "expect": "--paper:#F5F0E6"
+      }
+    },
+    "color.paper-2": {
+      "value": "#EFE8D8",
+      "cssVar": "--paper-2",
+      "evidence": {
+        "cite": "public/assets/css/site.css:12",
+        "expect": "--paper-2:#EFE8D8"
+      }
+    },
+    "color.paper-3": {
+      "value": "#E8DFCB",
+      "cssVar": "--paper-3",
+      "evidence": {
+        "cite": "public/assets/css/site.css:13",
+        "expect": "--paper-3:#E8DFCB"
+      }
+    },
+    "color.card": {
+      "value": "#FFFDF8",
+      "cssVar": "--card",
+      "evidence": {
+        "cite": "public/assets/css/site.css:14",
+        "expect": "--card:#FFFDF8"
+      }
+    },
+    "color.white": {
+      "value": "#FFFFFF",
+      "cssVar": "--white",
+      "evidence": {
+        "cite": "public/assets/css/site.css:15",
+        "expect": "--white:#FFFFFF"
+      }
+    },
+    "color.ink": {
+      "value": "#1E2318",
+      "cssVar": "--ink",
+      "evidence": {
+        "cite": "public/assets/css/site.css:16",
+        "expect": "--ink:#1E2318"
+      }
+    },
+    "color.ink-2": {
+      "value": "#464B3A",
+      "cssVar": "--ink-2",
+      "evidence": {
+        "cite": "public/assets/css/site.css:17",
+        "expect": "--ink-2:#464B3A"
+      }
+    },
+    "color.muted": {
+      "value": "#6A6E5B",
+      "cssVar": "--muted",
+      "evidence": {
+        "cite": "public/assets/css/site.css:18",
+        "expect": "--muted:#6A6E5B"
+      }
+    },
+    "color.faint": {
+      "value": "#8A8C78",
+      "cssVar": "--faint",
+      "evidence": {
+        "cite": "public/assets/css/site.css:19",
+        "expect": "--faint:#8A8C78"
+      }
+    },
+    "color.line": {
+      "value": "#DDD3BF",
+      "cssVar": "--line",
+      "evidence": {
+        "cite": "public/assets/css/site.css:20",
+        "expect": "--line:#DDD3BF"
+      }
+    },
+    "color.line-2": {
+      "value": "#CFC4AB",
+      "cssVar": "--line-2",
+      "evidence": {
+        "cite": "public/assets/css/site.css:21",
+        "expect": "--line-2:#CFC4AB"
+      }
+    },
+    "color.line-soft": {
+      "value": "#EDE6D6",
+      "cssVar": "--line-soft",
+      "evidence": {
+        "cite": "public/assets/css/site.css:22",
+        "expect": "--line-soft:#EDE6D6"
+      }
+    },
+    "color.olive": {
+      "value": "#3D5A2A",
+      "cssVar": "--olive",
+      "evidence": {
+        "cite": "public/assets/css/site.css:23",
+        "expect": "--olive:#3D5A2A"
+      }
+    },
+    "color.olive-2": {
+      "value": "#4E7A35",
+      "cssVar": "--olive-2",
+      "evidence": {
+        "cite": "public/assets/css/site.css:24",
+        "expect": "--olive-2:#4E7A35"
+      }
+    },
+    "color.olive-tint": {
+      "value": "#E3EBD8",
+      "cssVar": "--olive-tint",
+      "evidence": {
+        "cite": "public/assets/css/site.css:25",
+        "expect": "--olive-tint:#E3EBD8"
+      }
+    },
+    "color.night": {
+      "value": "#1B2414",
+      "cssVar": "--night",
+      "evidence": {
+        "cite": "public/assets/css/site.css:26",
+        "expect": "--night:#1B2414"
+      }
+    },
+    "color.night-2": {
+      "value": "#131A0E",
+      "cssVar": "--night-2",
+      "evidence": {
+        "cite": "public/assets/css/site.css:27",
+        "expect": "--night-2:#131A0E"
+      }
+    },
+    "color.night-line": {
+      "value": "#3B4A30",
+      "cssVar": "--night-line",
+      "evidence": {
+        "cite": "public/assets/css/site.css:28",
+        "expect": "--night-line:#3B4A30"
+      }
+    },
+    "color.lime": {
+      "value": "#C5D69A",
+      "cssVar": "--lime",
+      "evidence": {
+        "cite": "public/assets/css/site.css:29",
+        "expect": "--lime:#C5D69A"
+      }
+    },
+    "color.on-night": {
+      "value": "#F1ECDF",
+      "cssVar": "--on-night",
+      "evidence": {
+        "cite": "public/assets/css/site.css:30",
+        "expect": "--on-night:#F1ECDF"
+      }
+    },
+    "color.on-night-2": {
+      "value": "#C9CBB6",
+      "cssVar": "--on-night-2",
+      "evidence": {
+        "cite": "public/assets/css/site.css:31",
+        "expect": "--on-night-2:#C9CBB6"
+      }
+    },
+    "color.amber": {
+      "value": "#B07A1E",
+      "cssVar": "--amber",
+      "evidence": {
+        "cite": "public/assets/css/site.css:32",
+        "expect": "--amber:#B07A1E"
+      }
+    },
+    "color.amber-ink": {
+      "value": "#8A5A12",
+      "cssVar": "--amber-ink",
+      "evidence": {
+        "cite": "public/assets/css/site.css:33",
+        "expect": "--amber-ink:#8A5A12"
+      }
+    }
+  }
+}

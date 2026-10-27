@@ -1,0 +1,20 @@
+{
+  "id": "component.cost-card",
+  "description": "Cost card: key, index, big value + unit, description; olive top bar on hover.",
+  "props": {
+    "key": "text",
+    "value": "text",
+    "unit": "text",
+    "description": "text"
+  },
+  "tokensUsed": [
+    "font.display",
+    "border.default",
+    "accent.olive"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:269",
+    "expect": ".cost"
+  },
+  "retrievalEligible": true
+}

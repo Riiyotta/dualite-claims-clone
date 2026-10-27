@@ -1,0 +1,4 @@
+/* Base, keyframes and component styles come from the original stylesheets linked in index.html
+   (public/assets/css/site.css, hero-scene.css, demo.css). Tailwind adds utilities only. */
+@tailwind components;
+@tailwind utilities;

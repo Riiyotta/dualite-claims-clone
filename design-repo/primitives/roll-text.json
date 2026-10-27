@@ -1,0 +1,16 @@
+{
+  "id": "primitive.roll-text",
+  "description": "Text that rolls up one line on hover (text-shadow clone).",
+  "props": {
+    "text": "text"
+  },
+  "tokensUsed": [
+    "dur.hover",
+    "ease.io"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:128",
+    "expect": ".roll{display:inline-block"
+  },
+  "retrievalEligible": true
+}

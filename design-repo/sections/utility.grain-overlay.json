@@ -1,0 +1,45 @@
+{
+  "id": "utility.grain-overlay",
+  "title": "Grain overlay",
+  "source": {
+    "id": "src.grain",
+    "file": "src/components/Grain.jsx",
+    "tag": "div",
+    "lines": "4",
+    "citation": "src/components/Grain.jsx:4",
+    "marker": "<div className={\"grain\"}"
+  },
+  "semantic": {
+    "id": "utility.grain-overlay",
+    "category": "UTILITY"
+  },
+  "region": "pre-main",
+  "themes": [
+    "inherit"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": false,
+  "content": {},
+  "motion": {
+    "allowedPatterns": [
+      "grain-keyframes",
+      "none"
+    ],
+    "reducedMotionFallback": {
+      "grain-keyframes": "static",
+      "none": "none"
+    }
+  },
+  "retrievalIneligibleReason": "Fixed full-page film-grain texture (SVG turbulence data URI); purely decorative overlay with no content.",
+  "generatedAssetRoles": [],
+  "measured": {
+    "box": "2880x1800 at [-749,-477], fixed z 90, opacity .06, multiply",
+    "evidence": {
+      "cite": "public/assets/css/site.css:89",
+      "expect": ".grain{position:fixed"
+    }
+  },
+  "contentRequired": []
+}

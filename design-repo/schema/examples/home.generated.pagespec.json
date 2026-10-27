@@ -1,0 +1,843 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.home",
+  "route": "/",
+  "meta": {
+    "title": "Fernwick Ledger — carrier invoices, matched and approved",
+    "description": "Generation-safe example: fictional brand, original copy, placeholder assets, URLs and numbers.",
+    "brandName": "Fernwick Ledger",
+    "isFictionalBrand": true
+  },
+  "nodes": [
+    {
+      "section": "utility.skip-link",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "inherit",
+      "retrievalEligible": false,
+      "content": {
+        "label": "Skip to content"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "runtime.intro-loader",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "paper",
+      "retrievalEligible": false,
+      "content": {
+        "brandLabel": "Fernwick Ledger",
+        "fileTag": "Batch 042 · sample file",
+        "sealRingText": "FERNWICK · RECEIVED · VERIFIED · SENT ·",
+        "sealMark": {
+          "assetRole": "mark.seal-generic",
+          "alt": "Round seal with a check"
+        },
+        "statusSteps": [
+          {
+            "atPercent": 0,
+            "text": "Unpacking the batch"
+          },
+          {
+            "atPercent": 30,
+            "text": "Matching each invoice"
+          },
+          {
+            "atPercent": 65,
+            "text": "Stamping approvals"
+          },
+          {
+            "atPercent": 95,
+            "text": "Queued for sign-off"
+          }
+        ],
+        "footLabel": "Invoices · Receipts · Credit notes"
+      },
+      "motion": {
+        "pattern": "intro-loader-seal",
+        "reducedMotionFallback": "skip-entirely"
+      }
+    },
+    {
+      "section": "utility.scroll-progress",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "inherit",
+      "retrievalEligible": false,
+      "content": {},
+      "motion": {
+        "pattern": "progress-scrub",
+        "reducedMotionFallback": "hidden"
+      }
+    },
+    {
+      "section": "utility.grain-overlay",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "inherit",
+      "retrievalEligible": false,
+      "content": {},
+      "motion": {
+        "pattern": "grain-keyframes",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.mark-placeholder",
+          "alt": "Fernwick Ledger"
+        },
+        "productLabel": "Ledger",
+        "links": [
+          {
+            "label": "How it works",
+            "href": "#flow"
+          },
+          {
+            "label": "Features",
+            "href": "#features"
+          },
+          {
+            "label": "Security",
+            "href": "#security"
+          },
+          {
+            "label": "Questions",
+            "href": "#questions"
+          }
+        ],
+        "cta": {
+          "label": "Request a walkthrough",
+          "href": "#walkthrough"
+        }
+      },
+      "motion": {
+        "pattern": "nav-state",
+        "reducedMotionFallback": "state-classes-without-transition"
+      }
+    },
+    {
+      "section": "runtime.mobile-menu",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "night",
+      "retrievalEligible": false,
+      "content": {
+        "links": [
+          {
+            "index": "01",
+            "label": "How it works",
+            "href": "#flow"
+          },
+          {
+            "index": "02",
+            "label": "Features",
+            "href": "#features"
+          },
+          {
+            "index": "03",
+            "label": "Security",
+            "href": "#security"
+          },
+          {
+            "index": "04",
+            "label": "Questions",
+            "href": "#questions"
+          }
+        ],
+        "cta": {
+          "label": "Request a walkthrough",
+          "href": "#walkthrough"
+        },
+        "contactEmail": "hello@fernwick.example"
+      },
+      "motion": {
+        "pattern": "menu-clip-wipe",
+        "reducedMotionFallback": "instant-toggle"
+      }
+    },
+    {
+      "section": "hero.claims-intro",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrow": "Invoice operations · Freight teams",
+        "statusTicker": [
+          "Opening a carrier invoice",
+          "Matching the rate card",
+          "Flagging an overcharge"
+        ],
+        "headline": "Drop the invoice.",
+        "headlineAccent": "Ledger squares it.",
+        "sub": "Fernwick Ledger matches every carrier invoice to its rate card and proof of delivery, flags overcharges, and queues a clean approval for your finance lead. Nothing is paid until a person signs off.",
+        "primaryCta": {
+          "label": "Request a walkthrough",
+          "href": "#walkthrough"
+        },
+        "secondaryCta": {
+          "label": "See a sample batch",
+          "href": "#flow"
+        },
+        "micro": "Illustrative product; numbers on this page are placeholders.",
+        "facts": [
+          {
+            "key": "Documents",
+            "value": "Invoices · PODs"
+          },
+          {
+            "key": "Teams",
+            "value": "Freight finance"
+          },
+          {
+            "key": "Output",
+            "value": "Approval queue"
+          },
+          {
+            "key": "Control",
+            "value": "Person signs off"
+          }
+        ],
+        "scene": {
+          "assetRole": "illustration.generated",
+          "alt": "Line drawing of invoices on a conveyor"
+        }
+      },
+      "motion": {
+        "pattern": "hero-intro-stagger",
+        "reducedMotionFallback": "final-state"
+      },
+      "style": {
+        "accent": "accent.olive",
+        "paddingBlock": "space.0"
+      }
+    },
+    {
+      "section": "proof.quote-logos",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "quote": "“Month-end used to take a week. Now it is an afternoon.”",
+        "attribution": {
+          "name": "Rowan Ashby",
+          "role": "Finance lead, Calder Haulage (fictional)",
+          "isFictional": true
+        },
+        "label": "Example customers (fictional)",
+        "logos": [
+          {
+            "name": "Calder Haulage",
+            "mark": {
+              "assetRole": "logo.customer-placeholder"
+            }
+          },
+          {
+            "name": "Pemberly Cold Chain",
+            "mark": {
+              "assetRole": "logo.customer-placeholder"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "quote-words",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "content.problem-costs",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(01)",
+        "eyebrow": "Why it hurts",
+        "statement": "Carrier invoices arrive in every format imaginable, and each one is keyed in and checked against a rate card by hand, so",
+        "statementAccent": "a single missed surcharge slips through.",
+        "costs": [
+          {
+            "key": "Effort",
+            "index": "01",
+            "value": "XX min",
+            "description": "per invoice spent re-keying lines into the ledger (placeholder)."
+          },
+          {
+            "key": "Leakage",
+            "index": "02",
+            "value": "X.X%",
+            "description": "of spend lost to unnoticed surcharges (placeholder figure)."
+          }
+        ],
+        "note": "Figures are placeholders for layout only and describe no real company."
+      },
+      "motion": {
+        "pattern": "scrub-words",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "metrics.results-band",
+      "variant": "default",
+      "region": "main",
+      "theme": "night",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(02)",
+        "eyebrow": "Illustrative outcome",
+        "headline": "Same invoices.",
+        "headlineAccent": "Fewer surprises.",
+        "aside": "PLACEHOLDER NUMBERS",
+        "metrics": [
+          {
+            "key": "Close time",
+            "value": "X days",
+            "description": "Placeholder value for the month-end close."
+          },
+          {
+            "key": "Overcharges caught",
+            "value": "NN",
+            "description": "Placeholder count of flagged lines."
+          }
+        ],
+        "note": "Every number in this band is a placeholder.",
+        "backgroundNumber": "NN"
+      },
+      "motion": {
+        "pattern": "clip-reveal-scrub",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "features.pinned-workflow",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(03)",
+        "eyebrow": "The flow",
+        "headline": "Forward it,",
+        "headlineAccent": "then relax.",
+        "lede": "Your team forwards the invoice. Ledger handles the matching, the checks and the paperwork, and records how long each step took.",
+        "steps": [
+          {
+            "index": "01",
+            "name": "Collect",
+            "clock": "00:02",
+            "description": "A shared inbox receives every carrier invoice and picks it up straight away."
+          },
+          {
+            "index": "02",
+            "name": "Parse",
+            "clock": "00:05",
+            "description": "Lines, lanes and surcharges are read from the document into structured rows."
+          },
+          {
+            "index": "03",
+            "name": "Match",
+            "clock": "00:09",
+            "description": "Each line is matched to the agreed rate card and the proof of delivery."
+          },
+          {
+            "index": "04",
+            "name": "Flag",
+            "clock": "00:12",
+            "description": "Anything above the agreed rate is highlighted with the reason it failed."
+          },
+          {
+            "index": "05",
+            "name": "Stamp",
+            "clock": "00:15",
+            "description": "Clean invoices get an approval stamp and a reference for the ledger."
+          },
+          {
+            "index": "06",
+            "name": "Queue",
+            "clock": "00:18",
+            "description": "Approved batches wait in a queue until your finance lead signs them off."
+          }
+        ],
+        "meta": [
+          {
+            "key": "Inputs",
+            "value": "PDF, email"
+          },
+          {
+            "key": "Checks",
+            "value": "Rate cards"
+          },
+          {
+            "key": "Review",
+            "value": "Finance lead"
+          }
+        ],
+        "stageArt": {
+          "assetRole": "illustration.generated",
+          "alt": "Invoice moving through six stages"
+        }
+      },
+      "motion": {
+        "pattern": "pinned-scrub-timeline",
+        "reducedMotionFallback": "scrub-true-no-smoothing"
+      }
+    },
+    {
+      "section": "product.demo-walkthrough",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper-2",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(04)",
+        "eyebrow": "Inside Ledger",
+        "headline": "One batch,",
+        "headlineAccent": "end to end.",
+        "lede": "A fictional batch screen showing how a week of carrier invoices becomes one approval queue.",
+        "timeline": [
+          {
+            "index": "01",
+            "label": "Import"
+          },
+          {
+            "index": "02",
+            "label": "Parse"
+          },
+          {
+            "index": "03",
+            "label": "Match"
+          },
+          {
+            "index": "04",
+            "label": "Approve"
+          }
+        ],
+        "artboard": {
+          "assetRole": "image.generated-product-visual",
+          "alt": "Fictional batch screen"
+        },
+        "hint": "Select a stage to jump ahead."
+      },
+      "motion": {
+        "pattern": "tilt-scrub-autocycle",
+        "reducedMotionFallback": "static-first-state"
+      }
+    },
+    {
+      "section": "features.platform-tabs",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(05)",
+        "eyebrow": "Features",
+        "headline": "Three jobs, done.",
+        "headlineDim": "Zero retyping.",
+        "lede": "One place for freight finance: read the invoice, check the rate, and stamp the approval.",
+        "asideCta": {
+          "label": "See it with your invoices",
+          "href": "#walkthrough"
+        },
+        "tabs": [
+          {
+            "number": "01 · READ",
+            "title": "Invoice parsing",
+            "description": "Pulls lines, lanes and surcharges out of any carrier format into clean rows.",
+            "image": {
+              "assetRole": "image.generated-product-visual",
+              "alt": "Fictional parsed invoice"
+            }
+          },
+          {
+            "number": "02 · CHECK",
+            "title": "Rate card matching",
+            "description": "Compares every line with the agreed rate and explains each mismatch.",
+            "image": {
+              "assetRole": "image.generated-product-visual",
+              "alt": "Fictional rate comparison"
+            }
+          },
+          {
+            "number": "03 · APPROVE",
+            "title": "Approval stamps",
+            "description": "Adds a dated approval stamp and ledger reference to clean invoices.",
+            "image": {
+              "assetRole": "image.generated-product-visual",
+              "alt": "Fictional approval stamp"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "tabs-autoplay",
+        "reducedMotionFallback": "static-manual-tabs"
+      }
+    },
+    {
+      "section": "trust.guarantees",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(06)",
+        "eyebrow": "Security",
+        "headline": "Checked first.",
+        "headlineAccent": "Paid second.",
+        "lede": "Speed is pointless if the payment is wrong, so a person reviews each invoice before any money moves.",
+        "media": {
+          "assetRole": "video.generated-loop",
+          "alt": "Abstract loop of a balance settling"
+        },
+        "caption": "Plate 2 · Balance before payment",
+        "guarantees": [
+          {
+            "title": "A person approves",
+            "description": "No invoice is paid until your finance lead approves it."
+          },
+          {
+            "title": "Every change is logged",
+            "description": "Each edit and stamp is recorded with a time and a name."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "frame-clip-video",
+        "reducedMotionFallback": "poster-static"
+      }
+    },
+    {
+      "section": "features.reconciliation",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper-2",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(07)",
+        "eyebrow": "Matching",
+        "headline": "Billed is not owed.",
+        "headlineAccent": "See the gap.",
+        "lede": "Ledger lines up the carrier invoice, the rate card and the delivery record so finance can see what was charged, what was agreed and what is disputed.",
+        "sources": [
+          {
+            "key": "Input 01 · Invoice",
+            "title": "What the carrier charged",
+            "description": "Every line from the carrier invoice, in a consistent shape."
+          },
+          {
+            "key": "Input 02 · Rate card",
+            "title": "What you agreed",
+            "description": "The contracted rate for each lane and surcharge."
+          },
+          {
+            "key": "Input 03 · Delivery",
+            "title": "What actually happened",
+            "description": "Proof of delivery with dates and weights."
+          }
+        ],
+        "dashboard": {
+          "title": "Matching · sample week",
+          "kpis": [
+            {
+              "label": "Charged",
+              "value": "£NN.N"
+            },
+            {
+              "label": "Agreed",
+              "value": "£NN.N"
+            }
+          ],
+          "rows": [
+            {
+              "claim": "Sample invoice A",
+              "billed": "£N,NNN",
+              "approved": "£N,NNN",
+              "credit": "matched",
+              "status": "Clean"
+            },
+            {
+              "claim": "Sample invoice B",
+              "billed": "£N,NNN",
+              "approved": "£N,NNN",
+              "credit": "disputed",
+              "status": "Surcharge above rate"
+            }
+          ],
+          "note": "Placeholder data"
+        },
+        "gains": [
+          {
+            "index": "01",
+            "title": "Catch overcharges early",
+            "description": "Disputed lines are raised the day the invoice arrives."
+          },
+          {
+            "index": "02",
+            "title": "Explain every dispute",
+            "description": "Each flag carries the rate and the delivery record behind it."
+          },
+          {
+            "index": "03",
+            "title": "Close the month faster",
+            "description": "Finance signs off one queue instead of a pile of paper."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "recon-board-timeline",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "proof.video-story",
+      "variant": "default",
+      "region": "main",
+      "theme": "night",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(08)",
+        "eyebrow": "Example story",
+        "headline": "A fictional walkthrough.",
+        "speaker": {
+          "name": "Rowan Ashby",
+          "role": "Finance lead (fictional)",
+          "isFictional": true
+        },
+        "caption": "How an example freight team closed its month quickly.",
+        "captionMeta": "Illustrative video placeholder",
+        "video": {
+          "assetRole": "video.user-supplied"
+        },
+        "poster": {
+          "assetRole": "image.generated-poster",
+          "alt": "Generated poster frame"
+        },
+        "playLabel": "PLAY VIDEO"
+      },
+      "motion": {
+        "pattern": "video-play-follow",
+        "reducedMotionFallback": "static-centered-button"
+      }
+    },
+    {
+      "section": "editorial.case-study",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(09)",
+        "eyebrow": "Example case",
+        "headline": "How a fictional haulier shortened its month-end close.",
+        "columns": [
+          {
+            "title": "Before",
+            "body": "Invoices were keyed in by hand and checked against spreadsheets, so disputes surfaced weeks late."
+          },
+          {
+            "title": "After",
+            "body": "Invoices are parsed, matched and stamped automatically, and finance approves one queue."
+          }
+        ],
+        "results": [
+          {
+            "key": "Close time",
+            "value": "placeholder"
+          },
+          {
+            "key": "Disputes raised",
+            "value": "placeholder"
+          }
+        ],
+        "link": {
+          "label": "Read the example",
+          "href": "#flow"
+        }
+      },
+      "motion": {
+        "pattern": "stagger-children",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "faq.accordion",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(10)",
+        "eyebrow": "Questions",
+        "headline": "Things finance teams",
+        "headlineAccent": "tend to ask.",
+        "intro": "Missing something? Email hello@fernwick.example and someone will reply.",
+        "contactEmail": "hello@fernwick.example",
+        "items": [
+          {
+            "number": "01",
+            "question": "Which invoice formats can Ledger read?",
+            "answer": "PDF, scanned paper and emailed invoices from most carriers. Unusual layouts are routed to a person."
+          },
+          {
+            "number": "02",
+            "question": "Does Ledger pay anything on its own?",
+            "answer": "Never. It prepares an approval queue; a person on your team approves every payment."
+          },
+          {
+            "number": "03",
+            "question": "How long does setup take?",
+            "answer": "This is a fictional product, so the answer here is placeholder copy for layout only."
+          }
+        ],
+        "initiallyOpen": 0
+      },
+      "motion": {
+        "pattern": "accordion-height",
+        "reducedMotionFallback": "instant-toggle"
+      }
+    },
+    {
+      "section": "conversion.demo-form",
+      "variant": "default",
+      "region": "main",
+      "theme": "night",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(11)",
+        "eyebrow": "Walkthrough",
+        "headline": "Watch a week of invoices",
+        "headlineAccent": "clear in minutes.",
+        "lede": "A short session using sample freight invoices. Placeholder form; it submits nowhere.",
+        "steps": [
+          {
+            "index": "01",
+            "text": "Pick a few sample invoices."
+          },
+          {
+            "index": "02",
+            "text": "See them parsed, matched and stamped."
+          }
+        ],
+        "form": {
+          "fields": [
+            {
+              "label": "Name",
+              "kind": "text",
+              "name": "name",
+              "required": true
+            },
+            {
+              "label": "Company",
+              "kind": "text",
+              "name": "company",
+              "required": true
+            },
+            {
+              "label": "Email",
+              "kind": "email",
+              "name": "email",
+              "required": true
+            },
+            {
+              "label": "Invoices per month",
+              "kind": "select",
+              "name": "volume",
+              "options": [
+                "Fewer than 50",
+                "50 or more"
+              ]
+            }
+          ],
+          "submitLabel": "Request a walkthrough",
+          "note": "Placeholder only; nothing is sent.",
+          "endpoint": {
+            "assetRole": "endpoint.placeholder",
+            "url": "https://forms.fernwick.example/walkthrough"
+          }
+        },
+        "success": {
+          "title": "Request received.",
+          "body": "This is placeholder confirmation copy for the success state."
+        }
+      },
+      "motion": {
+        "pattern": "form-feedback",
+        "reducedMotionFallback": "instant-state"
+      },
+      "style": {
+        "surface": "surface.night",
+        "text": "text.on-night",
+        "accent": "accent.lime"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "region": "post-main",
+      "theme": "night-2",
+      "retrievalEligible": true,
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.mark-placeholder",
+          "alt": "Fernwick Ledger"
+        },
+        "tagline": "From carrier invoice to approved payment, checked at each step.",
+        "columns": [
+          {
+            "heading": "PRODUCT",
+            "links": [
+              {
+                "label": "How it works",
+                "href": "#flow"
+              },
+              {
+                "label": "Features",
+                "href": "#features"
+              },
+              {
+                "label": "Security",
+                "href": "#security"
+              }
+            ]
+          },
+          {
+            "heading": "COMPANY",
+            "links": [
+              {
+                "label": "About",
+                "href": "https://fernwick.example/about"
+              },
+              {
+                "label": "Contact",
+                "href": "mailto:hello@fernwick.example"
+              }
+            ]
+          }
+        ],
+        "mark": "Forward & relax.",
+        "legal": "© Fernwick (fictional)",
+        "legalLinks": "PRIVACY · TERMS",
+        "backToTop": "BACK TO TOP ↑"
+      },
+      "motion": {
+        "pattern": "footer-chars",
+        "reducedMotionFallback": "final-state"
+      }
+    }
+  ]
+}

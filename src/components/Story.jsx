@@ -1,0 +1,7 @@
+export default function Story() {
+  return (
+    <>
+<section className={"story"} id={"story"} data-theme={"dark"}>{" "}<div className={"wrap"}>{" "}<div className={"sec-head"}>{" "}<div className={"sec-head__title"}>{" "}<span className={"eyebrow"} data-scramble=""><span className={"eyebrow__idx"}>(08)</span> Customer story</span>{" "}<h2 className={"h2"} data-split="">In his own words.</h2>{" "}</div>{" "}<div className={"sec-head__aside story__who"} data-reveal={"fade"}><span>Mayank Singhi</span><span>MANAGING DIRECTOR, MEDIPULSE</span></div>{" "}</div>{" "}<div className={"story__frame"} data-reveal={"up"}>{" "}<div className={"story__video"} data-story="">{" "}<video src={"/testimonial.mp4"} poster={"/poster.jpg"} preload={"metadata"} playsInline aria-label={"Testimonial video: Mayank Singhi, Managing Director, Medipulse"}></video>{" "}<div className={"story__veil"}></div>{" "}<div className={"story__cap"}><p>How a hospital claims desk cleared its backlog.</p><span>Medipulse · ECHS &amp; RGHS</span></div>{" "}<button className={"story__play"} type={"button"} aria-label={"Play the customer story video"}><svg className={"i-play"} viewBox={"0 0 24 24"} aria-hidden={"true"}><path d={"M6 4l15 8-15 8z"} fill={"currentColor"} /></svg><svg className={"i-pause"} viewBox={"0 0 24 24"} aria-hidden={"true"}><path d={"M6 4h4v16H6zM14 4h4v16h-4z"} fill={"currentColor"} /></svg><span data-play-label="">PLAY STORY</span></button>{" "}<div className={"story__bar"} aria-hidden={"true"}><i></i></div>{" "}</div>{" "}</div>{" "}</div>{" "}</section>
+    </>
+  );
+}

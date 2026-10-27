@@ -1,0 +1,164 @@
+{
+  "id": "runtime.intro-loader",
+  "title": "Intro loader (load screen)",
+  "source": {
+    "id": "src.loader",
+    "file": "src/components/Loader.jsx",
+    "tag": "div",
+    "lines": "4",
+    "citation": "src/components/Loader.jsx:4",
+    "marker": "<div className={\"loader\"}"
+  },
+  "semantic": {
+    "id": "runtime.intro-loader",
+    "category": "RUNTIME"
+  },
+  "region": "pre-main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": false,
+  "content": {
+    "brandLabel": {
+      "type": "text",
+      "maxWords": 4
+    },
+    "fileTag": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "sealRingText": {
+      "type": "text",
+      "maxWords": 10
+    },
+    "sealMark": {
+      "type": "media",
+      "assetRoles": [
+        "mark.seal-source",
+        "mark.seal-generic"
+      ]
+    },
+    "statusSteps": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "atPercent": {
+            "type": "integer",
+            "min": 0,
+            "max": 100
+          },
+          "text": {
+            "type": "text",
+            "maxWords": 6
+          }
+        },
+        "required": [
+          "atPercent",
+          "text"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 6
+    },
+    "footLabel": {
+      "type": "text",
+      "maxWords": 8
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "intro-loader-seal",
+      "none"
+    ],
+    "reducedMotionFallback": {
+      "intro-loader-seal": "skip-entirely",
+      "none": "none"
+    }
+  },
+  "retrievalIneligibleReason": "Preloader overlay: fixed full-viewport intro shown once per session before the page; it is runtime chrome, not page content, so it is excluded from retrieval.",
+  "generatedAssetRoles": [
+    "mark.seal-generic"
+  ],
+  "responsive": {
+    "desktop": "padding 28px var(--gutter) (96px); count 128px/102.4px",
+    "mobile": "padding 28px 25px; count 64px/51.2px (clamp(64px,9vw,128px))",
+    "evidence": {
+      "cite": "public/assets/css/site.css:157-163",
+      "expect": ".js .loader{display:flex"
+    }
+  },
+  "structure": {
+    "root": "div.loader[aria-hidden=true] fixed inset 0, z-index 150, background surface.paper, flex column space-between, padding 28px gutter; display:none unless html.js; display:none under html.no-loader",
+    "topRow": ".loader__top: brand label <span> + .loader__file tag <span>; mono 11px, ls .14em, uppercase, text.muted",
+    "mid": ".loader__mid absolutely centred, flex column gap 28px: svg.loader__seal + .loader__status",
+    "seal": {
+      "viewBox": "0 0 132 132",
+      "size": "132x132",
+      "color": "accent.olive",
+      "parts": [
+        "defs path#sealPath (circle r47 as two arcs) for the ring text",
+        "circle.seal-ink r62 filled currentColor, starts opacity 0 (animates to .12)",
+        "circle.seal-draw r62 stroke 1.5 (drawn)",
+        "circle.seal-draw r38 stroke 1 (drawn)",
+        "text.seal-text Geist Mono 7.6 on textPath href #sealPath, textLength 292, lengthAdjust spacing, starts opacity 0",
+        "path.seal-draw check \"M52 67l10 10 20-22\" stroke 3 round caps/joins (drawn)"
+      ]
+    },
+    "status": ".loader__status mono 12px ls .14em uppercase accent.olive, min-width 22ch, centred; text steps at counter thresholds",
+    "bottomRow": ".loader__bot: .loader__count (display font, clamp(64px,9vw,128px), lh .8, ls -.02em, tabular nums, text.muted; text \"00\"..\"100\") + foot label span",
+    "bar": ".loader__bar absolute bottom, 2px, border.default track; span accent.olive scaleX 0->1 origin left",
+    "panels": ".loader__panels absolute inset 0, flex, 6 x <i> flex:1 surface.night, transform-origin 50% 100%, start scaleY(0); exit translateY(-101%)"
+  },
+  "tokensUsed": [
+    "surface.paper",
+    "surface.night",
+    "text.muted",
+    "accent.olive",
+    "border.default",
+    "font.mono",
+    "font.display",
+    "fs.mono-label",
+    "fs.eyebrow",
+    "fs.loader-count",
+    "lh.loader-count",
+    "loader.seal-size",
+    "loader.panel-count",
+    "loader.bar-height"
+  ],
+  "endState": "display:none; sessionStorage dc-intro=1; smooth scroll started; hero intro already running (started at T0+2780ms)",
+  "gating": {
+    "oncePerSession": true,
+    "skipUnderReducedMotion": true,
+    "safetyNetTimeoutMs": 6000,
+    "evidence": {
+      "cite": "index.html:28-38",
+      "expect": "setTimeout(function(){if(!h.classList.contains"
+    }
+  },
+  "evidence": [
+    {
+      "cite": "src/components/Loader.jsx:4",
+      "expect": "loader__seal"
+    },
+    {
+      "cite": "public/assets/css/site.css:156-168",
+      "expect": ".loader{display:none}"
+    },
+    {
+      "cite": "public/assets/js/site.js:899-944",
+      "expect": "function loader(onReveal)"
+    }
+  ],
+  "contentRequired": [
+    "brandLabel",
+    "fileTag",
+    "footLabel",
+    "sealMark",
+    "sealRingText",
+    "statusSteps"
+  ]
+}

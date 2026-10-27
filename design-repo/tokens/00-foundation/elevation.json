@@ -1,0 +1,40 @@
+{
+  "$description": "Every box-shadow in site.css (each used once; warm-tinted rgba).",
+  "tokens": {
+    "elevation.dashboard": {
+      "value": "0 30px 60px rgba(40,40,20,.12)",
+      "evidence": {
+        "cite": "public/assets/css/site.css:479",
+        "expect": "0 30px 60px rgba(40,40,20,.12)"
+      }
+    },
+    "elevation.doc": {
+      "value": "0 20px 40px rgba(60,50,20,.14)",
+      "evidence": {
+        "cite": "public/assets/css/site.css:397",
+        "expect": "0 20px 40px rgba(60,50,20,.14)"
+      }
+    },
+    "elevation.card": {
+      "value": "0 14px 28px rgba(60,50,20,.1)",
+      "evidence": {
+        "cite": "public/assets/css/site.css:377",
+        "expect": "0 14px 28px"
+      }
+    },
+    "elevation.scan-glow": {
+      "value": "0 0 18px 4px rgba(78,122,53,.35)",
+      "evidence": {
+        "cite": "public/assets/css/site.css:357",
+        "expect": "0 0 18px 4px rgba(78,122,53,.35)"
+      }
+    },
+    "elevation.focus-ring": {
+      "value": "0 0 0 3px var(--olive-tint)",
+      "evidence": {
+        "cite": "public/assets/css/site.css:591",
+        "expect": "0 0 0 3px var(--olive-tint)"
+      }
+    }
+  }
+}

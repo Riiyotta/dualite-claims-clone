@@ -1,0 +1,18 @@
+{
+  "id": "component.recon-source",
+  "description": "Reconciliation source card.",
+  "props": {
+    "key": "text",
+    "title": "text",
+    "description": "text"
+  },
+  "tokensUsed": [
+    "font.mono",
+    "accent.olive"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:469",
+    "expect": ".rsrc"
+  },
+  "retrievalEligible": true
+}

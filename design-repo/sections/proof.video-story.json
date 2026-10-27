@@ -1,0 +1,120 @@
+{
+  "id": "proof.video-story",
+  "title": "Customer video story",
+  "source": {
+    "id": "src.story",
+    "file": "src/components/Story.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Story.jsx:4",
+    "marker": "<section className={\"story\"}"
+  },
+  "semantic": {
+    "id": "proof.video-story",
+    "category": "SOCIAL_PROOF"
+  },
+  "region": "main",
+  "themes": [
+    "night"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "speaker": {
+      "type": "object",
+      "fields": {
+        "name": {
+          "type": "text",
+          "maxWords": 4
+        },
+        "role": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "isFictional": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "role"
+      ]
+    },
+    "caption": {
+      "type": "text",
+      "maxWords": 10
+    },
+    "captionMeta": {
+      "type": "text",
+      "maxWords": 6
+    },
+    "video": {
+      "type": "media",
+      "assetRoles": [
+        "video.testimonial-source",
+        "video.user-supplied",
+        "video.generated-loop"
+      ]
+    },
+    "poster": {
+      "type": "media",
+      "assetRoles": [
+        "image.story-poster-source",
+        "image.generated-poster"
+      ]
+    },
+    "playLabel": {
+      "type": "text",
+      "maxWords": 2
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "video-play-follow",
+      "reveal-up"
+    ],
+    "reducedMotionFallback": {
+      "video-play-follow": "static-centered-button",
+      "reveal-up": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "video.user-supplied",
+    "video.generated-loop",
+    "image.generated-poster",
+    "person.fictional"
+  ],
+  "responsive": {
+    "desktop": "1226x690 frame, 128px play button follows cursor",
+    "mobile": "303x170 frame, 88px play button, caption meta hidden",
+    "evidence": {
+      "cite": "public/assets/css/site.css:682",
+      "expect": ".story__play{width:88px;height:88px"
+    }
+  },
+  "contentRequired": [
+    "caption",
+    "captionMeta",
+    "eyebrow",
+    "eyebrowIndex",
+    "headline",
+    "playLabel",
+    "poster",
+    "speaker",
+    "video"
+  ]
+}

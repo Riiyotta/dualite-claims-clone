@@ -1,0 +1,18 @@
+{
+  "id": "component.step-item",
+  "description": "Workflow step row (index, name, clock); active/done states.",
+  "props": {
+    "index": "text",
+    "name": "text",
+    "clock": "text"
+  },
+  "tokensUsed": [
+    "font.mono",
+    "accent.olive"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:315",
+    "expect": ".step"
+  },
+  "retrievalEligible": true
+}

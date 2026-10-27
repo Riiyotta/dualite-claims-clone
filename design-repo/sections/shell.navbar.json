@@ -1,0 +1,115 @@
+{
+  "id": "shell.navbar",
+  "title": "Navigation bar",
+  "source": {
+    "id": "src.nav",
+    "file": "src/components/Nav.jsx",
+    "tag": "header",
+    "lines": "4",
+    "citation": "src/components/Nav.jsx:4",
+    "marker": "<header className={\"nav\"}"
+  },
+  "semantic": {
+    "id": "shell.navbar",
+    "category": "SHELL"
+  },
+  "region": "pre-main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "brandMark": {
+      "type": "media",
+      "assetRoles": [
+        "brand.logo-source",
+        "brand.mark-placeholder"
+      ]
+    },
+    "productLabel": {
+      "type": "text",
+      "maxWords": 2
+    },
+    "links": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 6
+          },
+          "href": {
+            "type": "href"
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 7
+    },
+    "cta": {
+      "type": "object",
+      "fields": {
+        "label": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "href": {
+          "type": "href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "nav-state"
+    ],
+    "reducedMotionFallback": {
+      "nav-state": "state-classes-without-transition"
+    }
+  },
+  "generatedAssetRoles": [
+    "brand.mark-placeholder",
+    "url.placeholder"
+  ],
+  "responsive": {
+    "desktop": "grid 3 cols; links + CTA visible; 76px",
+    "mobile": "<=980px: links + CTA hidden, burger 44x44 shown, 64px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:636-640",
+      "expect": ".nav__links,.nav__right .btn{display:none}"
+    }
+  },
+  "measured": {
+    "box1440": [
+      0,
+      0,
+      1440,
+      76
+    ],
+    "box375": [
+      0,
+      0,
+      375,
+      64
+    ],
+    "position": "fixed"
+  },
+  "contentRequired": [
+    "brandMark",
+    "cta",
+    "links",
+    "productLabel"
+  ]
+}

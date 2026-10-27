@@ -1,0 +1,19 @@
+{
+  "id": "component.metric",
+  "description": "Metric with odometer value and draw arrow on night surface.",
+  "props": {
+    "key": "text",
+    "value": "text",
+    "description": "text"
+  },
+  "tokensUsed": [
+    "font.display",
+    "text.on-night-2",
+    "border.night"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:293",
+    "expect": ".metric"
+  },
+  "retrievalEligible": true
+}

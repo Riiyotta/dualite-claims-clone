@@ -1,0 +1,7 @@
+export default function Nav() {
+  return (
+    <>
+<header className={"nav"} id={"nav"}>{" "}<div className={"wrap nav__in"}>{" "}<a href={"#top"} className={"brand"} aria-label={"Dualite Claims, back to top"}>{" "}<span className={"brand__logo"}><img src={"/logo-dark.png"} alt={"Dualite"} width={"92"} height={"22"} /><img src={"/logo-light.png"} alt={""} aria-hidden={"true"} width={"92"} height={"22"} /></span>{" "}<span className={"brand__rule"}></span>{" "}<span className={"brand__name"}>Claims</span>{" "}</a>{" "}<nav className={"nav__links"} aria-label={"Primary"}>{" "}<a href={"#movement"} data-nav={"movement"}><span className={"roll"}><span>How it works</span></span></a>{" "}<a href={"#platform"} data-nav={"platform"}><span className={"roll"}><span>Platform</span></span></a>{" "}<a href={"#results"} data-nav={"results"}><span className={"roll"}><span>Results</span></span></a>{" "}<a href={"#trust"} data-nav={"trust"}><span className={"roll"}><span>Trust</span></span></a>{" "}<a href={"#faq"} data-nav={"faq"}><span className={"roll"}><span>FAQ</span></span></a>{" "}<a href={"/blog/"}><span className={"roll"}><span>Blog</span></span></a>{" "}</nav>{" "}<div className={"nav__right"}>{" "}<a href={"#demo"} className={"btn btn--primary btn--sm"} data-magnetic=""><span className={"roll"}><span>Book a demo</span></span></a>{" "}<button className={"burger"} type={"button"} aria-label={"Open menu"} aria-expanded={"false"} aria-controls={"mmenu"}><span></span><span></span></button>{" "}</div>{" "}</div>{" "}</header>
+    </>
+  );
+}

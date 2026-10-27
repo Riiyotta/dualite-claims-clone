@@ -1,0 +1,112 @@
+{
+  "id": "metrics.results-band",
+  "title": "Results metrics band",
+  "source": {
+    "id": "src.results",
+    "file": "src/components/Results.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Results.jsx:4",
+    "marker": "<section className={\"results\"}"
+  },
+  "semantic": {
+    "id": "metrics.results-band",
+    "category": "METRICS"
+  },
+  "region": "main",
+  "themes": [
+    "night"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "aside": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "metrics": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "key": {
+            "type": "text",
+            "maxWords": 4
+          },
+          "value": {
+            "type": "text",
+            "maxWords": 3
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 14
+          }
+        },
+        "required": [
+          "key",
+          "value",
+          "description"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 3
+    },
+    "note": {
+      "type": "text",
+      "maxWords": 16
+    },
+    "backgroundNumber": {
+      "type": "text",
+      "maxWords": 1
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "clip-reveal-scrub",
+      "reveal-up"
+    ],
+    "reducedMotionFallback": {
+      "clip-reveal-scrub": "final-state",
+      "reveal-up": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "rating.placeholder"
+  ],
+  "responsive": {
+    "desktop": "3 metrics in a row",
+    "mobile": "1 col, bg number hidden <640px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:655",
+      "expect": ".metrics{grid-template-columns:1fr}"
+    }
+  },
+  "contentRequired": [
+    "aside",
+    "backgroundNumber",
+    "eyebrow",
+    "eyebrowIndex",
+    "headline",
+    "headlineAccent",
+    "metrics",
+    "note"
+  ]
+}

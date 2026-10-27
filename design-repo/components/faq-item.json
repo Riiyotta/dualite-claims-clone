@@ -1,0 +1,19 @@
+{
+  "id": "component.faq-item",
+  "description": "Question/answer row with round +/- icon; toggles independently.",
+  "props": {
+    "number": "text",
+    "question": "text",
+    "answer": "text"
+  },
+  "tokensUsed": [
+    "font.display",
+    "radius.circle",
+    "accent.olive"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:562",
+    "expect": ".qa"
+  },
+  "retrievalEligible": true
+}

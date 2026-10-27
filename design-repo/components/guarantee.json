@@ -1,0 +1,17 @@
+{
+  "id": "component.guarantee",
+  "description": "Guarantee item: title + description.",
+  "props": {
+    "title": "text",
+    "description": "text"
+  },
+  "tokensUsed": [
+    "fs.body",
+    "text.secondary"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:456",
+    "expect": ".g"
+  },
+  "retrievalEligible": true
+}

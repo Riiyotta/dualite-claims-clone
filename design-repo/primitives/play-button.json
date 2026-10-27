@@ -1,0 +1,18 @@
+{
+  "id": "primitive.play-button",
+  "description": "Circular lime play button with mono label.",
+  "props": {
+    "label": "text"
+  },
+  "tokensUsed": [
+    "accent.lime",
+    "surface.night",
+    "play.size",
+    "radius.circle"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:527",
+    "expect": ".story__play"
+  },
+  "retrievalEligible": true
+}

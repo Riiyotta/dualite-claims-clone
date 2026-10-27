@@ -1,0 +1,128 @@
+{
+  "id": "features.platform-tabs",
+  "title": "Platform capability tabs",
+  "source": {
+    "id": "src.platform",
+    "file": "src/components/Platform.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Platform.jsx:4",
+    "marker": "<section className={\"platform\"}"
+  },
+  "semantic": {
+    "id": "features.platform-tabs",
+    "category": "FEATURES"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 4
+    },
+    "headlineDim": {
+      "type": "text",
+      "maxWords": 3
+    },
+    "lede": {
+      "type": "text",
+      "maxWords": 30
+    },
+    "asideCta": {
+      "type": "object",
+      "fields": {
+        "label": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "href": {
+          "type": "href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    },
+    "tabs": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "number": {
+            "type": "text",
+            "maxWords": 3
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 5
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 50
+          },
+          "image": {
+            "type": "media",
+            "assetRoles": [
+              "screenshot.platform-source",
+              "image.generated-product-visual"
+            ]
+          }
+        },
+        "required": [
+          "number",
+          "title",
+          "description",
+          "image"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 4
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tabs-autoplay",
+      "reveal-up"
+    ],
+    "reducedMotionFallback": {
+      "tabs-autoplay": "static-manual-tabs",
+      "reveal-up": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "image.generated-product-visual",
+    "url.placeholder"
+  ],
+  "responsive": {
+    "desktop": "tabs column 420 | view 826",
+    "mobile": "tabs stacked above view (aspect 828/600)",
+    "evidence": {
+      "cite": "public/assets/css/site.css:670-672",
+      "expect": ".pf{grid-template-columns:1fr;min-height:0}"
+    }
+  },
+  "contentRequired": [
+    "asideCta",
+    "eyebrow",
+    "eyebrowIndex",
+    "headline",
+    "headlineDim",
+    "lede",
+    "tabs"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$description": "Every route reachable in the clone, mapped exactly once.",
+  "routes": [
+    {
+      "route": "/",
+      "template": "template.home",
+      "status": "implemented",
+      "evidence": {
+        "cite": "src/App.jsx:35-63",
+        "expect": "<main id=\"main\">"
+      }
+    }
+  ],
+  "notImplementedByClone": [
+    {
+      "route": "/blog/",
+      "status": "soft-404-spa-fallback",
+      "reason": "Linked from the nav/footer; the live site serves a real blog page here, but the clone does not implement it. The clone dev server answers 200 with the SPA homepage HTML (soft 404), so there is no distinct page to extract. The blog/article template family is genuinely omitted by the clone, not dropped by this design-repo.",
+      "linkedFrom": "src/components/Nav.jsx:4, src/components/Footer.jsx:4"
+    },
+    {
+      "route": "/blog/rghs-claim-submission-guide/",
+      "status": "soft-404-spa-fallback",
+      "reason": "Linked from the nav/footer; the live site serves a real blog page here, but the clone does not implement it. The clone dev server answers 200 with the SPA homepage HTML (soft 404), so there is no distinct page to extract. The blog/article template family is genuinely omitted by the clone, not dropped by this design-repo.",
+      "linkedFrom": "src/components/Footer.jsx:4"
+    },
+    {
+      "route": "/blog/echs-claim-submission-guide/",
+      "status": "soft-404-spa-fallback",
+      "reason": "Linked from the nav/footer; the live site serves a real blog page here, but the clone does not implement it. The clone dev server answers 200 with the SPA homepage HTML (soft 404), so there is no distinct page to extract. The blog/article template family is genuinely omitted by the clone, not dropped by this design-repo.",
+      "linkedFrom": "src/components/Footer.jsx:4"
+    },
+    {
+      "route": "/blog/cghs-claim-submission-guide/",
+      "status": "soft-404-spa-fallback",
+      "reason": "Linked from the nav/footer; the live site serves a real blog page here, but the clone does not implement it. The clone dev server answers 200 with the SPA homepage HTML (soft 404), so there is no distinct page to extract. The blog/article template family is genuinely omitted by the clone, not dropped by this design-repo.",
+      "linkedFrom": "src/components/Footer.jsx:4"
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/api/lead",
+      "method": "POST",
+      "status": "live-endpoint-on-original-never-submit",
+      "note": "Form backend on the live site; absent under the clone dev server (submit falls into the mailto error state)."
+    }
+  ]
+}

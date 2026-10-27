@@ -1,0 +1,452 @@
+{
+  "$description": "Closed set of motion patterns observed in the motion layer. A PageSpec node may only use a pattern its section contract allows; reducedMotionFallback is locked per pattern.",
+  "version": "1.0.0",
+  "patterns": {
+    "intro-loader-seal": {
+      "id": "intro-loader-seal",
+      "description": "Once-per-session intro: seal draws, counter 00->100, status line steps, seal stamps, 6 night panels wipe up and off.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:899-944",
+          "expect": "function loader(onReveal)"
+        },
+        {
+          "cite": "index.html:28-38",
+          "expect": "sessionStorage.getItem('dc-intro')"
+        }
+      ],
+      "reducedMotionFallback": "skip-entirely",
+      "library": "anime.js 4.5 timeline (not GSAP): A.createTimeline defaults ease inOut(3); draws via A.svg.createDrawable",
+      "timeline": [
+        {
+          "t": 0,
+          "target": ".seal-draw x3",
+          "prop": "draw",
+          "from": "0 0",
+          "to": "0 1",
+          "durationMs": 1250,
+          "staggerMs": 160,
+          "ease": "inOut(3)"
+        },
+        {
+          "t": 0,
+          "target": "counter + .loader__bar span",
+          "prop": "value 0->100 (2-digit pad); bar scaleX v/100",
+          "durationMs": 1750,
+          "ease": "inOut(2)",
+          "statusThresholds": [
+            [
+              0,
+              "status 0"
+            ],
+            [
+              22,
+              "status 1"
+            ],
+            [
+              48,
+              "status 2"
+            ],
+            [
+              74,
+              "status 3"
+            ],
+            [
+              96,
+              "status 4"
+            ]
+          ]
+        },
+        {
+          "t": 850,
+          "target": ".seal-text",
+          "prop": "opacity",
+          "from": 0,
+          "to": 1,
+          "durationMs": 600,
+          "ease": "outQuad"
+        },
+        {
+          "t": 1650,
+          "target": ".loader__seal",
+          "prop": "scale [1,.9,1.02,1], rotate 0->-8deg",
+          "durationMs": 520,
+          "ease": "outQuad",
+          "restState": "rotate(-8deg) scale(1)"
+        },
+        {
+          "t": 1700,
+          "target": ".seal-ink",
+          "prop": "opacity 0->0.12, scale .6->1",
+          "durationMs": 420,
+          "ease": "outQuad"
+        },
+        {
+          "t": 2050,
+          "target": ".loader__panels i x6",
+          "prop": "scaleY",
+          "from": 0,
+          "to": 1,
+          "durationMs": 650,
+          "staggerMs": 55,
+          "ease": "inOut(4)",
+          "transformOrigin": "50% 100%"
+        },
+        {
+          "t": 2780,
+          "target": "top/mid/bot/bar",
+          "prop": "visibility hidden; loader background transparent; page intro (hero-intro-stagger) starts",
+          "call": true
+        },
+        {
+          "t": 2800,
+          "target": ".loader__panels i x6",
+          "prop": "translateY",
+          "from": "0%",
+          "to": "-101%",
+          "durationMs": 800,
+          "staggerMs": 55,
+          "ease": "inOut(4)"
+        },
+        {
+          "t": 3700,
+          "target": ".loader",
+          "prop": "display:none; smooth scroll restarted; sessionStorage dc-intro=1",
+          "call": true
+        }
+      ],
+      "t0": "T0 = html gets is-ready, after document.fonts.ready (raced against 2500ms) and all ScrollTriggers are built; measured ~1134ms after navigation on the live site, ~815ms on the clone",
+      "gating": {
+        "oncePerSession": "sessionStorage['dc-intro']==='1' -> html.no-loader (head inline script)",
+        "reducedMotion": "prefers-reduced-motion: reduce -> html.no-loader, loader never shown",
+        "safetyNetMs": 6000,
+        "safetyNet": "if html never gets is-ready within 6000ms: add no-loader, remove js (everything visible)",
+        "noJs": ".loader{display:none} unless html.js",
+        "scrollLock": "lenis.stop() + html.lenis-stopped while playing"
+      },
+      "measured": {
+        "live": {
+          "isReadyMs": 1134,
+          "statusChangesAbsMs": [
+            1711,
+            1981,
+            2253,
+            2641
+          ],
+          "panelsStartAbsMs": 3211,
+          "bgTransparentAbsMs": 3943,
+          "panelsOffAbsMs": 4711,
+          "displayNoneAbsMs": 4843,
+          "sessionFlagAbsMs": 4843
+        },
+        "clone": {
+          "isReadyMs": 815,
+          "statusChangesAbsMs": [
+            1381,
+            1653,
+            1920,
+            2315
+          ],
+          "panelsStartAbsMs": 2850
+        },
+        "source": "extraction/measured-values.json loader.timelineLog"
+      }
+    },
+    "hero-intro-stagger": {
+      "id": "hero-intro-stagger",
+      "description": "Page-opening stagger: nav children, guides, eyebrow, h1 words (masked), sub (blur), CTAs, scene, plate corners, facts.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:265-282",
+          "expect": "function heroIntro()"
+        }
+      ],
+      "reducedMotionFallback": "final-state",
+      "ease": "expo.out",
+      "durations": {
+        "h1Words": "1.5s stagger .055 @0.25",
+        "sub": "1.4s @0.7 blur(10px)",
+        "scene": "2s @0.35 from y60 scale .96"
+      }
+    },
+    "status-ticker-scramble": {
+      "id": "status-ticker-scramble",
+      "description": "Status line cycles every 2800ms with ScrambleText (lowercase A-Z0-9, speed .6, 0.9s).",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:283-294",
+          "expect": "function startStatusTicker()"
+        }
+      ],
+      "reducedMotionFallback": "static-first-item"
+    },
+    "eyebrow-scramble": {
+      "id": "eyebrow-scramble",
+      "description": "Eyebrow text scrambles in at top 90% (A-Z0-9, 1.1s, speed .5); index blinks x3.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:177-201",
+          "expect": "function prepEyebrows()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "heading-split-lines": {
+      "id": "heading-split-lines",
+      "description": "h2 split into masked lines from yPercent 112 rotate 2.5, 1.35s stagger .1 expo.out, top 88% once.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:202-216",
+          "expect": "function splitHeadings()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "reveal-fade": {
+      "id": "reveal-fade",
+      "description": "from autoAlpha 0 y 24, 1.2s expo.out (+blur 8px when >980px), top 90% once.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:217-229",
+          "expect": "function reveals()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "reveal-up": {
+      "id": "reveal-up",
+      "description": "from autoAlpha 0 y 70, 1.5s expo.out (+blur 8px when >980px), top 90% once.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:217-229",
+          "expect": "function reveals()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "stagger-children": {
+      "id": "stagger-children",
+      "description": "children opacity 0/y50 -> anime 1200ms stagger 120 outExpo at top 85%.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:741-758",
+          "expect": "function staggers()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "scrub-words": {
+      "id": "scrub-words",
+      "description": "words opacity .13->1 scrubbed top 80% -> bottom 48%.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:230-240",
+          "expect": "function scrubWords()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "quote-words": {
+      "id": "quote-words",
+      "description": "quote words .08->1, translateY .35em, blur 6px, 900ms stagger 55 outExpo at top 88%.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:310-328",
+          "expect": "function proofQuote()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "cost-scramble": {
+      "id": "cost-scramble",
+      "description": "cost cards rise (1300ms stagger 120) and values scramble (0-9#%X, 1.1s).",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:329-351",
+          "expect": "function costs()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "clip-reveal-scrub": {
+      "id": "clip-reveal-scrub",
+      "description": "section clip-path inset(6% 3% 0% 3% round 28px) -> inset(0) scrubbed top bottom -> top 25%; odometers spin (power4.inOut); bg number parallax.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:352-394",
+          "expect": "function results()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "pinned-scrub-timeline": {
+      "id": "pinned-scrub-timeline",
+      "description": "Pinned stage: pin .move__pin from top top for innerHeight*5.2 (4680px at 900 high), scrub 0.9; 7.0s timeline with 6 step starts [0,1.1,2.2,3.3,4.4,5.6].",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:395-538",
+          "expect": "function movement()"
+        },
+        {
+          "cite": "public/assets/js/site.js:519",
+          "expect": "pin: '.move__pin'"
+        }
+      ],
+      "reducedMotionFallback": "scrub-true-no-smoothing",
+      "pin": {
+        "startDesktop": 2888,
+        "endDesktop": 7568,
+        "startMobile": 4454,
+        "endMobile": 8676,
+        "scrub": 0.9,
+        "stepCount": 6
+      }
+    },
+    "tilt-scrub-autocycle": {
+      "id": "tilt-scrub-autocycle",
+      "description": "Artboard tilt rotateX 24 scale .88 y60 -> flat (scrub top 98% -> top 30%); state class cycles every 3600ms while in view; 7 timeline buttons jump.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:539-561",
+          "expect": "function productDemo()"
+        }
+      ],
+      "reducedMotionFallback": "static-first-state",
+      "cycleMs": 3600,
+      "states": 7
+    },
+    "tabs-autoplay": {
+      "id": "tabs-autoplay",
+      "description": "Tab 0 active; progress bar fills over 7s linear while in view (paused on hover), then advances; click stops autoplay; panel wipes clip-path inset(0 0 0 100%) -> inset(0) 1s expo.inOut.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:562-609",
+          "expect": "function platform()"
+        }
+      ],
+      "reducedMotionFallback": "static-manual-tabs",
+      "autoplayMs": 7000
+    },
+    "frame-clip-video": {
+      "id": "frame-clip-video",
+      "description": "frame clip-path inset(16%) -> inset(0) scrub; video scale 1.35->1 scrub; plays only in range; guarantees stagger 1100ms stagger 110.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:610-640",
+          "expect": "function trust()"
+        }
+      ],
+      "reducedMotionFallback": "poster-static"
+    },
+    "recon-board-timeline": {
+      "id": "recon-board-timeline",
+      "description": "sources x-36, wires fade, dashboard rise, rows, chips back.out(2.2), counters 0->value 1.6s power3.out, flagged row pulses x4.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:641-672",
+          "expect": "function reconciliation()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "video-play-follow": {
+      "id": "video-play-follow",
+      "description": "play button pops in (back.out 1.8) at top 70%, follows cursor on fine pointers (700ms out(4)); click toggles playback; arrow keys seek 5s.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:673-740",
+          "expect": "function story()"
+        }
+      ],
+      "reducedMotionFallback": "static-centered-button"
+    },
+    "accordion-height": {
+      "id": "accordion-height",
+      "description": "non-exclusive accordion: height auto .7s expo.out open, .5s expo.inOut close; inner y14 fade; first item open on load.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:759-778",
+          "expect": "function faq()"
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "form-feedback": {
+      "id": "form-feedback",
+      "description": "invalid fields shake translateX [0,-8,7,-5,3,0] 520ms; success overlay clip wipe .9s + seal draw; error fades in.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:779-885",
+          "expect": "function form()"
+        }
+      ],
+      "reducedMotionFallback": "instant-state"
+    },
+    "footer-chars": {
+      "id": "footer-chars",
+      "description": "footer mark chars from yPercent 110 1.4s stagger .04 at top 95%; top row from y60.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:886-898",
+          "expect": "function footer()"
+        }
+      ],
+      "reducedMotionFallback": "final-state"
+    },
+    "nav-state": {
+      "id": "nav-state",
+      "description": "is-scrolled >12px; is-hidden when y>240 moving down with velocity>40; is-dark over [data-theme=dark] sections; aria-current at 45%.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:98-126",
+          "expect": "classList.toggle('is-scrolled', y > 12)"
+        }
+      ],
+      "reducedMotionFallback": "state-classes-without-transition"
+    },
+    "menu-clip-wipe": {
+      "id": "menu-clip-wipe",
+      "description": "drawer clip-path inset(0 0 100% 0) -> inset(0) 0.8s wipe; links yPercent 60 stagger .06; Escape reverses at timeScale 1.6.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:129-152",
+          "expect": "clipPath: 'inset(0% 0% 100% 0%)'"
+        }
+      ],
+      "reducedMotionFallback": "instant-toggle"
+    },
+    "progress-scrub": {
+      "id": "progress-scrub",
+      "description": "progress bar scaleX 0->1 scrubbed (0.3) over the whole document.",
+      "evidence": [
+        {
+          "cite": "public/assets/js/site.js:127",
+          "expect": "gsap.to('.progress span'"
+        }
+      ],
+      "reducedMotionFallback": "hidden"
+    },
+    "grain-keyframes": {
+      "id": "grain-keyframes",
+      "description": "fixed grain overlay translated by CSS keyframes grain.",
+      "evidence": [
+        {
+          "cite": "public/assets/css/site.css:90",
+          "expect": "@keyframes grain"
+        }
+      ],
+      "reducedMotionFallback": "static"
+    },
+    "none": {
+      "id": "none",
+      "description": "No motion.",
+      "evidence": [
+        {
+          "cite": "public/assets/css/site.css:731-734",
+          "expect": "prefers-reduced-motion:reduce"
+        }
+      ],
+      "reducedMotionFallback": "none"
+    }
+  }
+}

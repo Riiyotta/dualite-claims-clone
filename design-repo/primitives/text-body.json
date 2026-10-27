@@ -1,0 +1,24 @@
+{
+  "id": "primitive.text-body",
+  "description": "Lede / body / micro paragraph roles.",
+  "props": {
+    "role": [
+      "lede",
+      "body",
+      "micro"
+    ],
+    "text": "text"
+  },
+  "tokensUsed": [
+    "fs.lede",
+    "fs.body",
+    "fs.micro",
+    "text.secondary",
+    "text.muted"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:106-107",
+    "expect": ".lede{font-size:var(--fs-lede)"
+  },
+  "retrievalEligible": true
+}

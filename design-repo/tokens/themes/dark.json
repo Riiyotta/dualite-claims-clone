@@ -1,0 +1,16 @@
+{
+  "theme": "dark",
+  "appliesToNodeThemes": [
+    "night",
+    "night-2"
+  ],
+  "selector": "[data-theme=\"dark\"] (results, story, cta#demo, footer, mmenu)",
+  "resolves": {
+    "surface": "surface.night",
+    "surface-alt": "surface.night-2",
+    "text": "text.on-night",
+    "text-secondary": "text.on-night-2",
+    "accent": "accent.lime",
+    "border": "border.night"
+  }
+}

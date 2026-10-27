@@ -1,0 +1,17 @@
+{
+  "id": "component.fact",
+  "description": "Key/value fact in the hero foot row.",
+  "props": {
+    "key": "text",
+    "value": "text"
+  },
+  "tokensUsed": [
+    "font.mono",
+    "text.faint"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:232",
+    "expect": ".fact"
+  },
+  "retrievalEligible": true
+}

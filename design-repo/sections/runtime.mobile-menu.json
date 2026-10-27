@@ -1,0 +1,96 @@
+{
+  "id": "runtime.mobile-menu",
+  "title": "Mobile menu drawer",
+  "source": {
+    "id": "src.mmenu",
+    "file": "src/components/Mmenu.jsx",
+    "tag": "div",
+    "lines": "4",
+    "citation": "src/components/Mmenu.jsx:4",
+    "marker": "<div className={\"mmenu\"}"
+  },
+  "semantic": {
+    "id": "runtime.mobile-menu",
+    "category": "RUNTIME"
+  },
+  "region": "pre-main",
+  "themes": [
+    "night"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": false,
+  "content": {
+    "links": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "index": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "label": {
+            "type": "text",
+            "maxWords": 3
+          },
+          "href": {
+            "type": "href"
+          }
+        },
+        "required": [
+          "index",
+          "label",
+          "href"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 7
+    },
+    "cta": {
+      "type": "object",
+      "fields": {
+        "label": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "href": {
+          "type": "href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    },
+    "contactEmail": {
+      "type": "email"
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "menu-clip-wipe"
+    ],
+    "reducedMotionFallback": {
+      "menu-clip-wipe": "instant-toggle"
+    }
+  },
+  "retrievalIneligibleReason": "Mobile navigation drawer: hidden (clip-path + aria-hidden) until the burger opens it; it duplicates nav links and is runtime UI, not content.",
+  "generatedAssetRoles": [
+    "url.placeholder"
+  ],
+  "responsive": {
+    "mobile": "links Perfectly Nineties 41.25px at 375",
+    "desktop": "never opened (burger hidden >980px)",
+    "evidence": {
+      "cite": "public/assets/css/site.css:198",
+      "expect": ".mmenu{position:fixed"
+    }
+  },
+  "contentRequired": [
+    "contactEmail",
+    "cta",
+    "links"
+  ]
+}

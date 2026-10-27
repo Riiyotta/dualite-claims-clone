@@ -1,0 +1,127 @@
+{
+  "id": "editorial.case-study",
+  "title": "Case study",
+  "source": {
+    "id": "src.case",
+    "file": "src/components/Case.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Case.jsx:4",
+    "marker": "<section className={\"case\"}"
+  },
+  "semantic": {
+    "id": "editorial.case-study",
+    "category": "EDITORIAL"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 16
+    },
+    "columns": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 4
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40
+          }
+        },
+        "required": [
+          "title",
+          "body"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "results": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "key": {
+            "type": "text",
+            "maxWords": 3
+          },
+          "value": {
+            "type": "text",
+            "maxWords": 3
+          }
+        },
+        "required": [
+          "key",
+          "value"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 3
+    },
+    "link": {
+      "type": "object",
+      "fields": {
+        "label": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "href": {
+          "type": "href"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "stagger-children"
+    ],
+    "reducedMotionFallback": {
+      "stagger-children": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "copy.original",
+    "rating.placeholder",
+    "url.placeholder"
+  ],
+  "responsive": {
+    "desktop": "3 cols (challenge | approach | dark results)",
+    "mobile": "1 col",
+    "evidence": {
+      "cite": "public/assets/css/site.css:674",
+      "expect": ".case__grid{grid-template-columns:1fr}"
+    }
+  },
+  "contentRequired": [
+    "columns",
+    "eyebrow",
+    "eyebrowIndex",
+    "headline",
+    "link",
+    "results"
+  ]
+}

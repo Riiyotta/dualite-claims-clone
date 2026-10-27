@@ -1,0 +1,13 @@
+{
+  "id": "component.scaler",
+  "description": "Fixed-artboard container scaled to its width (transform scale(min(1,w/W))).",
+  "props": {
+    "artboardWidth": "number"
+  },
+  "tokensUsed": [],
+  "evidence": {
+    "cite": "public/assets/css/site.css:414",
+    "expect": ".scaler"
+  },
+  "retrievalEligible": true
+}

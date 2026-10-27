@@ -1,0 +1,112 @@
+{
+  "$description": "Token policy for PageSpec node.style (the only per-instance token-override field). Category names are the real catalog categories in tokens/llm/token-catalog.json; verify_all.py resolves every id/category here against the catalog.",
+  "version": "1.0.0",
+  "styleProperties": {
+    "surface": {
+      "categories": [
+        "surface"
+      ]
+    },
+    "accent": {
+      "categories": [
+        "accent"
+      ]
+    },
+    "text": {
+      "categories": [
+        "text"
+      ]
+    },
+    "paddingBlock": {
+      "categories": [
+        "spacing"
+      ],
+      "allowedIds": [
+        "space.section-y",
+        "space.0"
+      ],
+      "note": "Section vertical rhythm is var(--section-y) (144px at 1440, 96px at 375) or none; other spacing steps are internal to components."
+    },
+    "displayFont": {
+      "categories": [
+        "fontFamily"
+      ]
+    }
+  },
+  "rawValueRestrictions": {
+    "color": "Raw hex / rgb() / hsl() / named colours are rejected (TOKEN_RAW_COLOR). Use a surface.*, text.*, accent.* id.",
+    "spacing": "Raw px / rem / em / % / vw values are rejected (TOKEN_ARBITRARY_SPACING). Use a spacing id.",
+    "fontFamily": "Only font.display, font.sans, font.mono (TOKEN_UNSUPPORTED_FONT)."
+  },
+  "themeCombos": {
+    "$evidence": "Dark sections ([data-theme=dark]) switch text to on-night/on-night-2 and accents to lime (CLONE_SPEC.md section 0 shared text roles: eyebrow #C5D69A, lede #C9CBB6 in dark sections); paper sections use ink/olive.",
+    "paper": {
+      "surface": [
+        "surface.paper",
+        "surface.card"
+      ],
+      "text": [
+        "text.primary",
+        "text.secondary",
+        "text.muted",
+        "text.faint"
+      ],
+      "accent": [
+        "accent.olive",
+        "accent.olive-2",
+        "accent.amber"
+      ]
+    },
+    "paper-2": {
+      "surface": [
+        "surface.paper-2",
+        "surface.card"
+      ],
+      "text": [
+        "text.primary",
+        "text.secondary",
+        "text.muted",
+        "text.faint"
+      ],
+      "accent": [
+        "accent.olive",
+        "accent.olive-2",
+        "accent.amber"
+      ]
+    },
+    "night": {
+      "surface": [
+        "surface.night"
+      ],
+      "text": [
+        "text.on-night",
+        "text.on-night-2"
+      ],
+      "accent": [
+        "accent.lime"
+      ]
+    },
+    "night-2": {
+      "surface": [
+        "surface.night-2"
+      ],
+      "text": [
+        "text.on-night",
+        "text.on-night-2"
+      ],
+      "accent": [
+        "accent.lime"
+      ]
+    },
+    "inherit": {
+      "surface": [],
+      "text": [],
+      "accent": []
+    }
+  },
+  "approvedFontFamilies": [
+    "font.display",
+    "font.sans",
+    "font.mono"
+  ]
+}

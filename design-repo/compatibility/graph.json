@@ -1,0 +1,63 @@
+{
+  "$description": "Rhythm/position rules. Every rule id is implemented in schema/semantic_validate.py (verify_all checks the two sets are equal).",
+  "rules": [
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "rule": "Exactly one HERO-category node per page, in region main.",
+      "exception": "None: the only template (template.home) has one hero."
+    },
+    {
+      "id": "HERO_FIRST_IN_MAIN",
+      "severity": "error",
+      "rule": "The HERO is the first node of region main."
+    },
+    {
+      "id": "REGION_ORDER",
+      "severity": "error",
+      "rule": "Regions appear in order pre-main -> main -> post-main."
+    },
+    {
+      "id": "FOOTER_LAST",
+      "severity": "error",
+      "rule": "shell.footer is the last node."
+    },
+    {
+      "id": "CONVERSION_PRECEDES_FOOTER",
+      "severity": "error",
+      "rule": "conversion.demo-form is the last node of main, immediately before shell.footer (measured order: ... faq, cta#demo, footer)."
+    },
+    {
+      "id": "RUNTIME_OUTSIDE_MAIN",
+      "severity": "error",
+      "rule": "retrievalEligible:false nodes (skip link, loader, progress, grain, mobile menu) live only in region pre-main."
+    },
+    {
+      "id": "ONE_LOADER",
+      "severity": "error",
+      "rule": "At most one runtime.intro-loader, and it precedes shell.navbar."
+    },
+    {
+      "id": "ONE_PINNED_SCRUB",
+      "severity": "error",
+      "rule": "At most one node uses pinned-scrub-timeline (the source has exactly one pin among 77 ScrollTriggers)."
+    },
+    {
+      "id": "AUTOPLAY_BUDGET",
+      "severity": "warn",
+      "rule": "At most two autoplay patterns (tilt-scrub-autocycle, tabs-autoplay) per page."
+    },
+    {
+      "id": "NO_ADJACENT_SAME_CATEGORY",
+      "severity": "warn",
+      "rule": "Two consecutive main nodes should not share a semantic category.",
+      "exception": "None observed; measured sequence alternates categories."
+    },
+    {
+      "id": "NO_ADJACENT_NIGHT",
+      "severity": "warn",
+      "rule": "Two consecutive night/night-2 nodes break the paper/night rhythm.",
+      "exception": "conversion.demo-form -> shell.footer (measured: cta#demo night then footer night-2)."
+    }
+  ]
+}

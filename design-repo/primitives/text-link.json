@@ -1,0 +1,17 @@
+{
+  "id": "primitive.text-link",
+  "description": "Underline-draw link (background-size 0 -> 100% 1px, .5s ease-io).",
+  "props": {
+    "label": "text",
+    "href": "href"
+  },
+  "tokensUsed": [
+    "dur.link",
+    "ease.io"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:139",
+    "expect": ".link{background:linear-gradient"
+  },
+  "retrievalEligible": true
+}

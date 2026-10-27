@@ -1,0 +1,205 @@
+{
+  "id": "conversion.demo-form",
+  "title": "Demo booking form",
+  "source": {
+    "id": "src.cta",
+    "file": "src/components/Cta.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Cta.jsx:4",
+    "marker": "<section className={\"cta\"}"
+  },
+  "semantic": {
+    "id": "conversion.demo-form",
+    "category": "CTA_CONVERSION"
+  },
+  "region": "main",
+  "themes": [
+    "night"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 10
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "lede": {
+      "type": "text",
+      "maxWords": 24
+    },
+    "steps": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "index": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "text": {
+            "type": "text",
+            "maxWords": 16
+          }
+        },
+        "required": [
+          "index",
+          "text"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 4
+    },
+    "form": {
+      "type": "object",
+      "fields": {
+        "fields": {
+          "type": "list",
+          "items": {
+            "type": "object",
+            "fields": {
+              "label": {
+                "type": "text",
+                "maxWords": 4
+              },
+              "kind": {
+                "type": "enum",
+                "values": [
+                  "text",
+                  "email",
+                  "tel",
+                  "select"
+                ]
+              },
+              "name": {
+                "type": "text",
+                "maxWords": 1
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "options": {
+                "type": "list",
+                "items": {
+                  "type": "text",
+                  "maxWords": 5
+                },
+                "minItems": 0,
+                "maxItems": 6
+              }
+            },
+            "required": [
+              "label",
+              "kind",
+              "name"
+            ]
+          },
+          "minItems": 3,
+          "maxItems": 8
+        },
+        "submitLabel": {
+          "type": "text",
+          "maxWords": 4
+        },
+        "note": {
+          "type": "text",
+          "maxWords": 16
+        },
+        "endpoint": {
+          "type": "object",
+          "fields": {
+            "assetRole": {
+              "type": "enum",
+              "values": [
+                "endpoint.lead-source",
+                "endpoint.placeholder"
+              ]
+            },
+            "url": {
+              "type": "href"
+            }
+          },
+          "required": [
+            "assetRole",
+            "url"
+          ]
+        }
+      },
+      "required": [
+        "fields",
+        "submitLabel",
+        "note",
+        "endpoint"
+      ]
+    },
+    "success": {
+      "type": "object",
+      "fields": {
+        "title": {
+          "type": "text",
+          "maxWords": 3
+        },
+        "body": {
+          "type": "text",
+          "maxWords": 30
+        }
+      },
+      "required": [
+        "title",
+        "body"
+      ]
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "form-feedback",
+      "reveal-up",
+      "stagger-children"
+    ],
+    "reducedMotionFallback": {
+      "form-feedback": "instant-state",
+      "reveal-up": "final-state",
+      "stagger-children": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "endpoint.placeholder",
+    "copy.original"
+  ],
+  "responsive": {
+    "desktop": "2 cols copy | form, form grid 2 cols",
+    "mobile": "1 col, form grid 1 col <640px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:678",
+      "expect": ".cta__in{grid-template-columns:1fr}"
+    }
+  },
+  "nestedRuntime": [
+    "component.form-feedback"
+  ],
+  "liveEndpointWarning": "The source form POSTs JSON to a live lead endpoint. Never submit it; generated pages must use endpoint.placeholder.",
+  "contentRequired": [
+    "eyebrow",
+    "eyebrowIndex",
+    "form",
+    "headline",
+    "headlineAccent",
+    "lede",
+    "steps",
+    "success"
+  ]
+}

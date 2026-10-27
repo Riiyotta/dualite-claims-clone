@@ -1,0 +1,107 @@
+{
+  "id": "proof.quote-logos",
+  "title": "Customer quote and logos",
+  "source": {
+    "id": "src.proof",
+    "file": "src/components/Proof.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Proof.jsx:4",
+    "marker": "<section className={\"proof\"}"
+  },
+  "semantic": {
+    "id": "proof.quote-logos",
+    "category": "SOCIAL_PROOF"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "quote": {
+      "type": "text",
+      "maxWords": 16
+    },
+    "attribution": {
+      "type": "object",
+      "fields": {
+        "name": {
+          "type": "text",
+          "maxWords": 4
+        },
+        "role": {
+          "type": "text",
+          "maxWords": 6
+        },
+        "isFictional": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "role"
+      ]
+    },
+    "label": {
+      "type": "text",
+      "maxWords": 6
+    },
+    "logos": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "name": {
+            "type": "text",
+            "maxWords": 5
+          },
+          "mark": {
+            "type": "media",
+            "assetRoles": [
+              "logo.customer-source",
+              "logo.customer-placeholder"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "mark"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 6
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "quote-words",
+      "reveal-fade"
+    ],
+    "reducedMotionFallback": {
+      "quote-words": "final-state",
+      "reveal-fade": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "logo.customer-placeholder",
+    "person.fictional"
+  ],
+  "responsive": {
+    "desktop": "2 cols 480 | 768",
+    "mobile": "stacked, quote 22px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:650-652",
+      "expect": ".proof__in{grid-template-columns:1fr}"
+    }
+  },
+  "contentRequired": [
+    "attribution",
+    "label",
+    "logos",
+    "quote"
+  ]
+}

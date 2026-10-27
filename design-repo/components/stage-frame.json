@@ -1,0 +1,16 @@
+{
+  "id": "component.stage-frame",
+  "description": "Card stage with HUD and foot bars hosting scaled art.",
+  "props": {
+    "art": "assetRole"
+  },
+  "tokensUsed": [
+    "surface.card",
+    "border.default"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:329",
+    "expect": ".stage{position:relative"
+  },
+  "retrievalEligible": true
+}

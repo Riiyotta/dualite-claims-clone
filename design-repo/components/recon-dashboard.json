@@ -1,0 +1,17 @@
+{
+  "id": "component.recon-dashboard",
+  "description": "Reconciliation dashboard: KPIs, rows, chips.",
+  "props": {
+    "kpis": "list",
+    "rows": "list"
+  },
+  "tokensUsed": [
+    "elevation.dashboard",
+    "font.display"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:479",
+    "expect": ".rdash"
+  },
+  "retrievalEligible": true
+}

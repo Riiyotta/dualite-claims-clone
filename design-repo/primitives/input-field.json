@@ -1,0 +1,25 @@
+{
+  "id": "primitive.input-field",
+  "description": "Labelled input/select, 50px, card background, olive focus ring.",
+  "props": {
+    "label": "text",
+    "kind": [
+      "text",
+      "email",
+      "tel",
+      "select"
+    ],
+    "required": "bool"
+  },
+  "tokensUsed": [
+    "surface.card",
+    "border.strong",
+    "elevation.focus-ring",
+    "field.height"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:588",
+    "expect": ".field"
+  },
+  "retrievalEligible": true
+}

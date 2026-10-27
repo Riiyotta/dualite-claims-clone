@@ -1,0 +1,1013 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.home",
+  "route": "/",
+  "meta": {
+    "title": "Dualite Claims — ECHS & RGHS claims, checked, sealed and filed",
+    "description": "Reference reconstruction of the source homepage (real brand and copy as evidence; never for generation).",
+    "brandName": "Dualite Claims",
+    "isFictionalBrand": false
+  },
+  "nodes": [
+    {
+      "section": "utility.skip-link",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "inherit",
+      "retrievalEligible": false,
+      "content": {
+        "label": "Skip to content"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "section": "runtime.intro-loader",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "paper",
+      "retrievalEligible": false,
+      "content": {
+        "brandLabel": "Dualite Claims",
+        "fileTag": "Claim 1187 · RGHS · OPD",
+        "sealRingText": "DUALITE CLAIMS · CHECKED · SEALED · FILED ·",
+        "sealMark": {
+          "assetRole": "mark.seal-source",
+          "alt": "Seal with check mark"
+        },
+        "statusSteps": [
+          {
+            "atPercent": 0,
+            "text": "Opening claim file"
+          },
+          {
+            "atPercent": 22,
+            "text": "Reading 14 pages"
+          },
+          {
+            "atPercent": 48,
+            "text": "Checking 50+ case rules"
+          },
+          {
+            "atPercent": 74,
+            "text": "Applying Digistamp"
+          },
+          {
+            "atPercent": 96,
+            "text": "Ready for review"
+          }
+        ],
+        "footLabel": "ECHS · RGHS · OPD · IPD"
+      },
+      "motion": {
+        "pattern": "intro-loader-seal",
+        "reducedMotionFallback": "skip-entirely"
+      }
+    },
+    {
+      "section": "utility.scroll-progress",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "inherit",
+      "retrievalEligible": false,
+      "content": {},
+      "motion": {
+        "pattern": "progress-scrub",
+        "reducedMotionFallback": "hidden"
+      }
+    },
+    {
+      "section": "utility.grain-overlay",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "inherit",
+      "retrievalEligible": false,
+      "content": {},
+      "motion": {
+        "pattern": "grain-keyframes",
+        "reducedMotionFallback": "static"
+      }
+    },
+    {
+      "section": "shell.navbar",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.logo-source",
+          "src": "/logo-dark.png",
+          "alt": "Dualite"
+        },
+        "productLabel": "Claims",
+        "links": [
+          {
+            "label": "How it works",
+            "href": "#movement"
+          },
+          {
+            "label": "Platform",
+            "href": "#platform"
+          },
+          {
+            "label": "Results",
+            "href": "#results"
+          },
+          {
+            "label": "Trust",
+            "href": "#trust"
+          },
+          {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog/"
+          }
+        ],
+        "cta": {
+          "label": "Book a demo",
+          "href": "#demo"
+        }
+      },
+      "motion": {
+        "pattern": "nav-state",
+        "reducedMotionFallback": "state-classes-without-transition"
+      }
+    },
+    {
+      "section": "runtime.mobile-menu",
+      "variant": "default",
+      "region": "pre-main",
+      "theme": "night",
+      "retrievalEligible": false,
+      "content": {
+        "links": [
+          {
+            "index": "01",
+            "label": "How it works",
+            "href": "#movement"
+          },
+          {
+            "index": "02",
+            "label": "Platform",
+            "href": "#platform"
+          },
+          {
+            "index": "03",
+            "label": "Results",
+            "href": "#results"
+          },
+          {
+            "index": "04",
+            "label": "Trust",
+            "href": "#trust"
+          },
+          {
+            "index": "05",
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "index": "06",
+            "label": "Blog",
+            "href": "/blog/"
+          }
+        ],
+        "cta": {
+          "label": "Book a 30-minute demo",
+          "href": "#demo"
+        },
+        "contactEmail": "info@dualite.dev"
+      },
+      "motion": {
+        "pattern": "menu-clip-wipe",
+        "reducedMotionFallback": "instant-toggle"
+      }
+    },
+    {
+      "section": "hero.claims-intro",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrow": "Claims automation · ECHS & RGHS",
+        "statusTicker": [
+          "Reading discharge summary",
+          "Checking 50+ case rules",
+          "Collating 14 pages",
+          "Applying Digistamp",
+          "Draft saved on RGHS portal"
+        ],
+        "headline": "Scan the file.",
+        "headlineAccent": "We’ll handle the claim.",
+        "sub": "Dualite reads every scanned claim file, checks it against 50+ case rules, applies your seal and signature, and prepares it on the ECHS or RGHS portal, in seconds rather than hours. Your team approves before anything is final.",
+        "primaryCta": {
+          "label": "Book a 30-minute demo",
+          "href": "#demo"
+        },
+        "secondaryCta": {
+          "label": "Watch the customer story",
+          "href": "#story"
+        },
+        "micro": "Bring a real claim file. We’ll run it live. No commitment.",
+        "facts": [
+          {
+            "key": "Schemes",
+            "value": "ECHS · RGHS"
+          },
+          {
+            "key": "Claim types",
+            "value": "OPD · IPD"
+          },
+          {
+            "key": "Checks",
+            "value": "50+ case rules per file"
+          },
+          {
+            "key": "Sign-off",
+            "value": "Human review gate"
+          }
+        ],
+        "scene": {
+          "assetRole": "illustration.hero-scene-source",
+          "alt": "Isometric claim desk scene"
+        }
+      },
+      "motion": {
+        "pattern": "hero-intro-stagger",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "proof.quote-logos",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "quote": "“Our claim backlog went from a week to three days.”",
+        "attribution": {
+          "name": "Mayank Singhi",
+          "role": "Managing Director, Medipulse"
+        },
+        "label": "Trusted by hospital claim desks",
+        "logos": [
+          {
+            "name": "Medipulse Hospital",
+            "mark": {
+              "assetRole": "logo.customer-source"
+            }
+          },
+          {
+            "name": "ASG Eye Hospitals",
+            "mark": {
+              "assetRole": "logo.customer-source"
+            }
+          },
+          {
+            "name": "+ More hospitals onboarding",
+            "mark": {
+              "assetRole": "logo.customer-placeholder"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "quote-words",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "content.problem-costs",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(01)",
+        "eyebrow": "The problem",
+        "statement": "Government portals weren’t built for volume. So every claim is typed, checked, printed, stamped and uploaded by hand, and",
+        "statementAccent": "one slip sends it back to the start.",
+        "costs": [
+          {
+            "key": "Time",
+            "index": "01",
+            "value": "Hours",
+            "description": "per claim, re-typing the same patient and bill details across portal tabs."
+          },
+          {
+            "key": "Accuracy",
+            "index": "02",
+            "value": "1 typo",
+            "description": "is all it takes for a query or a rejection, and the claim goes back to the start."
+          },
+          {
+            "key": "Paper",
+            "index": "03",
+            "value": "₹2.5",
+            "unit": "lakhs *",
+            "description": "per month on printing, hand-stamping and re-scanning every page."
+          },
+          {
+            "key": "Backlog",
+            "index": "04",
+            "value": "7 days",
+            "description": "of files waiting before a new one is opened, with a full team on the desk."
+          }
+        ],
+        "note": "* Calculated at 86 pages per patient and ₹5 per printed page. The cost may differ from hospital to hospital."
+      },
+      "motion": {
+        "pattern": "scrub-words",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "metrics.results-band",
+      "variant": "default",
+      "region": "main",
+      "theme": "night",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(02)",
+        "eyebrow": "After Dualite",
+        "headline": "Same claims.",
+        "headlineAccent": "A lighter desk.",
+        "aside": "MEASURED AT MEDIPULSE · ECHS & RGHS",
+        "metrics": [
+          {
+            "key": "Claim backlog",
+            "value": "3",
+            "description": "Days of claim backlog, down from a full week."
+          },
+          {
+            "key": "Claims workforce",
+            "value": "66%",
+            "description": "A leaner claims team, handling the same volume."
+          },
+          {
+            "key": "Queries & rejections",
+            "value": "48%",
+            "description": "Fewer claims sent back with queries or rejections."
+          }
+        ],
+        "note": "Results reported by Medipulse. Outcomes vary with claim volume and case mix.",
+        "backgroundNumber": "48%"
+      },
+      "motion": {
+        "pattern": "clip-reveal-scrub",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "features.pinned-workflow",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(03)",
+        "eyebrow": "How a file moves",
+        "headline": "Scan and",
+        "headlineAccent": "forget.",
+        "lede": "Your team’s only step is the scan. The file moves through the rest on its own, and every step is logged with the time it took.",
+        "steps": [
+          {
+            "index": "01",
+            "name": "Watch",
+            "clock": "00:03",
+            "description": "A watcher sits on your scan folder around the clock. The moment a file lands, it’s picked up. No uploads, no reminders."
+          },
+          {
+            "index": "02",
+            "name": "Read",
+            "clock": "00:07",
+            "description": "Every page is read and classified. Patient, admission and bill details are pulled from the discharge summary, bills and reports."
+          },
+          {
+            "index": "03",
+            "name": "Validate",
+            "clock": "00:11",
+            "description": "The file is checked against 50+ case rules. Missing documents and mismatched amounts are flagged before filing, not after a query."
+          },
+          {
+            "index": "04",
+            "name": "Organise",
+            "clock": "00:14",
+            "description": "Pages are put in the order each scheme expects and collated into one indexed, portal-ready PDF."
+          },
+          {
+            "index": "05",
+            "name": "Digistamp",
+            "clock": "00:19",
+            "description": "Your hospital’s seal and authorised signature are applied to exactly the pages each scheme requires. Every impression is logged."
+          },
+          {
+            "index": "06",
+            "name": "Submit",
+            "clock": "00:26",
+            "description": "The claim is entered on the ECHS or RGHS portal and saved as a draft. Your operator reviews, approves and submits."
+          }
+        ],
+        "meta": [
+          {
+            "key": "Portals",
+            "value": "ECHS, RGHS"
+          },
+          {
+            "key": "Claims",
+            "value": "OPD, IPD"
+          },
+          {
+            "key": "Review",
+            "value": "Human gate"
+          }
+        ],
+        "stageArt": {
+          "assetRole": "illustration.workflow-stage-source",
+          "alt": "Claim file moving through six stages"
+        }
+      },
+      "motion": {
+        "pattern": "pinned-scrub-timeline",
+        "reducedMotionFallback": "scrub-true-no-smoothing"
+      }
+    },
+    {
+      "section": "product.demo-walkthrough",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper-2",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(04)",
+        "eyebrow": "The product",
+        "headline": "One claim batch,",
+        "headlineAccent": "start to finish.",
+        "lede": "From a hospital export ZIP to a claim saved on the RGHS portal. This is the screen your claims desk works in, step by step.",
+        "timeline": [
+          {
+            "index": "01",
+            "label": "Upload"
+          },
+          {
+            "index": "02",
+            "label": "Prepare"
+          },
+          {
+            "index": "03",
+            "label": "Audit"
+          },
+          {
+            "index": "04",
+            "label": "Review"
+          },
+          {
+            "index": "05",
+            "label": "Finalize"
+          },
+          {
+            "index": "06",
+            "label": "Extract"
+          },
+          {
+            "index": "07",
+            "label": "File on portal"
+          }
+        ],
+        "artboard": {
+          "assetRole": "screenshot.product-ui-source",
+          "alt": "Claims desk batch screen"
+        },
+        "hint": "Tap a step to jump to it."
+      },
+      "motion": {
+        "pattern": "tilt-scrub-autocycle",
+        "reducedMotionFallback": "static-first-state"
+      }
+    },
+    {
+      "section": "features.platform-tabs",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(05)",
+        "eyebrow": "Platform",
+        "headline": "Three capabilities.",
+        "headlineDim": "No re-work.",
+        "lede": "One system for the whole claims desk: catch problems before the scheme does, stop printing to stamp, and let the watcher do the filing.",
+        "asideCta": {
+          "label": "See it on your claims",
+          "href": "#demo"
+        },
+        "tabs": [
+          {
+            "number": "01 · VALIDATE",
+            "title": "Document validation & organising",
+            "description": "Every bill, report and prescription is collated into one indexed, portal-ready PDF. It is then checked line by line against 50+ case rules, so missed charges and mismatches are caught before they cost you revenue.",
+            "image": {
+              "assetRole": "screenshot.platform-source",
+              "src": "/validate.webp"
+            }
+          },
+          {
+            "number": "02 · STAMP",
+            "title": "Digistamp",
+            "description": "Your hospital’s seal and authorised signature, applied digitally to exactly the pages each scheme requires. They go in clear space, never over text. No printing, no stamp pad, no re-scanning, and every impression is logged.",
+            "image": {
+              "assetRole": "screenshot.platform-source",
+              "src": "/stamp.webp"
+            }
+          },
+          {
+            "number": "03 · AUTOMATE",
+            "title": "Scan and forget",
+            "description": "A watcher sits on your scan folder around the clock. Every new file is prepared and filed on the ECHS or RGHS portal, and anything unusual waits for your operator.",
+            "image": {
+              "assetRole": "screenshot.platform-source",
+              "src": "/watcher.webp"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "tabs-autoplay",
+        "reducedMotionFallback": "static-manual-tabs"
+      }
+    },
+    {
+      "section": "trust.guarantees",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(06)",
+        "eyebrow": "Trust",
+        "headline": "Measured twice.",
+        "headlineAccent": "Filed once.",
+        "lede": "Speed only matters if the claim is right. Every file is checked and signed off before it reaches a portal, and you can always see who did what.",
+        "media": {
+          "assetRole": "video.trust-animation-source",
+          "src": "/trust-anim.mp4",
+          "alt": "Codex study of a document inside a circle and square above a balanced scale"
+        },
+        "caption": "Plate II · Measure, then file",
+        "guarantees": [
+          {
+            "title": "You approve before it’s final",
+            "description": "Every claim passes a human review gate. Anything unusual waits for your operator."
+          },
+          {
+            "title": "Drafts first, never filed blind",
+            "description": "Claims are saved as drafts on the portal until your team approves them."
+          },
+          {
+            "title": "A full audit trail",
+            "description": "Each step, each change and each stamp is logged with a time, on every file."
+          },
+          {
+            "title": "Where your data lives",
+            "description": "We don’t save your documents. We process them and keep log data for 55 days, then it’s deleted automatically. It stays on our secure servers, is never shared with third parties or used to train AI models, and only your organisation can view it."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "frame-clip-video",
+        "reducedMotionFallback": "poster-static"
+      }
+    },
+    {
+      "section": "features.reconciliation",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper-2",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(07)",
+        "eyebrow": "Reconciliation",
+        "headline": "Filed isn’t paid.",
+        "headlineAccent": "Now you’ll know the difference.",
+        "lede": "Submitting a claim is half the job. Dualite matches every claim across the scheme portal, your hospital management system and your bank statement. You see what was approved, what actually reached your account, and what is still owed, without anyone matching UTRs in a spreadsheet.",
+        "sources": [
+          {
+            "key": "Source 01 · Portal tracker",
+            "title": "What the scheme decided",
+            "description": "Status and approved amount for every claim on the ECHS and RGHS portals: submitted, queried, approved or rejected."
+          },
+          {
+            "key": "Source 02 · HMS tracker",
+            "title": "What your hospital billed",
+            "description": "Patient, claim ID and bill amount from your hospital management system: the number every claim should end at."
+          },
+          {
+            "key": "Source 03 · Bank UTRs",
+            "title": "What actually arrived",
+            "description": "Credits in your bank account, matched to each claim by UTR number and amount, not by guesswork."
+          }
+        ],
+        "dashboard": {
+          "title": "Reconciliation · September · ECHS + RGHS",
+          "kpis": [
+            {
+              "label": "Billed",
+              "value": "₹48.2L"
+            },
+            {
+              "label": "Approved",
+              "value": "₹44.9L"
+            },
+            {
+              "label": "In the bank",
+              "value": "₹39.6L"
+            },
+            {
+              "label": "Still owed",
+              "value": "₹5.3L"
+            }
+          ],
+          "rows": [
+            {
+              "claim": "RGHS · IPD · 1187",
+              "billed": "₹92,300",
+              "approved": "₹92,300",
+              "credit": "··· 4471",
+              "status": "Paid in full"
+            },
+            {
+              "claim": "ECHS · IPD · 0442",
+              "billed": "₹1,86,400",
+              "approved": "₹1,71,950",
+              "credit": "··· 8826",
+              "status": "Paid · ₹14,450 deducted"
+            },
+            {
+              "claim": "RGHS · IPD · 1203",
+              "billed": "₹2,14,000",
+              "approved": "₹2,14,000",
+              "credit": "Not received",
+              "status": "Approved, not credited · 34 days"
+            },
+            {
+              "claim": "ECHS · OPD · 1188",
+              "billed": "₹6,750",
+              "approved": "—",
+              "credit": "—",
+              "status": "Query open · reply due in 4 days"
+            },
+            {
+              "claim": "RGHS · OPD · 1190",
+              "billed": "₹48,220",
+              "approved": "₹48,220",
+              "credit": "··· 9083",
+              "status": "Paid in full"
+            }
+          ],
+          "note": "Sample data"
+        },
+        "gains": [
+          {
+            "index": "01",
+            "title": "Find the money that’s stuck",
+            "description": "Approved claims that never reached your account are flagged and aged by days, so your team follows up while it still matters."
+          },
+          {
+            "index": "02",
+            "title": "See every deduction",
+            "description": "Billed against approved against paid, claim by claim. Every short payment is visible the day it lands, not at year-end."
+          },
+          {
+            "index": "03",
+            "title": "Retire the spreadsheet",
+            "description": "No more matching UTRs against portal printouts by hand. Your finance team gets one view of what was filed, approved and paid."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "recon-board-timeline",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "proof.video-story",
+      "variant": "default",
+      "region": "main",
+      "theme": "night",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(08)",
+        "eyebrow": "Customer story",
+        "headline": "In his own words.",
+        "speaker": {
+          "name": "Mayank Singhi",
+          "role": "MANAGING DIRECTOR, MEDIPULSE"
+        },
+        "caption": "How a hospital claims desk cleared its backlog.",
+        "captionMeta": "Medipulse · ECHS & RGHS",
+        "video": {
+          "assetRole": "video.testimonial-source",
+          "src": "/testimonial.mp4"
+        },
+        "poster": {
+          "assetRole": "image.story-poster-source",
+          "src": "/poster.jpg"
+        },
+        "playLabel": "PLAY STORY"
+      },
+      "motion": {
+        "pattern": "video-play-follow",
+        "reducedMotionFallback": "static-centered-button"
+      }
+    },
+    {
+      "section": "editorial.case-study",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(09)",
+        "eyebrow": "Case study · Medipulse",
+        "headline": "How Medipulse cut its claim backlog from a week to three days.",
+        "columns": [
+          {
+            "title": "The challenge",
+            "body": "A growing volume of ECHS and RGHS claims, OPD and IPD, all filed by hand. The desk ran a week behind, and small data-entry slips kept coming back as queries."
+          },
+          {
+            "title": "What Dualite did",
+            "body": "Put a watcher on the hospital’s scan folder. Every file is validated, collated, digistamped and filed on the right portal, with a human review gate for anything unusual."
+          }
+        ],
+        "results": [
+          {
+            "key": "Claim backlog",
+            "value": "7 → 3 days"
+          },
+          {
+            "key": "Claims workforce",
+            "value": "66% leaner"
+          },
+          {
+            "key": "Claims sent back",
+            "value": "48% fewer"
+          }
+        ],
+        "link": {
+          "label": "Watch Mayank tell it →",
+          "href": "#story"
+        }
+      },
+      "motion": {
+        "pattern": "stagger-children",
+        "reducedMotionFallback": "final-state"
+      }
+    },
+    {
+      "section": "faq.accordion",
+      "variant": "default",
+      "region": "main",
+      "theme": "paper",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(10)",
+        "eyebrow": "FAQ",
+        "headline": "Questions hospitals",
+        "headlineAccent": "ask us.",
+        "intro": "Something we haven’t covered? Write to info@dualite.dev and a person will answer.",
+        "contactEmail": "info@dualite.dev",
+        "items": [
+          {
+            "number": "01",
+            "question": "Which schemes and claim types do you support?",
+            "answer": "ECHS and RGHS, for both OPD and IPD claims. Each scheme’s own rules decide the page order, which pages get a seal and signature, and what the portal needs."
+          },
+          {
+            "number": "02",
+            "question": "Does Dualite submit claims without our approval?",
+            "answer": "No. Claims are saved as drafts on the portal, and every file passes a human review gate. Your operator approves and submits. Anything unusual is held until someone on your team has looked at it."
+          },
+          {
+            "number": "03",
+            "question": "Do we need to change how we scan?",
+            "answer": "No. Your team keeps scanning the way it does today. The only addition is a dated folder for each day, so that day’s scans are saved together. The watcher picks them up from there, around the clock."
+          },
+          {
+            "number": "04",
+            "question": "What happens when a document is missing or doesn’t match?",
+            "answer": "The file is flagged with the exact page and the rule it failed. For example, a medicine billed on page 7 but missing from the claim. Your team fixes it before filing, instead of after a query."
+          },
+          {
+            "number": "05",
+            "question": "Where is our patient data stored?",
+            "answer": "We don’t save your documents. Dualite processes each file and keeps only log data, for 55 days, after which it is deleted automatically. That data is held on our secure servers, is not shared with any third party, and can only be viewed by your organisation. Your data is never used to train AI models."
+          },
+          {
+            "number": "06",
+            "question": "How do we know a claim has actually been paid?",
+            "answer": "Dualite reconciles every claim across three sources: its status and approved amount on the scheme portal, the bill in your hospital management system, and the credits in your bank account, matched by UTR. Your dashboard shows which claims are paid in full, short-paid or approved but not yet credited."
+          },
+          {
+            "number": "07",
+            "question": "How long does it take to go live?",
+            "answer": "We start with a 2–3 week pilot on your own claims. During the pilot we learn how your claims desk works (your schemes, documents and review steps) and set Dualite up around it. Once it’s running the way you need, we move to full deployment."
+          }
+        ],
+        "initiallyOpen": 0
+      },
+      "motion": {
+        "pattern": "accordion-height",
+        "reducedMotionFallback": "instant-toggle"
+      }
+    },
+    {
+      "section": "conversion.demo-form",
+      "variant": "default",
+      "region": "main",
+      "theme": "night",
+      "retrievalEligible": true,
+      "content": {
+        "eyebrowIndex": "(11)",
+        "eyebrow": "Book a demo",
+        "headline": "See one of your claims filed",
+        "headlineAccent": "in seconds.",
+        "lede": "A 30-minute walkthrough on your own ECHS or RGHS files, OPD or IPD. No commitment.",
+        "steps": [
+          {
+            "index": "01",
+            "text": "Bring one real claim file, scanned the way you do today."
+          },
+          {
+            "index": "02",
+            "text": "Watch it get read, checked, sealed and saved as a portal draft."
+          },
+          {
+            "index": "03",
+            "text": "Leave with a clear picture of your desk’s week with Dualite."
+          }
+        ],
+        "form": {
+          "fields": [
+            {
+              "label": "Full name",
+              "kind": "text",
+              "name": "name",
+              "required": true
+            },
+            {
+              "label": "Hospital",
+              "kind": "text",
+              "name": "hospital",
+              "required": true
+            },
+            {
+              "label": "Work email",
+              "kind": "email",
+              "name": "email",
+              "required": true
+            },
+            {
+              "label": "Mobile",
+              "kind": "tel",
+              "name": "phone",
+              "required": false
+            },
+            {
+              "label": "Your role",
+              "kind": "select",
+              "name": "role",
+              "options": [
+                "Owner / Managing Director",
+                "CFO / Finance",
+                "Billing / TPA desk head",
+                "Other"
+              ]
+            },
+            {
+              "label": "Claims filed per month",
+              "kind": "select",
+              "name": "volume",
+              "options": [
+                "Under 100",
+                "100 – 500",
+                "500 – 2,000",
+                "2,000+"
+              ]
+            }
+          ],
+          "submitLabel": "Book my demo",
+          "note": "Your details are only used to arrange this demo. Or write to info@dualite.dev",
+          "endpoint": {
+            "assetRole": "endpoint.lead-source",
+            "url": "/api/lead"
+          }
+        },
+        "success": {
+          "title": "Thank you.",
+          "body": "We’ve got your request and will be in touch shortly to fix a time. Keep one recent claim file handy for the walkthrough."
+        }
+      },
+      "motion": {
+        "pattern": "form-feedback",
+        "reducedMotionFallback": "instant-state"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "default",
+      "region": "post-main",
+      "theme": "night-2",
+      "retrievalEligible": true,
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.logo-source",
+          "src": "/logo-light.png",
+          "alt": "Dualite"
+        },
+        "tagline": "From scan folder to scheme portal, checked at every step.",
+        "columns": [
+          {
+            "heading": "PRODUCT",
+            "links": [
+              {
+                "label": "How it works",
+                "href": "#movement"
+              },
+              {
+                "label": "Platform",
+                "href": "#platform"
+              },
+              {
+                "label": "Trust",
+                "href": "#trust"
+              },
+              {
+                "label": "Reconciliation",
+                "href": "#reconciliation"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              }
+            ]
+          },
+          {
+            "heading": "GUIDES",
+            "links": [
+              {
+                "label": "RGHS claim submission",
+                "href": "/blog/rghs-claim-submission-guide/"
+              },
+              {
+                "label": "ECHS claim submission",
+                "href": "/blog/echs-claim-submission-guide/"
+              },
+              {
+                "label": "CGHS claim submission",
+                "href": "/blog/cghs-claim-submission-guide/"
+              },
+              {
+                "label": "All articles",
+                "href": "/blog/"
+              }
+            ]
+          },
+          {
+            "heading": "COMPANY",
+            "links": [
+              {
+                "label": "Customers",
+                "href": "#case"
+              },
+              {
+                "label": "Book a demo",
+                "href": "#demo"
+              },
+              {
+                "label": "Contact",
+                "href": "mailto:info@dualite.dev"
+              }
+            ]
+          }
+        ],
+        "mark": "Scan & forget.",
+        "legal": "© 2026 DUALITE",
+        "legalLinks": "PRIVACY · TERMS",
+        "backToTop": "BACK TO TOP ↑"
+      },
+      "motion": {
+        "pattern": "footer-chars",
+        "reducedMotionFallback": "final-state"
+      }
+    }
+  ]
+}

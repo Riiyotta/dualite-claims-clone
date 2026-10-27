@@ -1,0 +1,21 @@
+{
+  "id": "primitive.chip",
+  "description": "Pill status chip (olive) used in the reconciliation table.",
+  "props": {
+    "text": "text",
+    "tone": [
+      "ok",
+      "warn",
+      "flag"
+    ]
+  },
+  "tokensUsed": [
+    "radius.pill",
+    "accent.olive"
+  ],
+  "evidence": {
+    "cite": "public/assets/css/site.css:499",
+    "expect": ".rchip"
+  },
+  "retrievalEligible": true
+}

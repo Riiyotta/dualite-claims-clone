@@ -1,0 +1,1081 @@
+{
+ "$description": "Measured evidence ledger. Values were measured with an isolated Playwright 1.63 Chromium harness (separate contexts at 1440x900 DPR1 and 375x812 DPR2 isMobile/hasTouch) against the live original and the clone on 2026-10-27, and copied here so the package is self-contained. Citations under \"citations\" point at files of the sibling clone project (sourceRoot); verify_all.py checks them when that tree is present and degrades to a warning when it is not.",
+ "sourceRoot": "..",
+ "sourceRootNote": "Relative to design-repo/. Override with --source-root or DESIGN_REPO_SOURCE_ROOT.",
+ "original": "https://claims.dualite.dev/",
+ "clone": "http://localhost:5188/ (npm run dev in the clone project)",
+ "sectionHeights": {
+  "viewport": {
+   "width": 1440,
+   "height": 900,
+   "deviceScaleFactor": 1
+  },
+  "tool": "Playwright 1.63 Chromium, getBoundingClientRect at scrollY 0 after the intro",
+  "measuredAt": "2026-10-27",
+  "pages": {
+   "/": {
+    "template": "template.home",
+    "live": {
+     "docHeight": 17626,
+     "sections": {
+      "hero.claims-intro": {
+       "selector": ".hero",
+       "top": 0,
+       "height": 900,
+       "position": "relative",
+       "inFlow": true
+      },
+      "proof.quote-logos": {
+       "selector": ".proof",
+       "top": 900,
+       "height": 187,
+       "position": "static",
+       "inFlow": true
+      },
+      "content.problem-costs": {
+       "selector": ".problem",
+       "top": 1087,
+       "height": 1000,
+       "position": "static",
+       "inFlow": true
+      },
+      "metrics.results-band": {
+       "selector": ".results",
+       "top": 2087,
+       "height": 801,
+       "position": "relative",
+       "inFlow": true
+      },
+      "features.pinned-workflow": {
+       "selector": ".move",
+       "top": 2888,
+       "height": 5580,
+       "position": "relative",
+       "inFlow": true
+      },
+      "product.demo-walkthrough": {
+       "selector": ".demo",
+       "top": 8468,
+       "height": 1225,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.platform-tabs": {
+       "selector": ".platform",
+       "top": 9692,
+       "height": 1123,
+       "position": "static",
+       "inFlow": true
+      },
+      "trust.guarantees": {
+       "selector": ".trust",
+       "top": 10815,
+       "height": 1007,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.reconciliation": {
+       "selector": ".recon",
+       "top": 11822,
+       "height": 1368,
+       "position": "static",
+       "inFlow": true
+      },
+      "proof.video-story": {
+       "selector": ".story",
+       "top": 13190,
+       "height": 1162,
+       "position": "static",
+       "inFlow": true
+      },
+      "editorial.case-study": {
+       "selector": ".case",
+       "top": 14352,
+       "height": 882,
+       "position": "static",
+       "inFlow": true
+      },
+      "faq.accordion": {
+       "selector": ".faq",
+       "top": 15234,
+       "height": 974,
+       "position": "static",
+       "inFlow": true
+      },
+      "conversion.demo-form": {
+       "selector": ".cta",
+       "top": 16208,
+       "height": 760,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.footer": {
+       "selector": ".footer",
+       "top": 16967,
+       "height": 658,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.navbar": {
+       "selector": "#nav",
+       "top": 0,
+       "height": 76,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.mobile-menu": {
+       "selector": "#mmenu",
+       "top": 0,
+       "height": 900,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.intro-loader": {
+       "selector": ".loader",
+       "top": 0,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "display:none after the intro (measured box 0x0); while playing it is fixed inset 0 (viewport-sized)"
+      },
+      "utility.skip-link": {
+       "selector": ".skip",
+       "top": -60,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "off-screen until focused (site.css:71)"
+      },
+      "utility.scroll-progress": {
+       "selector": ".progress",
+       "top": 0,
+       "height": 2,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "utility.grain-overlay": {
+       "selector": ".grain",
+       "top": -477,
+       "height": 1800,
+       "position": "fixed",
+       "inFlow": false
+      }
+     }
+    },
+    "clone": {
+     "docHeight": 17626,
+     "sections": {
+      "hero.claims-intro": {
+       "selector": ".hero",
+       "top": 0,
+       "height": 900,
+       "position": "relative",
+       "inFlow": true
+      },
+      "proof.quote-logos": {
+       "selector": ".proof",
+       "top": 900,
+       "height": 187,
+       "position": "static",
+       "inFlow": true
+      },
+      "content.problem-costs": {
+       "selector": ".problem",
+       "top": 1087,
+       "height": 1000,
+       "position": "static",
+       "inFlow": true
+      },
+      "metrics.results-band": {
+       "selector": ".results",
+       "top": 2087,
+       "height": 801,
+       "position": "relative",
+       "inFlow": true
+      },
+      "features.pinned-workflow": {
+       "selector": ".move",
+       "top": 2888,
+       "height": 5580,
+       "position": "relative",
+       "inFlow": true
+      },
+      "product.demo-walkthrough": {
+       "selector": ".demo",
+       "top": 8468,
+       "height": 1225,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.platform-tabs": {
+       "selector": ".platform",
+       "top": 9692,
+       "height": 1123,
+       "position": "static",
+       "inFlow": true
+      },
+      "trust.guarantees": {
+       "selector": ".trust",
+       "top": 10815,
+       "height": 1007,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.reconciliation": {
+       "selector": ".recon",
+       "top": 11822,
+       "height": 1368,
+       "position": "static",
+       "inFlow": true
+      },
+      "proof.video-story": {
+       "selector": ".story",
+       "top": 13190,
+       "height": 1162,
+       "position": "static",
+       "inFlow": true
+      },
+      "editorial.case-study": {
+       "selector": ".case",
+       "top": 14352,
+       "height": 882,
+       "position": "static",
+       "inFlow": true
+      },
+      "faq.accordion": {
+       "selector": ".faq",
+       "top": 15234,
+       "height": 974,
+       "position": "static",
+       "inFlow": true
+      },
+      "conversion.demo-form": {
+       "selector": ".cta",
+       "top": 16208,
+       "height": 760,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.footer": {
+       "selector": ".footer",
+       "top": 16967,
+       "height": 658,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.navbar": {
+       "selector": "#nav",
+       "top": 0,
+       "height": 76,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.mobile-menu": {
+       "selector": "#mmenu",
+       "top": 0,
+       "height": 900,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.intro-loader": {
+       "selector": ".loader",
+       "top": 0,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "display:none after the intro (measured box 0x0); while playing it is fixed inset 0 (viewport-sized)"
+      },
+      "utility.skip-link": {
+       "selector": ".skip",
+       "top": -60,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "off-screen until focused (site.css:71)"
+      },
+      "utility.scroll-progress": {
+       "selector": ".progress",
+       "top": 0,
+       "height": 2,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "utility.grain-overlay": {
+       "selector": ".grain",
+       "top": -477,
+       "height": 1800,
+       "position": "fixed",
+       "inFlow": false
+      }
+     }
+    }
+   }
+  }
+ },
+ "sectionHeightsMobile": {
+  "viewport": {
+   "width": 375,
+   "height": 812,
+   "deviceScaleFactor": 2
+  },
+  "pages": {
+   "/": {
+    "live": {
+     "docHeight": 21028,
+     "sections": {
+      "hero.claims-intro": {
+       "selector": ".hero",
+       "top": 0,
+       "height": 1233,
+       "position": "relative",
+       "inFlow": true
+      },
+      "proof.quote-logos": {
+       "selector": ".proof",
+       "top": 1233,
+       "height": 392,
+       "position": "static",
+       "inFlow": true
+      },
+      "content.problem-costs": {
+       "selector": ".problem",
+       "top": 1625,
+       "height": 1575,
+       "position": "static",
+       "inFlow": true
+      },
+      "metrics.results-band": {
+       "selector": ".results",
+       "top": 3200,
+       "height": 1254,
+       "position": "relative",
+       "inFlow": true
+      },
+      "features.pinned-workflow": {
+       "selector": ".move",
+       "top": 4454,
+       "height": 5034,
+       "position": "relative",
+       "inFlow": true
+      },
+      "product.demo-walkthrough": {
+       "selector": ".demo",
+       "top": 9488,
+       "height": 740,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.platform-tabs": {
+       "selector": ".platform",
+       "top": 10228,
+       "height": 1313,
+       "position": "static",
+       "inFlow": true
+      },
+      "trust.guarantees": {
+       "selector": ".trust",
+       "top": 11541,
+       "height": 1424,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.reconciliation": {
+       "selector": ".recon",
+       "top": 12965,
+       "height": 2725,
+       "position": "static",
+       "inFlow": true
+      },
+      "proof.video-story": {
+       "selector": ".story",
+       "top": 15690,
+       "height": 587,
+       "position": "static",
+       "inFlow": true
+      },
+      "editorial.case-study": {
+       "selector": ".case",
+       "top": 16277,
+       "height": 1180,
+       "position": "static",
+       "inFlow": true
+      },
+      "faq.accordion": {
+       "selector": ".faq",
+       "top": 17457,
+       "height": 1254,
+       "position": "static",
+       "inFlow": true
+      },
+      "conversion.demo-form": {
+       "selector": ".cta",
+       "top": 18711,
+       "height": 1513,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.footer": {
+       "selector": ".footer",
+       "top": 20224,
+       "height": 804,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.navbar": {
+       "selector": "#nav",
+       "top": 0,
+       "height": 64,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.mobile-menu": {
+       "selector": "#mmenu",
+       "top": 0,
+       "height": 812,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.intro-loader": {
+       "selector": ".loader",
+       "top": 0,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "display:none after the intro (measured box 0x0); while playing it is fixed inset 0 (viewport-sized)"
+      },
+      "utility.skip-link": {
+       "selector": ".skip",
+       "top": -60,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "off-screen until focused (site.css:71)"
+      },
+      "utility.scroll-progress": {
+       "selector": ".progress",
+       "top": 0,
+       "height": 2,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "utility.grain-overlay": {
+       "selector": ".grain",
+       "top": -477,
+       "height": 1800,
+       "position": "fixed",
+       "inFlow": false
+      }
+     }
+    },
+    "clone": {
+     "docHeight": 21028,
+     "sections": {
+      "hero.claims-intro": {
+       "selector": ".hero",
+       "top": 0,
+       "height": 1233,
+       "position": "relative",
+       "inFlow": true
+      },
+      "proof.quote-logos": {
+       "selector": ".proof",
+       "top": 1233,
+       "height": 392,
+       "position": "static",
+       "inFlow": true
+      },
+      "content.problem-costs": {
+       "selector": ".problem",
+       "top": 1625,
+       "height": 1575,
+       "position": "static",
+       "inFlow": true
+      },
+      "metrics.results-band": {
+       "selector": ".results",
+       "top": 3200,
+       "height": 1254,
+       "position": "relative",
+       "inFlow": true
+      },
+      "features.pinned-workflow": {
+       "selector": ".move",
+       "top": 4454,
+       "height": 5034,
+       "position": "relative",
+       "inFlow": true
+      },
+      "product.demo-walkthrough": {
+       "selector": ".demo",
+       "top": 9488,
+       "height": 740,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.platform-tabs": {
+       "selector": ".platform",
+       "top": 10228,
+       "height": 1313,
+       "position": "static",
+       "inFlow": true
+      },
+      "trust.guarantees": {
+       "selector": ".trust",
+       "top": 11541,
+       "height": 1424,
+       "position": "static",
+       "inFlow": true
+      },
+      "features.reconciliation": {
+       "selector": ".recon",
+       "top": 12965,
+       "height": 2725,
+       "position": "static",
+       "inFlow": true
+      },
+      "proof.video-story": {
+       "selector": ".story",
+       "top": 15690,
+       "height": 587,
+       "position": "static",
+       "inFlow": true
+      },
+      "editorial.case-study": {
+       "selector": ".case",
+       "top": 16277,
+       "height": 1180,
+       "position": "static",
+       "inFlow": true
+      },
+      "faq.accordion": {
+       "selector": ".faq",
+       "top": 17457,
+       "height": 1254,
+       "position": "static",
+       "inFlow": true
+      },
+      "conversion.demo-form": {
+       "selector": ".cta",
+       "top": 18711,
+       "height": 1513,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.footer": {
+       "selector": ".footer",
+       "top": 20224,
+       "height": 804,
+       "position": "relative",
+       "inFlow": true
+      },
+      "shell.navbar": {
+       "selector": "#nav",
+       "top": 0,
+       "height": 64,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.mobile-menu": {
+       "selector": "#mmenu",
+       "top": 0,
+       "height": 812,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "runtime.intro-loader": {
+       "selector": ".loader",
+       "top": 0,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "display:none after the intro (measured box 0x0); while playing it is fixed inset 0 (viewport-sized)"
+      },
+      "utility.skip-link": {
+       "selector": ".skip",
+       "top": -60,
+       "height": 0,
+       "position": "fixed",
+       "inFlow": false,
+       "note": "off-screen until focused (site.css:71)"
+      },
+      "utility.scroll-progress": {
+       "selector": ".progress",
+       "top": 0,
+       "height": 2,
+       "position": "fixed",
+       "inFlow": false
+      },
+      "utility.grain-overlay": {
+       "selector": ".grain",
+       "top": -477,
+       "height": 1800,
+       "position": "fixed",
+       "inFlow": false
+      }
+     }
+    }
+   }
+  }
+ },
+ "scrollTriggers": {
+  "count": {
+   "1440": 77,
+   "375": 77
+  },
+  "cloneCount": {
+   "1440": 77,
+   "375": 77
+  },
+  "pin": [
+   "section#movement.move ; div.move__pin ; 2888 ; 7568 ; 0.9 ;  ; top top ; fn"
+  ],
+  "pinMobile": [
+   "section#movement.move ; div.move__pin ; 4454 ; 8676 ; 0.9 ;  ; top top ; fn"
+  ]
+ },
+ "loader": {
+  "t0": "html.is-ready",
+  "liveIsReadyMs": 1134,
+  "cloneIsReadyMs": 815,
+  "columns": "ms | html class | loader display | loader bg | count | status | bar transform | panel[0] transform | seal transform | seal-draw dasharray | seal-text opacity | h1 word transform | nav child opacity | scene opacity | sessionStorage dc-intro",
+  "timelineLogLive": [
+   "912 js | flex | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  |  | 1 | 1 | ",
+   "951 js lenis | flex | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  |  | 1 | 1 | ",
+   "1134 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  | 0 1010 |  | translate(0%, 118%) rotate(3deg) | 1 | 1 | ",
+   "1711 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 22 | Reading 14 pages | scaleX(0.220448) |  |  | 401.7 608.3 |  | translate(0%, 118%) rotate(3deg) | 1 ",
+   "1981 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 48 | Checking 50+ case rules | scaleX(0.475173) |  |  | 871.9 138.10000000000002 | 0.01 | translate(0%,",
+   "2253 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 74 | Applying Digistamp | scaleX(0.735839) |  |  | 994.8000000000001 15.199999999999932 | 0.6864 | tran",
+   "2641 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 96 | Ready for review | scaleX(0.962384) |  |  | 1000 0 | 1 | translate(0%, 118%) rotate(3deg) | 1 | 1 ",
+   "3211 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 100 | Ready for review | scaleX(1) | scaleY(0.0001) | rotate(-7.7812deg) scale(1.0049) | 1000 0 | 1 | t",
+   "3811 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 100 | Ready for review | scaleX(1) | scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1 | translate(0%, 11",
+   "3943 js is-ready lenis lenis-stopped | flex | rgba(0, 0, 0, 0) | 100 | Ready for review | scaleX(1) | scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1 | translate(0%, 118%",
+   "3962 js is-ready lenis lenis-stopped | flex | rgba(0, 0, 0, 0) | 100 | Ready for review | scaleX(1) | translateY(-0.001%) scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1 ",
+   "4843 js is-ready lenis | none | rgba(0, 0, 0, 0) | 100 | Ready for review | scaleX(1) | translateY(-101%) scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1 | translate(0%, "
+  ],
+  "timelineLogClone": [
+   "589 js | flex | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  |  | 1 | 1 | ",
+   "815 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 00 | Opening claim file | scaleX(0.000167184) |  |  | 0 1010 |  | translate(0%, 118%) rotate(3deg) | 1 |",
+   "1381 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 22 | Reading 14 pages | scaleX(0.218933) |  |  | 397.5 612.5 |  | translate(0%, 118%) rotate(3deg) | 1 ",
+   "1653 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 48 | Checking 50+ case rules | scaleX(0.48076) |  |  | 876.6 133.39999999999998 | 0.0265 | translate(0%",
+   "1920 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 74 | Applying Digistamp | scaleX(0.744898) |  |  | 996 14 | 0.7066 | translate(0%, 118%) rotate(3deg) |",
+   "2315 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 97 | Ready for review | scaleX(0.965453) |  |  | 1000 0 | 1 | translate(0%, 118%) rotate(3deg) | 1 | 1 ",
+   "2850 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 100 | Ready for review | scaleX(1) | scaleY(0) | rotate(-7.588deg) scale(1.0093) | 1000 0 | 1 | transla",
+   "2883 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 100 | Ready for review | scaleX(1) | scaleY(0.0001) | rotate(-7.7962deg) scale(1.0046) | 1000 0 | 1 | t",
+   "3483 js is-ready lenis lenis-stopped | flex | rgb(245, 240, 230) | 100 | Ready for review | scaleX(1) | scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1 | translate(0%, 11",
+   "3619 js is-ready lenis lenis-stopped | flex | rgba(0, 0, 0, 0) | 100 | Ready for review | scaleX(1) | scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1 | translate(0%, 118%",
+   "3633 js is-ready lenis lenis-stopped | flex | rgba(0, 0, 0, 0) | 100 | Ready for review | scaleX(1) | translateY(-0.0033%) scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1",
+   "4532 js is-ready lenis | none | rgba(0, 0, 0, 0) | 100 | Ready for review | scaleX(1) | translateY(-101%) scaleY(1) | rotate(-8deg) scale(1) | 1000 0 | 1 | translate(0%, "
+  ],
+  "afterIntro": {
+   "live": {
+    "cls": "js is-ready lenis",
+    "ss": "1",
+    "scrollY": 0
+   },
+   "clone": {
+    "cls": "js is-ready lenis",
+    "ss": "1",
+    "scrollY": 0
+   }
+  },
+  "secondLoadSameSession": {
+   "live": {
+    "cls": "js no-loader lenis is-ready",
+    "loaderDisp": "none",
+    "log": [
+     "385 js no-loader | none | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  |  | 1 | 1 | 1",
+     "547 js no-loader lenis is-ready | none | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  | translate(0%, 118%) rotate(3deg) | 0.1918 | 1 | 1",
+     "618 js no-loader lenis is-ready | none | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  | translate(0%, 118%) rotate(3deg) | 0.3716 | 1 | 1"
+    ]
+   },
+   "clone": {
+    "cls": "js no-loader lenis is-ready",
+    "loaderDisp": "none",
+    "log": [
+     "483 js no-loader | none | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  |  | 1 | 1 | 1",
+     "733 js no-loader lenis is-ready | none | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  | translate(0%, 118%) rotate(3deg) | 0.1089 | 1 | 1",
+     "768 js no-loader lenis is-ready | none | rgb(245, 240, 230) | 00 | Opening claim file |  |  |  |  |  | translate(0%, 118%) rotate(3deg) | 0.2056 | 1 | 1"
+    ]
+   }
+  }
+ },
+ "interactions": {
+  "faq": {
+   "count": 7,
+   "before": [
+    "true:107",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0"
+   ],
+   "after": [
+    "true:107",
+    "true:107",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0"
+   ],
+   "closed": [
+    "true:107",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0",
+    "false:0"
+   ],
+   "iconOpen": {
+    "bg": "rgb(61, 90, 42)",
+    "border": "1px solid rgb(61, 90, 42)",
+    "w": "28px",
+    "after": "matrix(1, 0, 0, 1, -5, -0.75)",
+    "before": "matrix(1, 0, 0, 1, -5, -0.75)"
+   },
+   "iconClosedAfter": "matrix(0, 1, -1, 0, -5, -0.75)",
+   "q": [
+    "01Which schemes and claim types do you support?",
+    "02Does Dualite submit claims without our approval?",
+    "03Do we need to change how we scan?",
+    "04What happens when a document is missing or doesn’t match?",
+    "05Where is our patient data stored?",
+    "06How do we know a claim has actually been paid?",
+    "07How long does it take to go live?"
+   ]
+  },
+  "tabs": [
+   "false",
+   "false",
+   "true"
+  ],
+  "productDemoCycle": [
+   "pd pd-s0",
+   "pd pd-s1"
+  ],
+  "mobileMenuOpen": {
+   "cls": "js is-ready menu-open lenis lenis-stopped",
+   "vis": "visible",
+   "clip": "inset(0%)",
+   "aria": "false",
+   "burger": "true"
+  },
+  "mobileMenuClosed": {
+   "vis": "hidden",
+   "clip": "inset(0% 0% 100%)",
+   "aria": "true"
+  }
+ },
+ "parity": {
+  "method": "viewport 1440x900 DPR1, reducedMotion=reduce, dc-intro=1, animations/transitions off, grain/nav/progress hidden, videos paused; per-pixel RGB tolerance 16",
+  "live": "https://claims.dualite.dev/",
+  "clone": "http://localhost:5188/",
+  "measuredAt": "2026-10-27T09:02:05.681Z",
+  "sections": {
+   ".hero": {
+    "liveBox": {
+     "y": 0,
+     "h": 900
+    },
+    "cloneBox": {
+     "y": 0,
+     "h": 900
+    },
+    "frames": 1,
+    "perFrame": [
+     99.99
+    ],
+    "matchPct": 99.99
+   },
+   ".proof": {
+    "liveBox": {
+     "y": 900,
+     "h": 187
+    },
+    "cloneBox": {
+     "y": 900,
+     "h": 187
+    },
+    "frames": 1,
+    "perFrame": [
+     99.93
+    ],
+    "matchPct": 99.93
+   },
+   ".problem": {
+    "liveBox": {
+     "y": 1087,
+     "h": 1000
+    },
+    "cloneBox": {
+     "y": 1087,
+     "h": 1000
+    },
+    "frames": 2,
+    "perFrame": [
+     100,
+     100
+    ],
+    "matchPct": 100
+   },
+   ".results": {
+    "liveBox": {
+     "y": 2087,
+     "h": 801
+    },
+    "cloneBox": {
+     "y": 2087,
+     "h": 801
+    },
+    "frames": 1,
+    "perFrame": [
+     100
+    ],
+    "matchPct": 100
+   },
+   ".move": {
+    "liveBox": {
+     "y": 2888,
+     "h": 5580
+    },
+    "cloneBox": {
+     "y": 2888,
+     "h": 5580
+    },
+    "frames": 6,
+    "perFrame": [
+     99.99,
+     99.97,
+     99.97,
+     99.98,
+     99.99,
+     99.99
+    ],
+    "matchPct": 99.98
+   },
+   ".demo": {
+    "liveBox": {
+     "y": 8468,
+     "h": 1225
+    },
+    "cloneBox": {
+     "y": 8468,
+     "h": 1225
+    },
+    "frames": 2,
+    "perFrame": [
+     99.98,
+     100
+    ],
+    "matchPct": 99.99
+   },
+   ".platform": {
+    "liveBox": {
+     "y": 9692,
+     "h": 1115
+    },
+    "cloneBox": {
+     "y": 9692,
+     "h": 1115
+    },
+    "frames": 2,
+    "perFrame": [
+     99.99,
+     100
+    ],
+    "matchPct": 100
+   },
+   ".trust": {
+    "liveBox": {
+     "y": 10808,
+     "h": 999
+    },
+    "cloneBox": {
+     "y": 10808,
+     "h": 999
+    },
+    "frames": 2,
+    "perFrame": [
+     99.99,
+     100
+    ],
+    "matchPct": 99.99
+   },
+   ".recon": {
+    "liveBox": {
+     "y": 11807,
+     "h": 1368
+    },
+    "cloneBox": {
+     "y": 11807,
+     "h": 1368
+    },
+    "frames": 2,
+    "perFrame": [
+     99.98,
+     100
+    ],
+    "matchPct": 99.99
+   },
+   ".story": {
+    "liveBox": {
+     "y": 13175,
+     "h": 1162
+    },
+    "cloneBox": {
+     "y": 13175,
+     "h": 1162
+    },
+    "frames": 2,
+    "perFrame": [
+     100,
+     100
+    ],
+    "matchPct": 100
+   },
+   ".case": {
+    "liveBox": {
+     "y": 14337,
+     "h": 874
+    },
+    "cloneBox": {
+     "y": 14337,
+     "h": 874
+    },
+    "frames": 1,
+    "perFrame": [
+     100
+    ],
+    "matchPct": 100
+   },
+   ".faq": {
+    "liveBox": {
+     "y": 15211,
+     "h": 974
+    },
+    "cloneBox": {
+     "y": 15211,
+     "h": 974
+    },
+    "frames": 2,
+    "perFrame": [
+     100,
+     100
+    ],
+    "matchPct": 100
+   },
+   ".cta": {
+    "liveBox": {
+     "y": 16185,
+     "h": 751
+    },
+    "cloneBox": {
+     "y": 16185,
+     "h": 751
+    },
+    "frames": 1,
+    "perFrame": [
+     99.99
+    ],
+    "matchPct": 99.99
+   },
+   ".footer": {
+    "liveBox": {
+     "y": 16936,
+     "h": 658
+    },
+    "cloneBox": {
+     "y": 16936,
+     "h": 658
+    },
+    "frames": 1,
+    "perFrame": [
+     100
+    ],
+    "matchPct": 100
+   }
+  },
+  "averagePct": 99.99,
+  "minSectionPct": 99.93,
+  "gate": {
+   "perSectionMin": 80,
+   "averageMin": 80
+  },
+  "negativeControl": {
+   "compare": "live .hero frame 0 vs clone .results frame 0 (different sections)",
+   "matchPct": 1.92,
+   "expect": "well below 80"
+  },
+  "pass": true,
+  "harness": "extraction/parity_harness.mjs",
+  "note": "Real per-section numbers from the harness run; frames = viewport screenshots at section top and every further 900px (max 6). Desktop 1440 only; 375 parity was compared structurally (identical section boxes and docHeight 21028 on both), not pixel-diffed."
+ },
+ "citations": [
+  {
+   "claim": "Section boxes, docHeight 17626/21028, 77 ScrollTriggers, pin 2888->7568",
+   "cite": "CLONE_SPEC.md:13-19",
+   "expect": "17626"
+  },
+  {
+   "claim": "Loader structure, typography and measured timeline",
+   "cite": "CLONE_SPEC.md:49-69",
+   "expect": "Loader"
+  },
+  {
+   "claim": "Movement pin measured values",
+   "cite": "CLONE_SPEC.md:128-139",
+   "expect": "Pin"
+  },
+  {
+   "claim": "Asset inventory (requests the original makes)",
+   "cite": "CLONE_SPEC.md:237-258",
+   "expect": "Asset inventory"
+  },
+  {
+   "claim": "Blog links not implemented by the clone (soft 404)",
+   "cite": "CLONE_SPEC.md:258",
+   "expect": "soft 404"
+  },
+  {
+   "claim": "Section composition and order",
+   "cite": "src/App.jsx:35-63",
+   "expect": "<main id=\"main\">"
+  },
+  {
+   "claim": "Head gating script (once per session, reduced motion, 6s safety net)",
+   "cite": "index.html:28-38",
+   "expect": "dc-intro"
+  },
+  {
+   "claim": "Loader timeline (anime.js)",
+   "cite": "public/assets/js/site.js:899-944",
+   "expect": "A.createTimeline"
+  },
+  {
+   "claim": "Boot order: fonts ready -> triggers -> is-ready -> loader",
+   "cite": "public/assets/js/site.js:953-981",
+   "expect": "root.classList.add('is-ready')"
+  },
+  {
+   "claim": "Tailwind tokens mirror :root",
+   "cite": "tailwind.config.js:8-21",
+   "expect": "paper: { DEFAULT: '#F5F0E6'"
+  },
+  {
+   "claim": "Fonts self-hosted (Geist 400/500/600, Geist Mono 400/500)",
+   "cite": "public/fonts.css:1-243",
+   "expect": "Geist Mono"
+  },
+  {
+   "claim": "Live lead endpoint",
+   "cite": "public/assets/js/site.js:779-885",
+   "expect": "/api/lead"
+  }
+ ],
+ "corrections": [
+  "The prompt/brief said the loader seal is drawn with GSAP DrawSVG; the real loader() uses anime.js 4 (A.svg.createDrawable, A.createTimeline). DrawSVG is used elsewhere (metric arrows). Recorded as anime.js here."
+ ]
+}

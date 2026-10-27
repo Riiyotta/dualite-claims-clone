@@ -1,0 +1,268 @@
+{
+  "$description": "Closed assetRole vocabulary. availability is pinned in code (PINNED_AVAILABILITY in schema/semantic_validate.py and extraction/verify_all.py); editing this file alone cannot loosen it.",
+  "licensing": "Source is a real, live company site (Dualite / Dualite Claims / ClaimIt by Dualite). Logos, product screenshots, customer logos, the customer testimonial video and poster, customer names, quotes, results and copy are the property of the company or its customers. Generated pages must never reproduce them.",
+  "roles": {
+    "brand.logo-source": {
+      "id": "brand.logo-source",
+      "availability": "blocked-for-generation",
+      "description": "Real company wordmark (dark and light variants) in nav and footer.",
+      "generationGuidance": "must-not-fabricate: never reproduce, trace, recolour or imitate. Generated pages use brand.mark-placeholder.",
+      "sourceFiles": [
+        "logo-dark.png",
+        "logo-light.png"
+      ],
+      "generationSafeSubstitutes": [
+        "brand.mark-placeholder"
+      ],
+      "evidence": {
+        "cite": "src/components/Nav.jsx:4",
+        "expect": "logo-dark.png"
+      }
+    },
+    "mark.seal-source": {
+      "id": "mark.seal-source",
+      "availability": "reference-only",
+      "description": "Intro-loader / form-success seal: circles + check with the real brand name on the ring text.",
+      "generationGuidance": "Geometry may be re-drawn; ring text and brand label must be replaced. Use mark.seal-generic.",
+      "sourceFiles": [
+        "inline SVG in Loader.jsx and Cta.jsx"
+      ],
+      "generationSafeSubstitutes": [
+        "mark.seal-generic"
+      ],
+      "evidence": {
+        "cite": "src/components/Loader.jsx:4",
+        "expect": "loader__seal"
+      }
+    },
+    "illustration.hero-scene-source": {
+      "id": "illustration.hero-scene-source",
+      "availability": "reference-only",
+      "description": "Inline isometric codex scene in the hero (~80 CSS keyframes).",
+      "generationGuidance": "Do not copy the source SVG; generate a new illustration in the same paper/olive line style.",
+      "sourceFiles": [
+        "inline SVG in Hero.jsx",
+        "public/assets/css/hero-scene.css"
+      ],
+      "generationSafeSubstitutes": [
+        "illustration.generated"
+      ],
+      "evidence": {
+        "cite": "src/components/Hero.jsx:4",
+        "expect": "hero__scene"
+      }
+    },
+    "illustration.workflow-stage-source": {
+      "id": "illustration.workflow-stage-source",
+      "availability": "reference-only",
+      "description": "Pinned workflow stage art (documents, scan line, index, seal, portal panes).",
+      "generationGuidance": "Generate new stage art; never reuse the source document/portal mock-ups.",
+      "sourceFiles": [
+        "inline markup in Move.jsx"
+      ],
+      "generationSafeSubstitutes": [
+        "illustration.generated"
+      ],
+      "evidence": {
+        "cite": "src/components/Move.jsx:4",
+        "expect": "stage__canvas"
+      }
+    },
+    "screenshot.product-ui-source": {
+      "id": "screenshot.product-ui-source",
+      "availability": "blocked-for-generation",
+      "description": "Fixed-artboard recreation of the real product UI (batch screen with the real product domain).",
+      "generationGuidance": "must-not-fabricate: proprietary product UI. Generate a fictional UI with image.generated-product-visual.",
+      "sourceFiles": [
+        "inline markup in Demo.jsx",
+        "public/assets/css/demo.css"
+      ],
+      "generationSafeSubstitutes": [
+        "image.generated-product-visual"
+      ],
+      "evidence": {
+        "cite": "src/components/Demo.jsx:4",
+        "expect": "demo__stage"
+      }
+    },
+    "screenshot.platform-source": {
+      "id": "screenshot.platform-source",
+      "availability": "blocked-for-generation",
+      "description": "Real product screenshots for the three platform tabs.",
+      "generationGuidance": "must-not-fabricate: never reuse or imitate. Use image.generated-product-visual.",
+      "sourceFiles": [
+        "validate.webp",
+        "stamp.webp",
+        "watcher.webp"
+      ],
+      "generationSafeSubstitutes": [
+        "image.generated-product-visual"
+      ],
+      "evidence": {
+        "cite": "src/components/Platform.jsx:4",
+        "expect": "validate.webp"
+      }
+    },
+    "video.trust-animation-source": {
+      "id": "video.trust-animation-source",
+      "availability": "reference-only",
+      "description": "Brand animation loop and its poster in the trust section.",
+      "generationGuidance": "Generate a new loop or still; do not reuse.",
+      "sourceFiles": [
+        "trust-anim.mp4",
+        "trust.webp"
+      ],
+      "generationSafeSubstitutes": [
+        "video.generated-loop",
+        "illustration.generated"
+      ],
+      "evidence": {
+        "cite": "src/components/Trust.jsx:4",
+        "expect": "trust-anim.mp4"
+      }
+    },
+    "video.testimonial-source": {
+      "id": "video.testimonial-source",
+      "availability": "blocked-for-generation",
+      "description": "Real customer testimonial video (identifiable real person).",
+      "generationGuidance": "must-not-fabricate: real person identity. Never reuse, never synthesise a lookalike. Use video.user-supplied or video.generated-loop with a fictional speaker.",
+      "sourceFiles": [
+        "testimonial.mp4"
+      ],
+      "generationSafeSubstitutes": [
+        "video.user-supplied",
+        "video.generated-loop"
+      ],
+      "evidence": {
+        "cite": "src/components/Story.jsx:4",
+        "expect": "testimonial.mp4"
+      }
+    },
+    "image.story-poster-source": {
+      "id": "image.story-poster-source",
+      "availability": "blocked-for-generation",
+      "description": "Poster frame of the testimonial video (also the og:image).",
+      "generationGuidance": "must-not-fabricate: real person likeness. Use image.generated-poster.",
+      "sourceFiles": [
+        "poster.jpg"
+      ],
+      "generationSafeSubstitutes": [
+        "image.generated-poster"
+      ],
+      "evidence": {
+        "cite": "src/components/Story.jsx:4",
+        "expect": "poster.jpg"
+      }
+    },
+    "logo.customer-source": {
+      "id": "logo.customer-source",
+      "availability": "blocked-for-generation",
+      "description": "Real customer hospital logo lockups (vector marks with real brand colours).",
+      "generationGuidance": "must-not-fabricate: real third-party trademarks. Use logo.customer-placeholder with fictional names.",
+      "sourceFiles": [
+        "inline SVG in Proof.jsx"
+      ],
+      "generationSafeSubstitutes": [
+        "logo.customer-placeholder"
+      ],
+      "evidence": {
+        "cite": "src/components/Proof.jsx:4",
+        "expect": "logo-lockup"
+      }
+    },
+    "endpoint.lead-source": {
+      "id": "endpoint.lead-source",
+      "availability": "blocked-for-generation",
+      "description": "Live lead-capture endpoint the demo form POSTs to.",
+      "generationGuidance": "must-not-reuse-live-endpoint: never point a generated form at it. Use endpoint.placeholder.",
+      "sourceFiles": [
+        "/api/lead"
+      ],
+      "generationSafeSubstitutes": [
+        "endpoint.placeholder"
+      ],
+      "evidence": {
+        "cite": "public/assets/js/site.js:779-885",
+        "expect": "function form()"
+      }
+    },
+    "brand.mark-placeholder": {
+      "id": "brand.mark-placeholder",
+      "availability": "generation-safe",
+      "description": "User-supplied or generated wordmark for a fictional/new brand.",
+      "generationGuidance": "may-generate-new: original wordmark only; must not resemble the source wordmark."
+    },
+    "mark.seal-generic": {
+      "id": "mark.seal-generic",
+      "availability": "generation-safe",
+      "description": "Seal geometry (two circles, ring text path, check) with neutral or new-brand ring text.",
+      "generationGuidance": "may-generate-new: ring text must be the new brand or generic words."
+    },
+    "illustration.generated": {
+      "id": "illustration.generated",
+      "availability": "generation-safe",
+      "description": "Newly generated line illustration in the paper/olive codex style.",
+      "generationGuidance": "may-generate-new."
+    },
+    "image.generated-product-visual": {
+      "id": "image.generated-product-visual",
+      "availability": "generation-safe",
+      "description": "Generated fictional product UI or document visual.",
+      "generationGuidance": "may-generate-new: fictional data only; no real product names, domains or people."
+    },
+    "video.generated-loop": {
+      "id": "video.generated-loop",
+      "availability": "generation-safe",
+      "description": "Generated ambient loop (muted, looping).",
+      "generationGuidance": "may-generate-new."
+    },
+    "video.user-supplied": {
+      "id": "video.user-supplied",
+      "availability": "generation-safe",
+      "description": "Video supplied by the page owner, with consent of anyone shown.",
+      "generationGuidance": "user-supplied: never sourced from the original site."
+    },
+    "image.generated-poster": {
+      "id": "image.generated-poster",
+      "availability": "generation-safe",
+      "description": "Generated or user-supplied poster frame.",
+      "generationGuidance": "may-generate-new: fictional or consenting people only."
+    },
+    "logo.customer-placeholder": {
+      "id": "logo.customer-placeholder",
+      "availability": "generation-safe",
+      "description": "Text or abstract mark for a fictional customer organisation.",
+      "generationGuidance": "may-generate-new: fictional organisation names only."
+    },
+    "person.fictional": {
+      "id": "person.fictional",
+      "availability": "generation-safe",
+      "description": "Fictional person name/role/avatar for quotes and testimonials.",
+      "generationGuidance": "may-generate-new: must be flagged isFictional=true in the PageSpec."
+    },
+    "rating.placeholder": {
+      "id": "rating.placeholder",
+      "availability": "generation-safe",
+      "description": "Placeholder metric/result values. The source has no star ratings; its \"ratings\" are customer-reported results (48%, 66%, 7->3 days) which are blocked.",
+      "generationGuidance": "placeholder-only: clearly illustrative numbers, never the source results."
+    },
+    "url.placeholder": {
+      "id": "url.placeholder",
+      "availability": "generation-safe",
+      "description": "Placeholder links on reserved domains (.example / .invalid) or in-page anchors.",
+      "generationGuidance": "placeholder-only."
+    },
+    "endpoint.placeholder": {
+      "id": "endpoint.placeholder",
+      "availability": "generation-safe",
+      "description": "Placeholder form endpoint on a reserved domain.",
+      "generationGuidance": "placeholder-only: https://forms.<name>.example/..."
+    },
+    "copy.original": {
+      "id": "copy.original",
+      "availability": "generation-safe",
+      "description": "Newly written copy that shares no distinctive phrase with the source.",
+      "generationGuidance": "may-generate-new."
+    }
+  }
+}

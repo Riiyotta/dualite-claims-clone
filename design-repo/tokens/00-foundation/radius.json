@@ -1,0 +1,38 @@
+{
+  "$description": "Radius: the system is square-cornered (buttons radius 0). Only circles, one pill chip and 1-3px hairline rounding exist.",
+  "tokens": {
+    "radius.none": {
+      "value": "0",
+      "evidence": {
+        "cite": "public/assets/css/site.css:589",
+        "expect": "border-radius:0"
+      },
+      "measuredEvidence": {
+        "cite": "CLONE_SPEC.md:38",
+        "expect": "radius 0"
+      }
+    },
+    "radius.circle": {
+      "value": "50%",
+      "uses": 8,
+      "evidence": {
+        "cite": "public/assets/css/site.css:566",
+        "expect": "border-radius:50%"
+      }
+    },
+    "radius.pill": {
+      "value": "999px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:499",
+        "expect": "border-radius:999px"
+      }
+    },
+    "radius.hair": {
+      "value": "2px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:76",
+        "expect": "border-radius:2px"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$description": "Semantic roles -> foundation references. Roles observed in computed styles (CLONE_SPEC.md sections 0-18).",
+  "tokens": {
+    "surface.paper": {
+      "ref": "color.paper"
+    },
+    "surface.paper-2": {
+      "ref": "color.paper-2"
+    },
+    "surface.card": {
+      "ref": "color.card"
+    },
+    "surface.night": {
+      "ref": "color.night"
+    },
+    "surface.night-2": {
+      "ref": "color.night-2"
+    },
+    "text.primary": {
+      "ref": "color.ink"
+    },
+    "text.secondary": {
+      "ref": "color.ink-2"
+    },
+    "text.muted": {
+      "ref": "color.muted"
+    },
+    "text.faint": {
+      "ref": "color.faint"
+    },
+    "text.on-night": {
+      "ref": "color.on-night"
+    },
+    "text.on-night-2": {
+      "ref": "color.on-night-2"
+    },
+    "accent.olive": {
+      "ref": "color.olive"
+    },
+    "accent.olive-2": {
+      "ref": "color.olive-2"
+    },
+    "accent.lime": {
+      "ref": "color.lime"
+    },
+    "accent.amber": {
+      "ref": "color.amber"
+    },
+    "border.default": {
+      "ref": "color.line"
+    },
+    "border.strong": {
+      "ref": "color.line-2"
+    },
+    "border.soft": {
+      "ref": "color.line-soft"
+    },
+    "border.night": {
+      "ref": "color.night-line"
+    }
+  }
+}

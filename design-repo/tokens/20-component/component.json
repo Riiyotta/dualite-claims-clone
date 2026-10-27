@@ -1,0 +1,69 @@
+{
+  "$description": "Component-scoped values measured on the rendered page.",
+  "tokens": {
+    "button.height": {
+      "value": "56px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:117",
+        "expect": "--bh:56px"
+      }
+    },
+    "button.height-sm": {
+      "value": "44px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:124",
+        "expect": "--bh:44px"
+      }
+    },
+    "button.padding-x": {
+      "value": "26px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:117",
+        "expect": "padding:0 26px"
+      }
+    },
+    "button.radius": {
+      "ref": "radius.none"
+    },
+    "field.height": {
+      "value": "50px",
+      "measured": "inputs/select h 50 (CLONE_SPEC.md section 17)"
+    },
+    "loader.seal-size": {
+      "value": "132px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:160",
+        "expect": "width:132px;height:132px"
+      }
+    },
+    "loader.panel-count": {
+      "value": 6,
+      "evidence": {
+        "cite": "src/components/Loader.jsx:4",
+        "expect": "loader__panels"
+      }
+    },
+    "loader.bar-height": {
+      "value": "2px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:164",
+        "expect": "height:2px"
+      }
+    },
+    "progress.height": {
+      "value": "2px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:92",
+        "expect": "height:2px"
+      }
+    },
+    "play.size": {
+      "value": "128px",
+      "mobile": "88px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:527",
+        "expect": "width:128px;height:128px"
+      }
+    }
+  }
+}

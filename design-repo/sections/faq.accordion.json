@@ -1,0 +1,113 @@
+{
+  "id": "faq.accordion",
+  "title": "FAQ accordion",
+  "source": {
+    "id": "src.faq",
+    "file": "src/components/Faq.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Faq.jsx:4",
+    "marker": "<section className={\"faq\"}"
+  },
+  "semantic": {
+    "id": "faq.accordion",
+    "category": "FAQ"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "intro": {
+      "type": "text",
+      "maxWords": 16
+    },
+    "contactEmail": {
+      "type": "email"
+    },
+    "items": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "number": {
+            "type": "text",
+            "maxWords": 1
+          },
+          "question": {
+            "type": "text",
+            "maxWords": 14
+          },
+          "answer": {
+            "type": "text",
+            "maxWords": 70
+          }
+        },
+        "required": [
+          "number",
+          "question",
+          "answer"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 10
+    },
+    "initiallyOpen": {
+      "type": "integer",
+      "min": 0,
+      "max": 9
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion-height",
+      "reveal-fade"
+    ],
+    "reducedMotionFallback": {
+      "accordion-height": "instant-toggle",
+      "reveal-fade": "final-state"
+    }
+  },
+  "generatedAssetRoles": [
+    "copy.original",
+    "url.placeholder"
+  ],
+  "responsive": {
+    "desktop": "2 cols intro | items (464 | 697)",
+    "mobile": "1 col, question grid 32px 1fr 28px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:676",
+      "expect": ".faq__in{grid-template-columns:1fr}"
+    }
+  },
+  "contentRequired": [
+    "contactEmail",
+    "eyebrow",
+    "eyebrowIndex",
+    "headline",
+    "headlineAccent",
+    "initiallyOpen",
+    "intro",
+    "items"
+  ]
+}

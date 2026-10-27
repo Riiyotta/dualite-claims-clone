@@ -1,0 +1,18 @@
+{
+  "id": "component.form-feedback",
+  "description": "Demo form success overlay (Thank you + seal draw) and error/mailto fallback states.",
+  "props": {
+    "title": "text",
+    "body": "text"
+  },
+  "tokensUsed": [
+    "surface.card",
+    "font.display"
+  ],
+  "evidence": {
+    "cite": "src/components/Cta.jsx:4",
+    "expect": "form__done"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Form submission feedback (success overlay / error alert) only exists after a submit; transient runtime state, not retrievable content."
+}

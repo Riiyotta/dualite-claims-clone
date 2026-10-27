@@ -1,0 +1,18 @@
+{
+  "id": "component.seal-mark",
+  "description": "Seal SVG: ink disc, two drawn circles, ring text on a path, drawn check. Used by the loader and the form success overlay.",
+  "props": {
+    "ringText": "text",
+    "mark": "assetRole"
+  },
+  "tokensUsed": [
+    "accent.olive",
+    "font.mono",
+    "loader.seal-size"
+  ],
+  "evidence": {
+    "cite": "src/components/Loader.jsx:4",
+    "expect": "loader__seal"
+  },
+  "retrievalEligible": true
+}

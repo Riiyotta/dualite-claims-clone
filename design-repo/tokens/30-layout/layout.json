@@ -1,0 +1,33 @@
+{
+  "$description": "Layout scale.",
+  "tokens": {
+    "layout.maxw": {
+      "value": "1440px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:40",
+        "expect": "--maxw:1440px"
+      }
+    },
+    "layout.nav-h": {
+      "value": "76px",
+      "mobile": "64px",
+      "evidence": {
+        "cite": "public/assets/css/site.css:41",
+        "expect": "--nav-h:76px"
+      }
+    },
+    "layout.gutter": {
+      "ref": "space.gutter"
+    },
+    "layout.section-y": {
+      "ref": "space.section-y"
+    },
+    "layout.sec-head-cols": {
+      "value": "minmax(0,1.35fr) minmax(0,1fr)",
+      "evidence": {
+        "cite": "public/assets/css/site.css:110",
+        "expect": "minmax(0,1.35fr) minmax(0,1fr)"
+      }
+    }
+  }
+}

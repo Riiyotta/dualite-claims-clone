@@ -1,0 +1,138 @@
+{
+  "$description": "One template per page shape. The clone serves a single page shape.",
+  "templates": {
+    "template.home": {
+      "id": "template.home",
+      "title": "Single-page marketing home",
+      "routes": [
+        "/"
+      ],
+      "evidence": {
+        "cite": "src/App.jsx:35-63",
+        "expect": "<main id=\"main\">"
+      },
+      "nodes": [
+        {
+          "section": "utility.skip-link",
+          "region": "pre-main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.intro-loader",
+          "region": "pre-main",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "utility.scroll-progress",
+          "region": "pre-main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "utility.grain-overlay",
+          "region": "pre-main",
+          "required": false,
+          "repeatable": false
+        },
+        {
+          "section": "shell.navbar",
+          "region": "pre-main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.mobile-menu",
+          "region": "pre-main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.claims-intro",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.quote-logos",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.problem-costs",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "metrics.results-band",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.pinned-workflow",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "product.demo-walkthrough",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.platform-tabs",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "trust.guarantees",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.reconciliation",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.video-story",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "editorial.case-study",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.demo-form",
+          "region": "main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "region": "post-main",
+          "required": true,
+          "repeatable": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "$description": "Durations and easing curves used by the motion layer.",
+  "ease": {
+    "ease.codex": {
+      "value": "M0,0 C0.16,1 0.3,1 1,1",
+      "kind": "gsap-custom (default ease)",
+      "evidence": {
+        "cite": "public/assets/js/site.js:26",
+        "expect": "CustomEase.create('codex'"
+      }
+    },
+    "ease.wipe": {
+      "value": "M0,0 C0.7,0 0.2,1 1,1",
+      "kind": "gsap-custom",
+      "evidence": {
+        "cite": "public/assets/js/site.js:27",
+        "expect": "CustomEase.create('wipe'"
+      }
+    },
+    "ease.out": {
+      "value": "cubic-bezier(.16,1,.3,1)",
+      "kind": "css",
+      "evidence": {
+        "cite": "public/assets/css/site.css:50",
+        "expect": "--ease-out"
+      }
+    },
+    "ease.io": {
+      "value": "cubic-bezier(.7,0,.2,1)",
+      "kind": "css",
+      "evidence": {
+        "cite": "public/assets/css/site.css:51",
+        "expect": "--ease-io"
+      }
+    },
+    "ease.lenis": {
+      "value": "t => min(1, 1.001 - 2^(-10t))",
+      "kind": "smooth-scroll",
+      "evidence": {
+        "cite": "public/assets/js/site.js:39",
+        "expect": "1.001 - Math.pow(2, -10 * t)"
+      }
+    }
+  },
+  "duration": {
+    "dur.hover": {
+      "value": "600ms",
+      "evidence": {
+        "cite": "public/assets/css/site.css:129",
+        "expect": "transition:transform .6s"
+      }
+    },
+    "dur.link": {
+      "value": "500ms",
+      "evidence": {
+        "cite": "public/assets/css/site.css:139",
+        "expect": "background-size .5s"
+      }
+    },
+    "dur.reveal-fade": {
+      "value": "1200ms"
+    },
+    "dur.reveal-up": {
+      "value": "1500ms"
+    },
+    "dur.split": {
+      "value": "1350ms"
+    },
+    "dur.lenis": {
+      "value": "1150ms",
+      "evidence": {
+        "cite": "public/assets/js/site.js:39",
+        "expect": "duration: 1.15"
+      }
+    },
+    "dur.loader-total": {
+      "value": "3700ms",
+      "evidence": {
+        "cite": "public/assets/js/site.js:937-942",
+        "expect": "}, 3700);"
+      }
+    }
+  },
+  "evidenceNote": "reveal/split durations: CLONE_SPEC.md section 19 (measured) and site.js reveals()/splitHeadings()."
+}

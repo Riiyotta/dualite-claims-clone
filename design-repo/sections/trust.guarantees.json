@@ -1,0 +1,110 @@
+{
+  "id": "trust.guarantees",
+  "title": "Trust guarantees",
+  "source": {
+    "id": "src.trust",
+    "file": "src/components/Trust.jsx",
+    "tag": "section",
+    "lines": "4",
+    "citation": "src/components/Trust.jsx:4",
+    "marker": "<section className={\"trust\"}"
+  },
+  "semantic": {
+    "id": "trust.guarantees",
+    "category": "TRUST"
+  },
+  "region": "main",
+  "themes": [
+    "paper"
+  ],
+  "variants": [
+    "default"
+  ],
+  "retrievalEligible": true,
+  "content": {
+    "eyebrowIndex": {
+      "type": "text",
+      "maxWords": 1
+    },
+    "eyebrow": {
+      "type": "text",
+      "maxWords": 5
+    },
+    "headline": {
+      "type": "text",
+      "maxWords": 6
+    },
+    "headlineAccent": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "lede": {
+      "type": "text",
+      "maxWords": 30
+    },
+    "media": {
+      "type": "media",
+      "assetRoles": [
+        "video.trust-animation-source",
+        "video.generated-loop",
+        "illustration.generated"
+      ]
+    },
+    "caption": {
+      "type": "text",
+      "maxWords": 8
+    },
+    "guarantees": {
+      "type": "list",
+      "items": {
+        "type": "object",
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 7
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 50
+          }
+        },
+        "required": [
+          "title",
+          "description"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 4
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "frame-clip-video"
+    ],
+    "reducedMotionFallback": {
+      "frame-clip-video": "poster-static"
+    }
+  },
+  "generatedAssetRoles": [
+    "video.generated-loop",
+    "illustration.generated"
+  ],
+  "responsive": {
+    "desktop": "2 cols media | copy, guarantees 2x2",
+    "mobile": "1 col, guarantees 1 col <640px",
+    "evidence": {
+      "cite": "public/assets/css/site.css:673",
+      "expect": ".trust__in{grid-template-columns:1fr}"
+    }
+  },
+  "contentRequired": [
+    "caption",
+    "eyebrow",
+    "eyebrowIndex",
+    "guarantees",
+    "headline",
+    "headlineAccent",
+    "lede",
+    "media"
+  ]
+}
