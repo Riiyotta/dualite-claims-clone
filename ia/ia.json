@@ -1,0 +1,81 @@
+{
+  "$comment": "Routes from the original's sitemap.xml (fetched 2026-10-27). Home sections read from src/components/*.jsx of the clone; blog index/post sections read from the live original's markup. Blog templates are not built in the clone yet (no implementedBy).",
+  "meta": {
+    "source": "https://claims.dualite.dev/ (clone at clone/src)",
+    "status": "measured-from-live-and-clone",
+    "productionApproved": false,
+    "totalRoutes": 16,
+    "totalTemplates": 3
+  },
+  "categories": {
+    "SHELL": "Site chrome and runtime utility UI: skip link, preloader, scroll progress, grain overlay, navigation, mobile menu, footer.",
+    "HERO": "Page-opening composition.",
+    "PROOF": "Social proof: customer quote strip, outcome stats, customer story, case study.",
+    "FEATURES": "Product explanation: the problem, workflow, product demo, capabilities, trust/accuracy, reconciliation.",
+    "CONVERSION": "Lead capture and demo booking.",
+    "SUPPORT": "Objection handling: FAQ.",
+    "EDITORIAL": "Blog index and article content."
+  },
+  "sections": {
+    "shell.skip-link": { "category": "SHELL", "description": "Visually hidden 'Skip to content' link targeting #main.", "scope": "All 16 routes.", "implementedBy": "src/components/Skip.jsx" },
+    "shell.loader": { "category": "SHELL", "description": "Full-screen intro preloader: brand label and claim-file tag, drawn seal SVG with ring text and checkmark, status line, 00 to 100 counter, progress bar, six-panel exit wipe. Plays once per session.", "scope": "Home route only (1 route).", "implementedBy": "src/components/Loader.jsx" },
+    "shell.scroll-progress": { "category": "SHELL", "description": "Fixed thin bar at the top of the viewport that fills with page scroll progress.", "scope": "All 16 routes.", "implementedBy": "src/components/Progress.jsx" },
+    "shell.grain": { "category": "SHELL", "description": "Fixed full-viewport animated film-grain texture overlay.", "scope": "Home route only (1 route).", "implementedBy": "src/components/Grain.jsx" },
+    "shell.nav": { "category": "SHELL", "description": "Fixed top navigation: logo and 'Claims' wordmark, six primary links with roll hover, magnetic 'Book a demo' button, burger on mobile. Hides on scroll down, switches theme over dark sections.", "scope": "All 16 routes.", "implementedBy": "src/components/Nav.jsx" },
+    "shell.mobile-menu": { "category": "SHELL", "description": "Dark full-screen mobile menu revealed by clip-path: numbered links, lime demo button, contact email.", "scope": "All 16 routes.", "implementedBy": "src/components/Mmenu.jsx" },
+    "shell.footer": { "category": "SHELL", "description": "Dark footer: oversized split-letter brand mark, link columns including blog guides, contact and legal line.", "scope": "All 16 routes.", "implementedBy": "src/components/Footer.jsx" },
+
+    "hero.home": { "category": "HERO", "description": "Home hero: scrambled eyebrow and status ticker, serif headline 'Scan the file. We'll handle the claim.', lede, primary and video CTAs, animated isometric claim-desk SVG scene, spec strip.", "scope": "Home route only (1 route).", "implementedBy": "src/components/Hero.jsx" },
+
+    "proof.quote-strip": { "category": "PROOF", "description": "Customer proof strip with a scroll-scrubbed quote directly under the hero.", "scope": "Home route only.", "implementedBy": "src/components/Proof.jsx" },
+    "proof.results": { "category": "PROOF", "description": "(02) Dark results band 'Same claims. A lighter desk.' with odometer and counter stats.", "scope": "Home route only.", "implementedBy": "src/components/Results.jsx" },
+    "proof.customer-story": { "category": "PROOF", "description": "(08) Dark 'In his own words.' customer testimonial video with custom cursor.", "scope": "Home route only.", "implementedBy": "src/components/Story.jsx" },
+    "proof.case-study": { "category": "PROOF", "description": "(09) Case study teaser: a hospital cutting its claim backlog from a week to three days.", "scope": "Home route only.", "implementedBy": "src/components/Case.jsx" },
+
+    "features.problem": { "category": "FEATURES", "description": "(01) The claim-desk problem: cost breakdown of manual filing.", "scope": "Home route only.", "implementedBy": "src/components/Problem.jsx" },
+    "features.movement": { "category": "FEATURES", "description": "(03) 'Scan and forget.' pinned, scroll-scrubbed walkthrough of a claim file moving through the steps.", "scope": "Home route only.", "implementedBy": "src/components/Move.jsx" },
+    "features.product-demo": { "category": "FEATURES", "description": "(04) 'One claim batch, start to finish.' stepped interactive product demo with auto-cycle and step buttons.", "scope": "Home route only.", "implementedBy": "src/components/Demo.jsx" },
+    "features.platform": { "category": "FEATURES", "description": "(05) 'Three capabilities. No re-work.' tabbed capability panel (validate, stamp, watch) with auto-advancing tabs and screenshots.", "scope": "Home route only.", "implementedBy": "src/components/Platform.jsx" },
+    "features.trust": { "category": "FEATURES", "description": "(06) 'Measured twice. Filed once.' accuracy and human-approval section with an in-view looping video.", "scope": "Home route only.", "implementedBy": "src/components/Trust.jsx" },
+    "features.reconciliation": { "category": "FEATURES", "description": "(07) Payment reconciliation: stuck money, deductions, spreadsheet replacement, with animated reconciliation rows.", "scope": "Home route only.", "implementedBy": "src/components/Recon.jsx" },
+
+    "support.faq": { "category": "SUPPORT", "description": "(10) 'Questions hospitals ask us.' non-exclusive accordion.", "scope": "Home route only.", "implementedBy": "src/components/Faq.jsx" },
+    "conversion.demo-form": { "category": "CONVERSION", "description": "(11) Dark demo-booking band with a lead form, inline validation and a thank-you state.", "scope": "Home route only.", "implementedBy": "src/components/Cta.jsx" },
+
+    "editorial.blog-hero": { "category": "EDITORIAL", "description": "Blog index header introducing the claims guides.", "scope": "Blog index only (1 route)." },
+    "editorial.featured-post": { "category": "EDITORIAL", "description": "One large featured post card.", "scope": "Blog index only (1 route)." },
+    "editorial.post-list": { "category": "EDITORIAL", "description": "Grid of post cards for every article.", "scope": "Blog index only (1 route)." },
+    "editorial.breadcrumbs": { "category": "EDITORIAL", "description": "Breadcrumb trail back to the blog index.", "scope": "All 14 article routes." },
+    "editorial.post-header": { "category": "EDITORIAL", "description": "Article title, standfirst and metadata.", "scope": "All 14 article routes." },
+    "editorial.post-toc": { "category": "EDITORIAL", "description": "Sticky table of contents sidebar for the article.", "scope": "All 14 article routes." },
+    "editorial.post-body": { "category": "EDITORIAL", "description": "Long-form prose body of the article.", "scope": "All 14 article routes." },
+    "editorial.post-cta": { "category": "EDITORIAL", "description": "Aside promoting a demo from inside an article.", "scope": "All 14 article routes." },
+    "editorial.related-posts": { "category": "EDITORIAL", "description": "Three related post cards at the end of an article.", "scope": "All 14 article routes." }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Home",
+      "routeCount": 1,
+      "routes": ["/"],
+      "built": "yes",
+      "sections": ["shell.skip-link", "shell.loader", "shell.scroll-progress", "shell.grain", "shell.nav", "shell.mobile-menu", "hero.home", "proof.quote-strip", "features.problem", "proof.results", "features.movement", "features.product-demo", "features.platform", "features.trust", "features.reconciliation", "proof.customer-story", "proof.case-study", "support.faq", "conversion.demo-form", "shell.footer"]
+    },
+    {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "routeCount": 1,
+      "routes": ["/blog/"],
+      "built": "no",
+      "sections": ["shell.skip-link", "shell.scroll-progress", "shell.nav", "shell.mobile-menu", "editorial.blog-hero", "editorial.featured-post", "editorial.post-list", "shell.footer"]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog article",
+      "routeCount": 14,
+      "routes": ["/blog/rghs-claim-submission-guide/", "/blog/rghs-ipd-claim-submission/", "/blog/rghs-opd-claim-submission/", "/blog/rghs-claim-rejection-reasons/", "/blog/echs-claim-submission-guide/", "/blog/echs-ipd-claim-submission/", "/blog/echs-opd-claim-submission/", "/blog/echs-claim-rejection-reasons/", "/blog/cghs-claim-submission-guide/", "/blog/maa-yojana-claim-process-hospitals/", "/blog/pmjay-claim-submission-tms/", "/blog/hospital-claim-desk-problems/", "/blog/medipulse-hospital-claims-automation/", "/blog/how-dualite-claims-works/"],
+      "built": "no",
+      "sections": ["shell.skip-link", "shell.scroll-progress", "shell.nav", "shell.mobile-menu", "editorial.breadcrumbs", "editorial.post-header", "editorial.post-toc", "editorial.post-body", "editorial.post-cta", "editorial.related-posts", "shell.footer"]
+    }
+  ]
+}

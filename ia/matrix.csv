@@ -1,0 +1,31 @@
+section,category,templates,routes,Home,Blog index,Blog article
+shell.skip-link,SHELL,3,16,x,x,x
+shell.scroll-progress,SHELL,3,16,x,x,x
+shell.nav,SHELL,3,16,x,x,x
+shell.mobile-menu,SHELL,3,16,x,x,x
+shell.footer,SHELL,3,16,x,x,x
+editorial.breadcrumbs,EDITORIAL,1,14,,,x
+editorial.post-header,EDITORIAL,1,14,,,x
+editorial.post-toc,EDITORIAL,1,14,,,x
+editorial.post-body,EDITORIAL,1,14,,,x
+editorial.post-cta,EDITORIAL,1,14,,,x
+editorial.related-posts,EDITORIAL,1,14,,,x
+shell.loader,SHELL,1,1,x,,
+shell.grain,SHELL,1,1,x,,
+hero.home,HERO,1,1,x,,
+proof.quote-strip,PROOF,1,1,x,,
+proof.results,PROOF,1,1,x,,
+proof.customer-story,PROOF,1,1,x,,
+proof.case-study,PROOF,1,1,x,,
+features.problem,FEATURES,1,1,x,,
+features.movement,FEATURES,1,1,x,,
+features.product-demo,FEATURES,1,1,x,,
+features.platform,FEATURES,1,1,x,,
+features.trust,FEATURES,1,1,x,,
+features.reconciliation,FEATURES,1,1,x,,
+support.faq,SUPPORT,1,1,x,,
+conversion.demo-form,CONVERSION,1,1,x,,
+editorial.blog-hero,EDITORIAL,1,1,,x,
+editorial.featured-post,EDITORIAL,1,1,,x,
+editorial.post-list,EDITORIAL,1,1,,x,
+ROUTE COUNT,,,16,1,1,14
